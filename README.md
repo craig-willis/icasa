@@ -29,4 +29,5 @@ Each variable is added as an OWL data property with type xsd:string. The data pr
 </owl:DatatypeProperty>
 ```
 
-The OWL ontology is rendered as HTML using the [Live Owl Documentation Environment](http://www.essepuntato.it/lode).
+The OWL ontology can be viewed using the Live Owl Documentation Environment:
+[http://www.essepuntato.it/lode/https://github.com/craig-willis/icasa/icasa.owl](http://www.essepuntato.it/lode/https://github.com/craig-willis/icasa/icasa.owl)
