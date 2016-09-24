@@ -31,3 +31,14 @@ Each variable is added as an OWL data property with type xsd:string. The data pr
 
 The OWL ontology can be viewed using the Live Owl Documentation Environment:
 [http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa.owl](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa.owl)
+
+
+# Open Issues
+* Object properties/relationships have not been added
+* Some of the terms in the original vocabulary are IDs or relational keys intended for use in an RDB.
+* Some classes are duplicated (Person/Institution/Document for experiment, soil, weather station, suite). These can likely be consolidated into a single class
+* Some classes and variables are not included in the V 2.0 documentation (Suite, AgMIP variables, Dome simulation)
+* Codes sometimes contain % or #
+* Codes in the AgMIP JSON Objects documentation do not exist in the spreadsheet (people, tr_name, icrzno, icbl, elev)
+* AgMIP JSON Objects examples sometimes use variable name instead of code (crop_model_version versus model_ver)
+
