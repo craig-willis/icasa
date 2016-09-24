@@ -30,4 +30,4 @@ Each variable is added as an OWL data property with type xsd:string. The data pr
 ```
 
 The OWL ontology can be viewed using the Live Owl Documentation Environment:
-[http://www.essepuntato.it/lode/https://github.com/craig-willis/icasa/icasa.owl](http://www.essepuntato.it/lode/https://github.com/craig-willis/icasa/icasa.owl)
+[http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa.owl](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa.owl)
