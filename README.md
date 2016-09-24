@@ -1,15 +1,24 @@
 # ICASA OWL Ontology
 
-This is an initial rendering of the [ICASA Master Variable List](https://docs.google.com/spreadsheets/d/1MYx1ukUsCAM1pcixbVQSu49NU-LfXg-Dtt-ncLBzGAM/pub?output=html#) as an OWL-based ontology.
+This is an initial rendering of the [ICASA Master Variable List](https://docs.google.com/spreadsheets/d/1MYx1ukUsCAM1pcixbVQSu49NU-LfXg-Dtt-ncLBzGAM/pub?output=html#) "Management_Info" sheet as an OWL ontology.
 
-The Management Data sheet is downloaded as icasa.csv and converted to icasa.owl using the icasa.py script:
+The ontology can also be viewed as HTML using the Live Owl Documentation Environment (LODE):
+[http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa.owl](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa.owl)
+
+
+## Conversion
+Files:
+* icasa.csv: Management_Info sheet downloaded as CSV
+* icasa.owl: OWL ontology (output of icasa.py)
+* icasa.py: Python script that reads icasa.csv, subset-map.csv and generates icasa.owl
+* subset-map.csv: Manual mapping of dataset/subset/group information to RDF Class Names. Descriptions were taken from White et al (2013).
+
+To run:
 ```
 python icasa.py > icasa.owl
 ```
 
-This script reads the subset-map.csv to convert the dataset/subset/group information into RDF Classes.  Class descriptions were taken from White et al (2013).
-
-Each variable is added as an OWL data property with type xsd:string. The data property has the domain of the associated class.  For example:
+Each dataset/subset/group is added as an RDF Class. Each variable/code is added as a datatype property with domain as the associated class (dataset/subset/group) and range xsd:string. For example:
 
 ```
 <!-- http://purl.org/icasa#Experiment -->
@@ -29,16 +38,17 @@ Each variable is added as an OWL data property with type xsd:string. The data pr
 </owl:DatatypeProperty>
 ```
 
-The OWL ontology can be viewed using the Live Owl Documentation Environment:
-[http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa.owl](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa.owl)
-
-
-# Open Issues
-* Object properties/relationships have not been added
-* Some of the terms in the original vocabulary are IDs or relational keys intended for use in an RDB.
-* Some classes are duplicated (Person/Institution/Document for experiment, soil, weather station, suite). These can likely be consolidated into a single class
+# Notes
+* Assumes PURL created at purl.org/icasa (login currently disabled on purl.org site)
+* Object properties have not yet been added (relations.csv)
+* Some classes are duplicated (Person/Institution/Document) for experiment, soil, weather station, etc.  These can likely be consolidated to a single class.
+* Some of the terms in the original vocabulary are ID fields and relational keys intended for use in an RDBMS.
 * Some classes and variables are not included in the V 2.0 documentation (Suite, AgMIP variables, Dome simulation)
-* Codes sometimes contain % or #
-* Codes in the AgMIP JSON Objects documentation do not exist in the spreadsheet (people, tr_name, icrzno, icbl, elev)
+* Some codes sometimes contain % or #
+* Some codes in the AgMIP JSON Objects documentation do not exist in the spreadsheet (people, tr_name, icrzno, icbl, elev)
 * AgMIP JSON Objects examples sometimes use variable name instead of code (crop_model_version versus model_ver)
 
+# TODO
+* Add object properties (relations)
+* Add support for measured data
+* Demonstrate use with AgMIP JSON Objects and JSON-LD
