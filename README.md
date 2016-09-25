@@ -13,7 +13,10 @@ Each dataset/subset/group is added as an RDF Class. Each variable/code is added 
 <!-- http://purl.org/icasa#Experiment -->
 <owl:Class rdf:about="http://purl.org/icasa#Experiment">
    <rdfs:label>Experiment</rdfs:label> 
-   <rdfs:comment xml:lang="en">Complete description of management and initial conditions for a real or synthetic experiment (or very closely linked set of experiments). Data measured during or at the end of the experiment. The information presented should be sufficient to allow thorough interpretation or analysis of the results and for simulation of the experiment</rdfs:comment>
+   <rdfs:comment xml:lang="en">Complete description of management and initial conditions for a real or 
+   synthetic experiment (or very closely linked set of experiments). Data measured during or at the end 
+   of the experiment. The information presented should be sufficient to allow thorough interpretation or 
+   analysis of the results and for simulation of the experiment</rdfs:comment>
    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 </owl:Class>
 
