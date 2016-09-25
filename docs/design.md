@@ -137,6 +137,43 @@ be useful when we get to mapping.
 
 ### Examples
 
+
+### Data Catalog Vocabulary (DCAT)
+https://www.w3.org/TR/vocab-dcat/
+https://www.w3.org/ns/dcat
+
+```
+    <rdfs:Class rdf:about="http://www.w3.org/ns/dcat#Catalog">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/" />
+        <rdfs:label xml:lang="en">Catalog</rdfs:label>
+        <rdfs:comment xml:lang="en">A curated collection of metadata about datasets</rdfs:comment>
+        <vann:usageNote xml:lang="en">Typically, a web-based data catalog is represented as a single instance of this class.</vann:usageNote>
+    </rdfs:Class>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/dcat#dataset">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/" />
+        <rdfs:label xml:lang="en">dataset</rdfs:label>
+        <rdfs:comment xml:lang="en">Links a catalog to a dataset that is part of the catalog.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasPart" />
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog" />
+        <rdfs:range>
+            <rdfs:Class rdf:about="http://www.w3.org/ns/dcat#Dataset">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+                <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/" />
+                <rdfs:label xml:lang="en">Dataset</rdfs:label>
+                <rdfs:comment xml:lang="en">A collection of data, published or curated by a single source, and available for access or download in one or more formats</rdfs:comment>
+                <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Dataset" />
+                <vann:usageNote xml:lang="en">This class represents the actual dataset as published by the dataset publisher. In
+          cases where a distinction between the actual dataset and its entry in the catalog is
+          necessary (because metadata such as modification date and maintainer might differ), the
+          catalog record class can be used for the latter.</vann:usageNote>
+            </rdfs:Class>
+        </rdfs:range>
+    </rdf:Property>
+```
+
 #### WGS84 Geo Positioning
 One of the most widely used vocabularies according to LOV, the Geo vocabulary simply represents location information via altitude, latitude and longitude properties.
 
