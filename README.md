@@ -1,18 +1,19 @@
 # ICASA OWL Ontology
 
-This is an initial rendering of the [ICASA Master Variable List](https://docs.google.com/spreadsheets/d/1MYx1ukUsCAM1pcixbVQSu49NU-LfXg-Dtt-ncLBzGAM/pub?output=html#) "Management_Info" sheet as an OWL ontology.
+This is an initial rendering of the [ICASA Master Variable List](https://docs.google.com/spreadsheets/d/1MYx1ukUsCAM1pcixbVQSu49NU-LfXg-Dtt-ncLBzGAM/pub?output=html#) "Management_Info" and "Measured_Data" sheets in RDF and OWL.
 
 The ontology can also be viewed as HTML using the Live Owl Documentation Environment (LODE):
 [http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa-mgmt-info.owl](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa-mgmt-info.owl)
 
 See the [Design Notes](docs/design.md) for more information on the basic requirements, recommendations, and design considerations.
 
-## Conversion
+## Management Info
+
 Files:
-* icasa-mgmt-info.csv: Management_Info sheet downloaded as CSV
-* icasa-mgmt-info.owl: OWL ontology (output of icasa.py)
-* icasa-mgmt-info.py: Python script that reads icasa.csv, subset-map.csv and generates icasa.owl
-* icasa-mgmt-info-subgroups.csv: Manual mapping of dataset/subset/group information to RDF Class Names. Descriptions were taken from White et al (2013).
+* icasa-mgmt-info.csv: Management_Info sheet as CSV
+* icasa-mgmt-info.owl: OWL ontology (output of icasa-mgmt-info.py)
+* icasa-mgmt-info.py: Python script that reads icasa-mgmt-info.csv, icasa-mgmt-info-subgroups.csv and generates icasa-mgmt-info.owl
+* icasa-mgmt-info-subgroups.csv: Manual mapping of dataset/subset/group information to RDF Class Names. Descriptions taken from White et al (2013).
 
 To run:
 ```
@@ -39,9 +40,23 @@ Each dataset/subset/group is added as an RDF Class. Each variable/code is added 
 </owl:DatatypeProperty>
 ```
 
+## Measured Data
+
+A slightly different approach is taken for the Measured_Data sheet.  The f
+
+
+Files:
+* icasa-mgmt-info-subgroups.csv: Manual mapping of dataset/subset/group information to RDF Class Names. Descriptions taken from White et al (2013).
+* measured-data.owl: Owl ontology describing Variables and Units (manually created)
+* icasa-measured-data.csv: Measured_Data sheet as CSV
+* icasa-measured-data.py: Python script that reads icasa-measured-data.csv and generates icasa-measured-data.rdf
+* icasa-measured-data.rdf: RDF descriptions of each variable
+* icasa-measured-data-subgroups.csv: Mapping of dataset/subset/group to category
+* icasa-measured-data-units-types.csv: List of units and types (not currently used)
+
 ## Notes
 * Assumes PURL created at purl.org/icasa (login currently disabled on purl.org site)
-* Object properties have not yet been added (relations.csv)
+* Object properties have not yet been added (relations)
 * Some classes are duplicated (Person/Institution/Document) for experiment, soil, weather station, etc.  These can likely be consolidated to a single class.
 * Some of the terms in the original vocabulary are ID fields and relational keys intended for use in an RDBMS.
 * Some classes and variables are not included in the V 2.0 documentation (Suite, AgMIP variables, Dome simulation)

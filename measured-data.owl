@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="rdfs-xhtml.xsl"?>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+  <rdf:Description rdf:about="http://purl.org/icasa/md">
+    <dc:title>ICASA Variables and Units RDF vocabulary</dc:title>
+    <dc:description>A draft vocabulary for representing variables and units</dc:description>
+    <dc:date></dc:date>
+  </rdf:Description>
+
+  <rdfs:Class rdf:about="http://purl.org/icasa/md#Variable">
+    <rdfs:label>Variable</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://purl.org/icasa/md#Unit">
+    <rdfs:label>Unit</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Property rdf:about="http://purl.org/icasa/md#name">
+   <rdfs:domain rdf:about="http://purl.org/icasa/md#Variable">
+   <rdfs:domain rdf:about="http://purl.org/icasa/md#Unit">
+   <rdfs:label>Name</rdfs:label>
+   <rdfs:comment>Preferred name used to identify the variable or unit</rdfs:comment>
+  </rdf:Property>
+
+  <rdfs:Property rdf:about="http://purl.org/icasa/md#standardName">
+   <rdfs:domain rdf:about="http://purl.org/icasa/md#Variable">
+   <rdfs:label>Standard name</rdfs:label>
+   <rdfs:comment>Standard name by CF conventions used to identify the variable</rdfs:comment>
+  </rdf:Property>
+
+  <rdfs:Property rdf:about="http://purl.org/icasa/md#alternateName">
+   <rdfs:domain rdf:about="http://purl.org/icasa/md#Variable">
+   <rdfs:domain rdf:about="http://purl.org/icasa/md#Unit">
+   <rdfs:label>Alternate name</rdfs:label>
+   <rdfs:comment>Alternate name used to identify the variable or unit</rdfs:comment>
+  </rdf:Property>
+
+  <rdfs:Property rdf:about="http://purl.org/icasa/md#definition">
+   <rdfs:domain rdf:about="http://purl.org/icasa/md#Variable">
+   <rdfs:domain rdf:about="http://purl.org/icasa/md#Unit">
+   <rdfs:label>Definition</rdfs:label>
+   <rdfs:comment>Definition of the variable or unit</rdfs:comment>
+  </rdf:Property>
+
+  <rdfs:Property rdf:about="http://purl.org/icasa/md#category">
+   <rdfs:domain rdf:about="http://purl.org/icasa/md#Variable">
+   <rdfs:label>Category</rdfs:label>
+   <rdfs:comment>Category for the variable</rdfs:comment>
+  </rdf:Property>
+
+  <rdfs:Property rdf:about="http://purl.org/icasa/md#type">
+   <rdfs:domain rdf:about="http://purl.org/icasa/md#Variable">
+   <rdfs:label>Type</rdfs:label>
+   <rdfs:comment>Variable type (summary or time series)</rdfs:comment>
+  </rdf:Property>
+
+</rdf:RDF>
