@@ -5,6 +5,7 @@ This is an initial rendering of the [ICASA Master Variable List](https://docs.go
 The ontology can also be viewed as HTML using the Live Owl Documentation Environment (LODE):
 [http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa.owl](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa.owl)
 
+See the [Design Notes](docs/design.md) for more information on the basic requirements, recommendations, and design considerations.
 
 ## Conversion
 Files:
