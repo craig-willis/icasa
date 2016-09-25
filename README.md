@@ -4,10 +4,10 @@ This is an initial rendering of the [ICASA Master Variable List](https://docs.go
 in RDF and OWL. This is a very rough draft and intended for community feedback.
 
 What's been done:
-* ICASA "Mangement_Info" entities and attributes are rendered as an OWL ontology for agronomic experiments and managements. 
-  The ontology can also be viewed as HTML using the Live Owl Documentation Environment (LODE): [http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa-mgmt-info.owl](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa-mgmt-info.owl)
-* A separate OWL ontology was manually created to describe Variables and Units
-* The "Measured_Data" sheet is rendered as a set of Variables in RDF
+* ICASA "Mangement_Info" entities and attributes are rendered as an [OWL ontology](icasa-mgmt-info.owl). 
+* The ontology can also be viewed as HTML using the Live Owl Documentation Environment (LODE): [icasa-mgmt-info.owl](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa-mgmt-info.owl)
+* A separate OWL ontology was manually created to describe [Variables and Units](icasa-measured-data.owl).  This is a proof of concept and will ideally be replaced by another standard once identified.
+* The "Measured_Data" sheet is rendered as a set of [Variables in RDF](icasa-measured-data.rdf).
 
 See the [Design Notes](docs/design.md) for more information on the basic requirements, recommendations, and design considerations.
 
