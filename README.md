@@ -7,18 +7,6 @@ The ontology can also be viewed as HTML using the Live Owl Documentation Environ
 
 See the [Design Notes](docs/design.md) for more information on the basic requirements, recommendations, and design considerations.
 
-## Conversion
-Files:
-* icasa.csv: Management_Info sheet downloaded as CSV
-* icasa.owl: OWL ontology (output of icasa.py)
-* icasa.py: Python script that reads icasa.csv, subset-map.csv and generates icasa.owl
-* subset-map.csv: Manual mapping of dataset/subset/group information to RDF Class Names. Descriptions were taken from White et al (2013).
-
-To run:
-```
-python icasa.py > icasa.owl
-```
-
 Each dataset/subset/group is added as an RDF Class. Each variable/code is added as a datatype property with domain as the associated class (dataset/subset/group) and range xsd:string. For example:
 
 ```
@@ -39,7 +27,7 @@ Each dataset/subset/group is added as an RDF Class. Each variable/code is added 
 </owl:DatatypeProperty>
 ```
 
-# Notes
+## Notes
 * Assumes PURL created at purl.org/icasa (login currently disabled on purl.org site)
 * Object properties have not yet been added (relations.csv)
 * Some classes are duplicated (Person/Institution/Document) for experiment, soil, weather station, etc.  These can likely be consolidated to a single class.
@@ -49,7 +37,23 @@ Each dataset/subset/group is added as an RDF Class. Each variable/code is added 
 * Some codes in the AgMIP JSON Objects documentation do not exist in the spreadsheet (people, tr_name, icrzno, icbl, elev)
 * AgMIP JSON Objects examples sometimes use variable name instead of code (crop_model_version versus model_ver)
 
-# TODO
+## TODO
 * Add object properties (relations)
 * Add support for measured data
 * Demonstrate use with AgMIP JSON Objects and JSON-LD
+
+# Conversion
+Files:
+* icasa.csv: Management_Info sheet downloaded as CSV
+* icasa.owl: OWL ontology (output of icasa.py)
+* icasa.py: Python script that reads icasa.csv, subset-map.csv and generates icasa.owl
+* subset-map.csv: Manual mapping of dataset/subset/group information to RDF Class Names. Descriptions were taken from White et al (2013).
+
+To run:
+```
+python icasa.py > icasa.owl
+```
+
+
+
+
