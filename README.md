@@ -3,20 +3,20 @@
 This is an initial rendering of the [ICASA Master Variable List](https://docs.google.com/spreadsheets/d/1MYx1ukUsCAM1pcixbVQSu49NU-LfXg-Dtt-ncLBzGAM/pub?output=html#) "Management_Info" sheet as an OWL ontology.
 
 The ontology can also be viewed as HTML using the Live Owl Documentation Environment (LODE):
-[http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa.owl](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa.owl)
+[http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa-mgmt-info.owl](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa-mgmt-info.owl)
 
 See the [Design Notes](docs/design.md) for more information on the basic requirements, recommendations, and design considerations.
 
 ## Conversion
 Files:
-* icasa.csv: Management_Info sheet downloaded as CSV
-* icasa.owl: OWL ontology (output of icasa.py)
-* icasa.py: Python script that reads icasa.csv, subset-map.csv and generates icasa.owl
-* subset-map.csv: Manual mapping of dataset/subset/group information to RDF Class Names. Descriptions were taken from White et al (2013).
+* icasa-mgmt-info.csv: Management_Info sheet downloaded as CSV
+* icasa-mgmt-info.owl: OWL ontology (output of icasa.py)
+* icasa-mgmt-info.py: Python script that reads icasa.csv, subset-map.csv and generates icasa.owl
+* icasa-mgmt-info-subgroups.csv: Manual mapping of dataset/subset/group information to RDF Class Names. Descriptions were taken from White et al (2013).
 
 To run:
 ```
-python icasa.py > icasa.owl
+python icasa-mgmt-info.py > icasa-mgmt-info.owl
 ```
 
 Each dataset/subset/group is added as an RDF Class. Each variable/code is added as a datatype property with domain as the associated class (dataset/subset/group) and range xsd:string. For example:
@@ -39,7 +39,7 @@ Each dataset/subset/group is added as an RDF Class. Each variable/code is added 
 </owl:DatatypeProperty>
 ```
 
-# Notes
+## Notes
 * Assumes PURL created at purl.org/icasa (login currently disabled on purl.org site)
 * Object properties have not yet been added (relations.csv)
 * Some classes are duplicated (Person/Institution/Document) for experiment, soil, weather station, etc.  These can likely be consolidated to a single class.
@@ -49,7 +49,50 @@ Each dataset/subset/group is added as an RDF Class. Each variable/code is added 
 * Some codes in the AgMIP JSON Objects documentation do not exist in the spreadsheet (people, tr_name, icrzno, icbl, elev)
 * AgMIP JSON Objects examples sometimes use variable name instead of code (crop_model_version versus model_ver)
 
-# TODO
+## TODO
 * Add object properties (relations)
 * Add support for measured data
 * Demonstrate use with AgMIP JSON Objects and JSON-LD
+
+
+# Measured Data
+
+ICASA supports measured data through summary (recorded once for a treatment) and time series (measured at specific intervals throughout an experiment).  Variables are grouped based on specific categories and include attributes variable name, code, definition, units, and types.
+
+Summary data variables are divided into five categories: development, growth, water balance, soils, and environment. Overall, there are approximately 165 summary variables.
+
+Time series variables are divided into thirteen cagegories: plant growth, plant nitrogen, plant phosphorous, plant water balance, soil layers, soil nitrogen, soil organic matter, soil phosporous, surface litter, soil plant atmossphere, management, floodwater and pest population effects.
+
+Of course, there can certainly be other types of measured data.  While ICASA assumes daily measurements, the time series granularity can be different.  Also, while ICASA assumes crop-level measurements, this is not necessarily a requirement.
+
+ACTION: Need to find examples of representing observational and timeseries data as linked data. From an ontology perspective, 
+`
+ObservedDataLinks
+Summary
+Development
+Growth
+WaterBalance
+Soils
+Environment
+
+TimeSeries
+PlantGrowth
+PlantNitrogen
+PlantPhosphorous
+WaterBalance
+SoilLayers
+SoilNitrogen
+SoilOrganicMatter
+SoilPhosporous
+SurfaceLitter
+SoilPlantAtmos
+Management
+Floodwater
+PestPopsEffects
+
+
+Will also need some sort of units ontology.
+http://purl.bioontology.org/ontology/UO
+
+
+ 

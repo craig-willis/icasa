@@ -2,7 +2,7 @@ import csv
 import cgi
 
 '''
-Read icasa.csv (CSV export of ICASA Master Variable List Google doc https://docs.google.com/spreadsheets/d/1MYx1ukUsCAM1pcixbVQSu49NU-LfXg-Dtt-ncLBzGAM/pub?output=html) and generate an Owl ontology. 
+Read icasa-mgmt-info.csv (CSV export of ICASA Master Variable List Google doc https://docs.google.com/spreadsheets/d/1MYx1ukUsCAM1pcixbVQSu49NU-LfXg-Dtt-ncLBzGAM/pub?output=html) and generate an Owl ontology. 
 '''
 
 baseUrl = "http://purl.org/icasa"
@@ -48,7 +48,7 @@ print(
 )
 
 subsetmap = dict()
-with open('subset-map.csv', 'rb') as mapcsv:
+with open('icasa-mgmt-info-subgroups.csv', 'rb') as mapcsv:
     r = csv.DictReader(mapcsv)
     for row in r:
         key = row["dataset_subset_group"]
@@ -76,7 +76,7 @@ print(
 
 codeMap = dict()
 variableMap = dict()
-with open('icasa.csv', 'rb') as csvfile:
+with open('icasa-mgmt-info.csv', 'rb') as csvfile:
     r = csv.DictReader(csvfile)
     for row in r:
         variable_name = row["Variable_Name"].lower()
