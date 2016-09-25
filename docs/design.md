@@ -177,6 +177,8 @@ https://www.w3.org/ns/dcat
 #### WGS84 Geo Positioning
 One of the most widely used vocabularies according to LOV, the Geo vocabulary simply represents location information via altitude, latitude and longitude properties.
 
+https://www.w3.org/2003/01/geo/
+
 ```
 <rdf:Property rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
  <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" />
@@ -274,6 +276,25 @@ Recommendation: Store the vocabulary in Github, preferrably in OWL format. Use s
 * OBO vocabularies can easily be hosted via OBO Foundry. 
 * OWL vocabularies must be put someplace. 
 
+## Variables, Units, and Measured Data
+
+Quantitative studies require the use and definition of measured variables. Variables have names, units, scales, and value types (e.g., binary, numeric, ordinal, nominal).
+
+The [Climate and Forecast Standard Names](http://cfconventions.org) is a widely used list of standard variable names and units for measured data in the climate modeling community.  CF defines a standard naming convention for variable names (hence standard names) and publishes an accepted [table of standard names](http://cfconventions.org/Data/cf-standard-names/34/build/cf-standard-name-table.html) or variables.  These standard names are used by the CF community, most commonly in HDF/NetCDF files. The official table is defined in XML with a well defined schema.  The schema includes top-level element "entry" with sub-elements "canonical_units", "alias", and "description". Unfortunately, these elements are simply defined in an XSD file and are not easily referenced externally for use in other systems.  [CSDMS](http://csdms.colorado.edu/wiki/CSDMS_Standard_Names#.C2.A0_CSDMS_Standard_Names) follows a similar approach to standard naming. 
+
+The [Ontology of Experimental Variables and Values](https://bioportal.bioontology.org/ontologies/OOEVV) defines an OWL ontology for experimental variables and values. It defines a single ExperimentalVariable class with additional classes for MeasurementScale (e.g., NominalScale) and MeasurementValue (e.g., BinaryValue).  The [Units of Measurement](http://bioportal.bioontology.org/ontologies/UO?p=classes&conceptid=root) ontology may also be of interest here.
+
+The [Data Cube Vocabulary](https://www.w3.org/TR/vocab-data-cube/) is an RDF-based model for publishing multi-dimentional datasets, based in part on the Statistical Data and Metadata Exchange (SDMX)  guidelines.  DataCube defines a set of classes including DataSet, Observation, and MeasureProperty that may be relevant to the TERRA project.
+
+For example, they define "life expectancy" as follows:
+```
+eg:lifeExpectancy  a rdf:Property, qb:MeasureProperty;
+    rdfs:label "life expectancy"@en;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:decimal . 
+```
+
+Recommendation: Define (or extend) a vocabulary to facilitate publishing authoritative lists of variables for communities.  The basic model should support CF, CSDMS, BETYdb and the ICASA Measured Data values. This should include at least canonical name, alternate names, definition, units, and categories. It may also be necessary to define a vocabulary for units. We would then publish lists of ICASA variables and unit definitions as well as lists of BETYdb variables and unit definitions.
 
 ## References
 
