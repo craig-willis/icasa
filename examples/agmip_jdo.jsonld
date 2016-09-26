@@ -1,0 +1,151 @@
+{
+   "@context":  {
+      "experiments": "http://purl.org/icasa/core#Experiment",
+      "data_source": "http://purl.org/icasa/core#data_source",
+      "crop_model_version": "http://purl.org/icasa/core#crop_model_version",
+      "exname": "http://purl.org/icasa/core#exname",
+      "local_name": "http://purl.org/icasa/core#local_name",
+      "site_name": "http://purl.org/icasa/core#site_name",
+      "field": "http://purl.org/icasa/core#Field",
+      "id_field": "http://purl.org/icasa/core#id_field",
+      "fl_lat": "http://purl.org/icasa/core#fl_lat",
+      "fl_long": "http://purl.org/icasa/core#fl_long",
+      "flele": "http://purl.org/icasa/core#flele",
+      "institution": "http://purl.org/icasa/core#Institution",
+      "in": "http://purl.org/icasa/core#in",
+      "inst_name": "http://purl.org/icasa/core#inst_name",
+      "people": "http://purl.org/icasa/core#Person",
+      "first_name": "http://purl.org/icasa/core#first_name",
+      "mid_initial": "http://purl.org/icasa/core#mid_initial",
+      "last_name": "http://purl.org/icasa/core#last_name",
+      "treatment": "http://purl.org/icasa/core#Treatment",
+      "trt_name": "http://purl.org/icasa/core#trt_name",
+      "initial_condition": "http://purl.org/icasa/core#InitialCondition",
+      "icpcr": "http://purl.org/icasa/core#icpcr",
+      "icdat": "http://purl.org/icasa/core#icdat",
+      "icbl": "http://purl.org/icasa/core#icbl",
+      "icSoilLayer": "http://purl.org/icasa/core#InitialConditionSoilLayer",
+      "ich2o": "http://purl.org/icasa/core#ich2o",
+      "icnh4": "http://purl.org/icasa/core#icnh4",
+      "icno3": "http://purl.org/icasa/core#icno3",
+      "weathers" : "http://purl.org/icasa/core#WeatherStation",
+      "wst_id" : "http://purl.org/icasa/core#wst_id",
+      "wst_name" : "http://purl.org/icasa/core#wst_name",
+      "dailyWeather" : "http://purl.org/icasa/core#DailyWeather",
+      "w_date" : "http://purl.org/icasa/core#w_date",
+      "srad" : "http://purl.org/icasa/core#srad",
+      "tmax" : "http://purl.org/icasa/core#tmax",
+      "tmin" : "http://purl.org/icasa/core#tmin",
+      "rain" : "http://purl.org/icasa/core#rain",
+      "soils" : "http://purl.org/icasa/core#SoilProfile",
+      "soil_id" : "http://purl.org/icasa/core#soil_id",
+      "spSoilLayer" : "http://purl.org/icasa/core#SoilProfileLayer",
+      "sllb" : "http://purl.org/icasa/core#sllb",
+      "slll" : "http://purl.org/icasa/core#slll",
+      "sldul" : "http://purl.org/icasa/core#sldul",
+      "slsat" : "http://purl.org/icasa/core#slsat",
+      "slrgf" : "http://purl.org/icasa/core#slrgf",
+      "slbdm" : "http://purl.org/icasa/core#slbdm",
+      "sloc" : "http://purl.org/icasa/core#sloc",
+      "management" : "http://purl.org/icasa/core#Management",
+      "events" : "http://purl.org/icasa/core#Event",
+      "tiimp" : "http://purl.org/icasa/core#tiimp",
+      "tidep" : "http://purl.org/icasa/core#tidep",
+      "ti_name" : "http://purl.org/icasa/core#ti_name",
+      "plpop" : "http://purl.org/icasa/core#plpop",
+      "plpoe" : "http://purl.org/icasa/core#plpoe",
+      "plme" : "http://purl.org/icasa/core#plme",
+      "plds" : "http://purl.org/icasa/core#plds",
+      "plrs" : "http://purl.org/icasa/core#plrs",
+      "observed" : "http://purl.org/icasa/core#MeasuredData",
+      "summary" : "http://purl.org/icasa/core#SummaryData",
+      "hwam" : "http://purl.org/icasa/core#hwam",
+      "hwum" : "http://purl.org/icasa/core#hwum",
+      "timeSeries" : "http://purl.org/icasa/core#TimeSeriesData",
+      "date" : "http://purl.org/icasa/core#date",
+      "cwad" : "http://purl.org/icasa/core#cwad",
+      "laid" : "http://purl.org/icasa/core#laid",
+      "gwad" : "http://purl.org/icasa/core#gwad"
+   }, 
+   "experiments": [{
+        "data_source": "DSSAT",
+        "crop_model_version": "v4.5",
+        "exname": "UFGA8201MZ_1",
+        "local_name": "NIT X IRR, GAINESVILLE 2N*3I",
+        "site_name": "IRR.PARK,UF.CAMPUS 29.63;-82.37;40.;FLA",
+        "field": {
+            "id_field": "UFGA0002",
+            "fl_lat": "29.63",
+            "fl_long": "-82.37",
+            "flele": "40"
+        },
+        "institution": {
+            "in": "UF",
+            "inst_name": "UNIVERSITY OF FLORIDA, GAINESVILLE, FL, USA",
+            "people": [ 
+                { "first_name" : "J", "mid_initial" : "M", "last_name" : "BENNET" },
+                { "first_name" : "J", "mid_initial" : "W", "last_name" : "JONES" }
+            ]
+        },
+        "treatment":  { 
+            "trt_name": "RAINFED LOW NITROGEN"
+        },
+        "initial_condition": {
+            "icpcr": "MAZ",
+            "icdat": "19820225",
+            "icSoilLayer": [
+        	    {"icbl": "5","ich2o": ".086","icnh4": ".5","icno3": ".1"},
+        	    {"icbl": "180","ich2o": ".258","icnh4": ".5","icno3": ".1"}
+       	    ]
+	    }
+    }],
+    "weathers":[{
+        "wst_id": "UFGA",
+        "wst_name":"Gainesville,Florida,USA",
+        "dailyWeather":[
+            {"w_date":"19780101","srad":"5.3","tmax":"18.3","tmin":"13.3","rain":"0.0"},
+            {"w_date":"19780109","srad":"16.3","tmax":"18.5","tmin":"1.1","rain":"25.1"}
+    	]
+	}],
+    "soils":[{
+       "soil_id":"IBMZ910014",
+       "spSoilLayer":[
+          {"sllb":"5","slll":".026","sldul":".096","slsat":".23","slrgf":"1","slbdm":"1.3","sloc":"2"},
+          {"sllb":"180","slll":".07","sldul":".258","slsat":".36","slrgf":"0","slbdm":"1.2","sloc":".24"}
+       ]
+    }],
+    "management":{
+       "events":[
+          {
+             "@type":"http://purl.org/icasa#TillageEvent",
+             "date":"19820225",
+             "tiimp":"TI003",
+             "tidep":"35",
+             "ti_name":"Moldboard plow"
+          },
+          {
+             "@type":"http://purl.org/icasa#Planting",
+             "date":"19820226",
+             "crid":"MAZ",
+             "cul_name":"McCurdy 84aa",
+             "plpop":"7.2",
+             "plpoe":"7.2",
+             "plme":"S",
+             "plds":"R",
+             "plrs":"61",
+             "pldp":"7"
+          }
+       ]
+    },
+    "observed": {
+        "summary": {
+            "hwam": "2929.",
+            "hwum": "0.218"
+        },
+        "timeSeries": [
+            {"date": "19820226","cwad": "0","laid": "0.00","gwad": "0"},
+            {"date": "19820413","cwad": "341","laid": "0.56","gwad": "0"},
+            {"date": "19820426","cwad": "1070","laid": "1.43","gwad": "0"}
+        ]
+    }
+}
