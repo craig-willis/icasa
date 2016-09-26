@@ -29,6 +29,41 @@
 ///////////////////////////////////////////////////////////////////////////////////////
 -->
 
+    <!-- http://purl.org/icasa#Management -->
+    <owl:Class rdf:about="http://purl.org/icasa#Management">
+       <rdfs:label>Management</rdfs:label>
+       <rdfs:comment xml:lang="en">Descriptions of different management practices</rdfs:comment>
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <!-- http://purl.org/icasa#Event -->
+    <owl:Class rdf:about="http://purl.org/icasa#Event">
+       <rdfs:label>Event</rdfs:label>
+       <rdfs:comment xml:lang="en">Management events (tilage, irrigation, ferilization, chemical applications, mulching, etc.</rdfs:comment>
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <!-- http://purl.org/icasa#MeasuredData -->
+    <owl:Class rdf:about="http://purl.org/icasa#MeasuredData">
+       <rdfs:label>Event</rdfs:label>
+       <rdfs:comment xml:lang="en">Data from measurements of system performance, potentially including crop or weed growth, soil constituents, and gas fluxes or concentrations</rdfs:comment>
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <!-- http://purl.org/icasa#SummaryData -->
+    <owl:Class rdf:about="http://purl.org/icasa#SummaryData">
+       <rdfs:label>SummaryData</rdfs:label>
+       <rdfs:comment xml:lang="en">Summary data (may include data from means over replicates or from individual plots) that are collected during the course of or at the end of an experiment</rdfs:comment>
+	   <rdfs:subClassOf rdf:resource="http://purl.org/icasa#MeasuredData"/>
+    </owl:Class>
+
+    <!-- http://purl.org/icasa#TimeSeriesData -->
+    <owl:Class rdf:about="http://purl.org/icasa#TimeSeriesData">
+       <rdfs:label>TimeSeriesData</rdfs:label>
+       <rdfs:comment xml:lang="en">Time-course data (may include data from means over replicates or from individual plots) collected during the course of an experiment</rdfs:comment>
+	   <rdfs:subClassOf rdf:resource="http://purl.org/icasa#MeasuredData"/>
+    </owl:Class>
+
     <!-- http://purl.org/icasa#Experiment -->
     <owl:Class rdf:about="http://purl.org/icasa#Experiment">
        <rdfs:label>Experiment</rdfs:label>
@@ -88,14 +123,14 @@
     <owl:Class rdf:about="http://purl.org/icasa#ChemicalApplication">
        <rdfs:label>ChemicalApplication</rdfs:label>
        <rdfs:comment xml:lang="en">Chemical application</rdfs:comment>
-       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	   <rdfs:subClassOf rdf:resource="http://purl.org/icasa#Event"/>
     </owl:Class>
 
     <!-- http://purl.org/icasa#EnvironmentModification -->
     <owl:Class rdf:about="http://purl.org/icasa#EnvironmentModification">
        <rdfs:label>EnvironmentModification</rdfs:label>
        <rdfs:comment xml:lang="en">Adjustments to weather variable such as those that could be made during growth chamber, CO2 enrichment, or rainout shelter studies</rdfs:comment>
-       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	   <rdfs:subClassOf rdf:resource="http://purl.org/icasa#Event"/>
     </owl:Class>
 
     <!-- http://purl.org/icasa#EnvironmentModificationLevel -->
@@ -116,7 +151,7 @@
     <owl:Class rdf:about="http://purl.org/icasa#FertilizerApplication">
        <rdfs:label>FertilizerApplication</rdfs:label>
        <rdfs:comment xml:lang="en">Fertilizer application</rdfs:comment>
-       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	   <rdfs:subClassOf rdf:resource="http://purl.org/icasa#Event"/>
     </owl:Class>
 
     <!-- http://purl.org/icasa#Field -->
@@ -144,7 +179,7 @@
     <owl:Class rdf:about="http://purl.org/icasa#HarvestEvent">
        <rdfs:label>HarvestEvent</rdfs:label>
        <rdfs:comment xml:lang="en">Harvest event</rdfs:comment>
-       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	   <rdfs:subClassOf rdf:resource="http://purl.org/icasa#Event"/>
     </owl:Class>
 
     <!-- http://purl.org/icasa#InitialCondition -->
@@ -172,14 +207,14 @@
     <owl:Class rdf:about="http://purl.org/icasa#IrrigationApplication">
        <rdfs:label>IrrigationApplication</rdfs:label>
        <rdfs:comment xml:lang="en">Irrigation application</rdfs:comment>
-       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	   <rdfs:subClassOf rdf:resource="http://purl.org/icasa#Event"/>
     </owl:Class>
 
     <!-- http://purl.org/icasa#AutomaticIrrigation -->
     <owl:Class rdf:about="http://purl.org/icasa#AutomaticIrrigation">
        <rdfs:label>AutomaticIrrigation</rdfs:label>
        <rdfs:comment xml:lang="en">Automaatic irrigation</rdfs:comment>
-       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	   <rdfs:subClassOf rdf:resource="http://purl.org/icasa#Event"/>
     </owl:Class>
 
     <!-- http://purl.org/icasa#Mulch -->
@@ -193,14 +228,14 @@
     <owl:Class rdf:about="http://purl.org/icasa#MulchAddition">
        <rdfs:label>MulchAddition</rdfs:label>
        <rdfs:comment xml:lang="en">Mulch addition</rdfs:comment>
-       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	   <rdfs:subClassOf rdf:resource="http://purl.org/icasa#Event"/>
     </owl:Class>
 
     <!-- http://purl.org/icasa#MulchRemove -->
     <owl:Class rdf:about="http://purl.org/icasa#MulchRemove">
        <rdfs:label>MulchRemove</rdfs:label>
        <rdfs:comment xml:lang="en">Mulch removal</rdfs:comment>
-       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	   <rdfs:subClassOf rdf:resource="http://purl.org/icasa#Event"/>
     </owl:Class>
 
     <!-- http://purl.org/icasa#OrganicMaterial -->
@@ -214,14 +249,14 @@
     <owl:Class rdf:about="http://purl.org/icasa#OrganicMaterialApplication">
        <rdfs:label>OrganicMaterialApplication</rdfs:label>
        <rdfs:comment xml:lang="en">Organic material application</rdfs:comment>
-       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	   <rdfs:subClassOf rdf:resource="http://purl.org/icasa#Event"/>
     </owl:Class>
 
     <!-- http://purl.org/icasa#Planting -->
     <owl:Class rdf:about="http://purl.org/icasa#Planting">
        <rdfs:label>Planting</rdfs:label>
        <rdfs:comment xml:lang="en">Planting date, seed and initial plant populations, seeding depth, and plant distribution (row spacing, etc.)</rdfs:comment>
-       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	   <rdfs:subClassOf rdf:resource="http://purl.org/icasa#Event"/>
     </owl:Class>
 
     <!-- http://purl.org/icasa#SimulationControl -->
@@ -255,7 +290,7 @@
     <owl:Class rdf:about="http://purl.org/icasa#TillageEvent">
        <rdfs:label>TillageEvent</rdfs:label>
        <rdfs:comment xml:lang="en">Tillage event</rdfs:comment>
-       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	   <rdfs:subClassOf rdf:resource="http://purl.org/icasa#Event"/>
     </owl:Class>
 
     <!-- http://purl.org/icasa#Treatment -->
