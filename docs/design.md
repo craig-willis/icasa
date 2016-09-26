@@ -303,3 +303,6 @@ Recommendation: Define (or extend) a vocabulary to facilitate publishing authori
 * AgMIP [JSON Data Objects format descriptions](http://research.agmip.org/display/dev/JSON+Data+Objects)
 * AgMIP translation examples https://github.com/agmip/json-translation-samples
 * Dryad Application Profile http://wiki.datadryad.org/Metadata_Profile
+* Report on the Workshop [Improving Semantics in Agriculture](http://aims.fao.org/sites/default/files/Report_workshop_Agrisemantics.pdf) ([Workshop summary](http://aims.fao.org/agrisemantics-workshop-2015)]
+* Lokers et al (2016). [Analysis of Big Data technologies for use in agro-environmental science](http://dx.doi.org/10.1016/j.envsoft.2016.07.017)
+* RDA [Agrisemantics Working Group](https://rd-alliance.org/groups/agrisemantics-wg.html)
