@@ -36,6 +36,12 @@
        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
 
+    <!-- http://purl.org/icasa#AgMIP -->
+    <owl:Class rdf:about="http://purl.org/icasa#AgMIP">
+       <rdfs:label>AgMIP</rdfs:label>
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
     <!-- http://purl.org/icasa#Document -->
     <owl:Class rdf:about="http://purl.org/icasa#Document">
        <rdfs:label>Document</rdfs:label>
@@ -78,6 +84,13 @@
        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
 
+    <!-- http://purl.org/icasa#ChemicalApplication -->
+    <owl:Class rdf:about="http://purl.org/icasa#ChemicalApplication">
+       <rdfs:label>ChemicalApplication</rdfs:label>
+       <rdfs:comment xml:lang="en">Chemical application</rdfs:comment>
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
     <!-- http://purl.org/icasa#EnvironmentModification -->
     <owl:Class rdf:about="http://purl.org/icasa#EnvironmentModification">
        <rdfs:label>EnvironmentModification</rdfs:label>
@@ -85,10 +98,24 @@
        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
 
+    <!-- http://purl.org/icasa#EnvironmentModificationLevel -->
+    <owl:Class rdf:about="http://purl.org/icasa#EnvironmentModificationLevel">
+       <rdfs:label>EnvironmentModificationLevel</rdfs:label>
+       <rdfs:comment xml:lang="en">Environment modification level</rdfs:comment>
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
     <!-- http://purl.org/icasa#Fertilizer -->
     <owl:Class rdf:about="http://purl.org/icasa#Fertilizer">
        <rdfs:label>Fertilizer</rdfs:label>
        <rdfs:comment xml:lang="en">Fertilizer amounts, types, and dates of applications</rdfs:comment>
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <!-- http://purl.org/icasa#FertilizerApplication -->
+    <owl:Class rdf:about="http://purl.org/icasa#FertilizerApplication">
+       <rdfs:label>FertilizerApplication</rdfs:label>
+       <rdfs:comment xml:lang="en">Fertilizer application</rdfs:comment>
        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
 
@@ -113,10 +140,24 @@
        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
 
+    <!-- http://purl.org/icasa#HarvestEvent -->
+    <owl:Class rdf:about="http://purl.org/icasa#HarvestEvent">
+       <rdfs:label>HarvestEvent</rdfs:label>
+       <rdfs:comment xml:lang="en">Harvest event</rdfs:comment>
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
     <!-- http://purl.org/icasa#InitialCondition -->
     <owl:Class rdf:about="http://purl.org/icasa#InitialCondition">
        <rdfs:label>InitialCondition</rdfs:label>
        <rdfs:comment xml:lang="en">Starting conditions including above- and below-ground residues, and water and nitrogen in the complete profile</rdfs:comment>
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <!-- http://purl.org/icasa#InitialConditionSoilLayer -->
+    <owl:Class rdf:about="http://purl.org/icasa#InitialConditionSoilLayer">
+       <rdfs:label>InitialConditionSoilLayer</rdfs:label>
+       <rdfs:comment xml:lang="en">Initial condition soil layer</rdfs:comment>
        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
 
@@ -127,6 +168,20 @@
        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
 
+    <!-- http://purl.org/icasa#IrrigationApplication -->
+    <owl:Class rdf:about="http://purl.org/icasa#IrrigationApplication">
+       <rdfs:label>IrrigationApplication</rdfs:label>
+       <rdfs:comment xml:lang="en">Irrigation application</rdfs:comment>
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <!-- http://purl.org/icasa#AutomaticIrrigation -->
+    <owl:Class rdf:about="http://purl.org/icasa#AutomaticIrrigation">
+       <rdfs:label>AutomaticIrrigation</rdfs:label>
+       <rdfs:comment xml:lang="en">Automaatic irrigation</rdfs:comment>
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
     <!-- http://purl.org/icasa#Mulch -->
     <owl:Class rdf:about="http://purl.org/icasa#Mulch">
        <rdfs:label>Mulch</rdfs:label>
@@ -134,10 +189,31 @@
        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
 
+    <!-- http://purl.org/icasa#MulchAddition -->
+    <owl:Class rdf:about="http://purl.org/icasa#MulchAddition">
+       <rdfs:label>MulchAddition</rdfs:label>
+       <rdfs:comment xml:lang="en">Mulch addition</rdfs:comment>
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <!-- http://purl.org/icasa#MulchRemove -->
+    <owl:Class rdf:about="http://purl.org/icasa#MulchRemove">
+       <rdfs:label>MulchRemove</rdfs:label>
+       <rdfs:comment xml:lang="en">Mulch removal</rdfs:comment>
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
     <!-- http://purl.org/icasa#OrganicMaterial -->
     <owl:Class rdf:about="http://purl.org/icasa#OrganicMaterial">
        <rdfs:label>OrganicMaterial</rdfs:label>
        <rdfs:comment xml:lang="en">Details of straw, manure and other organic material applications</rdfs:comment>
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <!-- http://purl.org/icasa#OrganicMaterialApplication -->
+    <owl:Class rdf:about="http://purl.org/icasa#OrganicMaterialApplication">
+       <rdfs:label>OrganicMaterialApplication</rdfs:label>
+       <rdfs:comment xml:lang="en">Organic material application</rdfs:comment>
        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
 
@@ -161,10 +237,24 @@
        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
 
+    <!-- http://purl.org/icasa#SoilAnalysisLayer -->
+    <owl:Class rdf:about="http://purl.org/icasa#SoilAnalysisLayer">
+       <rdfs:label>SoilAnalysisLayer</rdfs:label>
+       <rdfs:comment xml:lang="en">Soil anlaysis soil layer</rdfs:comment>
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
     <!-- http://purl.org/icasa#Tillage -->
     <owl:Class rdf:about="http://purl.org/icasa#Tillage">
        <rdfs:label>Tillage</rdfs:label>
        <rdfs:comment xml:lang="en">Dates and types of tillage operations</rdfs:comment>
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <!-- http://purl.org/icasa#TillageEvent -->
+    <owl:Class rdf:about="http://purl.org/icasa#TillageEvent">
+       <rdfs:label>TillageEvent</rdfs:label>
+       <rdfs:comment xml:lang="en">Tillage event</rdfs:comment>
        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
 
@@ -220,6 +310,13 @@
     <owl:Class rdf:about="http://purl.org/icasa#SoilProfile">
        <rdfs:label>SoilProfile</rdfs:label>
        <rdfs:comment xml:lang="en">Soil profile data for individual pedons</rdfs:comment>
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <!-- http://purl.org/icasa#SoilProfileLayer -->
+    <owl:Class rdf:about="http://purl.org/icasa#SoilProfileLayer">
+       <rdfs:label>SoilProfileLayer</rdfs:label>
+       <rdfs:comment xml:lang="en">Soil profile layer</rdfs:comment>
        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
 
@@ -308,16 +405,6 @@
 ///////////////////////////////////////////////////////////////////////////////////////
 -->
 
-    <!-- http://http://purl.org/icasa#aco2 -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#aco2">
-        <rdfs:label>aco2</rdfs:label>
-        <rdfs:label>ambient_co2_conc</rdfs:label>
-        <rdfs:comment xml:lang="en">CO2, ambient</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#DailyWeather"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
     <!-- http://http://purl.org/icasa#dtwt -->
     <owl:DatatypeProperty rdf:about="http://purl.org/icasa#dtwt">
         <rdfs:label>dtwt</rdfs:label>
@@ -343,7 +430,7 @@
         <rdfs:label>omday</rdfs:label>
         <rdfs:label>org_material_applic_day</rdfs:label>
         <rdfs:comment xml:lang="en">Organic materials application day</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterial"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterialApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -353,7 +440,7 @@
         <rdfs:label>slca</rdfs:label>
         <rdfs:label>soil_calcium_conc</rdfs:label>
         <rdfs:comment xml:lang="en">Soil calcium, exchangeable</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -363,7 +450,7 @@
         <rdfs:label>slxf</rdfs:label>
         <rdfs:label>soil_water_uptake_factor</rdfs:label>
         <rdfs:comment xml:lang="en">Root exploration factor (0 to 1 scale, APSIM XF)</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -373,7 +460,7 @@
         <rdfs:label>slsu</rdfs:label>
         <rdfs:label>soil_sulphur_conc</rdfs:label>
         <rdfs:comment xml:lang="en">Sulphur in soil layer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -405,6 +492,7 @@
         <rdfs:comment xml:lang="en">Environmental modifications level, links to EM table</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Treatment"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -414,7 +502,7 @@
         <rdfs:label>iadate</rdfs:label>
         <rdfs:label>auto_irrig_date</rdfs:label>
         <rdfs:comment xml:lang="en">Date to begin automatic irrigation</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#AutomaticIrrigation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -434,7 +522,7 @@
         <rdfs:label>slrgf</rdfs:label>
         <rdfs:label>root_growth_factor_soil</rdfs:label>
         <rdfs:comment xml:lang="en">Root growth factor, soil only (0 to 1 scale)</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -444,7 +532,7 @@
         <rdfs:label>feamn</rdfs:label>
         <rdfs:label>n_in_applied_fertilizer</rdfs:label>
         <rdfs:comment xml:lang="en">Nitrogen in applied fertilizer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Fertilizer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#FertilizerApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -474,7 +562,7 @@
         <rdfs:label>ireff</rdfs:label>
         <rdfs:label>irrigation_efficiency</rdfs:label>
         <rdfs:comment xml:lang="en">Irrigation application efficiency as fraction (0 to 1)</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#AutomaticIrrigation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -505,7 +593,7 @@
         <rdfs:label>hasiz</rdfs:label>
         <rdfs:label>harv_operat_size_categor</rdfs:label>
         <rdfs:comment xml:lang="en">Harvest operations size category</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Harvest"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#HarvestEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -547,16 +635,7 @@
         <rdfs:comment xml:lang="en">Unique soil identifier linking to SOIL_PROFILES</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Field"/>
         <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://http://purl.org/icasa#data_source -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#data_source">
-        <rdfs:label>data_source</rdfs:label>
-        <rdfs:label>data_source</rdfs:label>
-        <rdfs:comment xml:lang="en">Original format of  data (DSSAT, APSIM, CIMMYT, field log, etc)</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Experiment"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -566,7 +645,7 @@
         <rdfs:label>slbs</rdfs:label>
         <rdfs:label>soil_base_saturation</rdfs:label>
         <rdfs:comment xml:lang="en">Soil base saturation</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -576,7 +655,7 @@
         <rdfs:label>ecmax</rdfs:label>
         <rdfs:label>environ_mod_code_tmax</rdfs:label>
         <rdfs:comment xml:lang="en">Environmental modific.code, maximum temperature</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -586,7 +665,7 @@
         <rdfs:label>slll</rdfs:label>
         <rdfs:label>soil_water_lower_limit</rdfs:label>
         <rdfs:comment xml:lang="en">Soil water, lower limit</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -596,7 +675,7 @@
         <rdfs:label>feamk</rdfs:label>
         <rdfs:label>fertilizer_k_applied</rdfs:label>
         <rdfs:comment xml:lang="en">Potassium in applied fertilizer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Fertilizer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#FertilizerApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -606,7 +685,7 @@
         <rdfs:label>emday</rdfs:label>
         <rdfs:label>environ_modificat_day</rdfs:label>
         <rdfs:comment xml:lang="en">Environmental modifications date</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -631,12 +710,22 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
+    <!-- http://http://purl.org/icasa#fl_lat -->
+    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#fl_lat">
+        <rdfs:label>fl_lat</rdfs:label>
+        <rdfs:label>field_latitude</rdfs:label>
+        <rdfs:comment xml:lang="en">Field latitude</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#Field"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+
     <!-- http://http://purl.org/icasa#caco3 -->
     <owl:DatatypeProperty rdf:about="http://purl.org/icasa#caco3">
         <rdfs:label>caco3</rdfs:label>
         <rdfs:label>caco3_content</rdfs:label>
         <rdfs:comment xml:lang="en">Soil CaCO3 content</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -666,7 +755,7 @@
         <rdfs:label>irmdp</rdfs:label>
         <rdfs:label>auto_irrig_manag_depth</rdfs:label>
         <rdfs:comment xml:lang="en">Irrigation management, reference soil depth for automatic application</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#AutomaticIrrigation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -677,7 +766,9 @@
         <rdfs:label>mulch_level</rdfs:label>
         <rdfs:comment xml:lang="en">Mulch treatment level</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Mulch"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#MulchRemove"/>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Treatment"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#MulchAddition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -767,7 +858,7 @@
         <rdfs:label>slfinc</rdfs:label>
         <rdfs:label>soil_intermediate_c_fraction</rdfs:label>
         <rdfs:comment xml:lang="en">Intermediate soil organic carbon by layer, fraction of total organic C</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -777,7 +868,7 @@
         <rdfs:label>omcd</rdfs:label>
         <rdfs:label>organic_material</rdfs:label>
         <rdfs:comment xml:lang="en">Organic material, identifying code</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterial"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterialApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -905,16 +996,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#model_ver -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#model_ver">
-        <rdfs:label>model_ver</rdfs:label>
-        <rdfs:label>crop_model_version</rdfs:label>
-        <rdfs:comment xml:lang="en">Crop model version related to data upload</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Experiment"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
     <!-- http://http://purl.org/icasa#plmwt -->
     <owl:DatatypeProperty rdf:about="http://purl.org/icasa#plmwt">
         <rdfs:label>plmwt</rdfs:label>
@@ -950,7 +1031,7 @@
         <rdfs:label>emco2</rdfs:label>
         <rdfs:label>environ_modif_co2</rdfs:label>
         <rdfs:comment xml:lang="en">Environmental modification, CO2</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -980,7 +1061,7 @@
         <rdfs:label>slpa</rdfs:label>
         <rdfs:label>phosphorus_isotherm_a</rdfs:label>
         <rdfs:comment xml:lang="en">Phosphorus isotherm A</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1002,7 +1083,7 @@
         <rdfs:label>sldul</rdfs:label>
         <rdfs:label>soil_wat_drned_upper_lim</rdfs:label>
         <rdfs:comment xml:lang="en">Soil water, drained upper limit</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1062,7 +1143,7 @@
         <rdfs:label>ecdew</rdfs:label>
         <rdfs:label>environ_mod_code_dewpt</rdfs:label>
         <rdfs:comment xml:lang="en">Environmental modific.code, dewpoint</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1112,7 +1193,7 @@
         <rdfs:label>slsnd</rdfs:label>
         <rdfs:label>soil_sand_fraction</rdfs:label>
         <rdfs:comment xml:lang="en">Soil texture, sand (0.05 to 2.0 mm), weight percent of fine earth</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1142,7 +1223,7 @@
         <rdfs:label>sldrl</rdfs:label>
         <rdfs:label>layer_drainage_rate_per_day</rdfs:label>
         <rdfs:comment xml:lang="en">Drainage rate as fraction per day, per layer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1172,7 +1253,7 @@
         <rdfs:label>slcom</rdfs:label>
         <rdfs:label>soil_color_moist_munsell</rdfs:label>
         <rdfs:comment xml:lang="en">Soil color of moist soil using Munsell hue</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1182,7 +1263,7 @@
         <rdfs:label>slmn</rdfs:label>
         <rdfs:label>soil_manganese_conc</rdfs:label>
         <rdfs:comment xml:lang="en">Manganese</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1225,7 +1306,7 @@
         <rdfs:label>mlrday</rdfs:label>
         <rdfs:label>mulch_removal_day</rdfs:label>
         <rdfs:comment xml:lang="en">Mulch removal date as day of year</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Mulch"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#MulchRemove"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1236,6 +1317,7 @@
         <rdfs:label>fertilizer_level</rdfs:label>
         <rdfs:comment xml:lang="en">Fertilizer level in treatment structure</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Fertilizer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#FertilizerApplication"/>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Treatment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -1298,7 +1380,7 @@
         <rdfs:label>slpb</rdfs:label>
         <rdfs:label>phosphorus_iostherm_b</rdfs:label>
         <rdfs:comment xml:lang="en">Phosphorus iostherm B</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1308,7 +1390,7 @@
         <rdfs:label>iryr</rdfs:label>
         <rdfs:label>irrigation_year</rdfs:label>
         <rdfs:comment xml:lang="en">Irrigation or water management year</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#IrrigationApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1318,7 +1400,7 @@
         <rdfs:label>sno3</rdfs:label>
         <rdfs:label>nitrate_kcl</rdfs:label>
         <rdfs:comment xml:lang="en">Nitrate in soil based on KCl extraction, by layer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1338,7 +1420,7 @@
         <rdfs:label>slec</rdfs:label>
         <rdfs:label>electric_conductivity</rdfs:label>
         <rdfs:comment xml:lang="en">Electric conductivity</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1348,7 +1430,7 @@
         <rdfs:label>fedate</rdfs:label>
         <rdfs:label>fertilization_date</rdfs:label>
         <rdfs:comment xml:lang="en">Fertilization date</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Fertilizer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#FertilizerApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1378,7 +1460,7 @@
         <rdfs:label>slcec</rdfs:label>
         <rdfs:label>cation_exchange_capacity</rdfs:label>
         <rdfs:comment xml:lang="en">Cation exchange capacity</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1413,22 +1495,12 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#clim_id -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#clim_id">
-        <rdfs:label>clim_id</rdfs:label>
-        <rdfs:label>climate_scenario_id</rdfs:label>
-        <rdfs:comment xml:lang="en">Climate scenario identification code</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Weather"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
     <!-- http://http://purl.org/icasa#saphw -->
     <owl:DatatypeProperty rdf:about="http://purl.org/icasa#saphw">
         <rdfs:label>saphw</rdfs:label>
         <rdfs:label>ph_in_water</rdfs:label>
         <rdfs:comment xml:lang="en">pH of soil in water, from in-field sample</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysis"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysisLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1448,7 +1520,7 @@
         <rdfs:label>emdyl</rdfs:label>
         <rdfs:label>environ_modif_daylen</rdfs:label>
         <rdfs:comment xml:lang="en">Environmental modification, daylength</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1498,7 +1570,7 @@
         <rdfs:label>fecd_name</rdfs:label>
         <rdfs:label>fertiliz_app_name</rdfs:label>
         <rdfs:comment xml:lang="en">Name or notes for this fertilizer application</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Fertilizer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#FertilizerApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1508,7 +1580,7 @@
         <rdfs:label>emyr</rdfs:label>
         <rdfs:label>environ_modificat_year</rdfs:label>
         <rdfs:comment xml:lang="en">Environmental modifications year</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1523,11 +1595,11 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#eto -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#eto">
-        <rdfs:label>eto</rdfs:label>
-        <rdfs:label>evapotranspiration_reference</rdfs:label>
-        <rdfs:comment xml:lang="en">Evapotranspiration, reference</rdfs:comment>
+    <!-- http://http://purl.org/icasa#aco2 -->
+    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#aco2">
+        <rdfs:label>aco2</rdfs:label>
+        <rdfs:label>ambient_co2_conc</rdfs:label>
+        <rdfs:comment xml:lang="en">CO2, ambient</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/icasa#DailyWeather"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -1578,6 +1650,7 @@
         <rdfs:label>ic</rdfs:label>
         <rdfs:label>initial_conditions_level</rdfs:label>
         <rdfs:comment xml:lang="en">Initial conditions level, link</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#InitialConditionSoilLayer"/>
         <rdfs:domain rdf:resource="http://purl.org/icasa#InitialCondition"/>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Treatment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -1599,7 +1672,7 @@
         <rdfs:label>sloc</rdfs:label>
         <rdfs:label>soil_organic_c_perc_layr</rdfs:label>
         <rdfs:comment xml:lang="en">Total soil organic carbon by layer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1609,7 +1682,7 @@
         <rdfs:label>icn_tot</rdfs:label>
         <rdfs:label>initial_ntot_layer</rdfs:label>
         <rdfs:comment xml:lang="en">Initial inorganic N amount, by layer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#InitialCondition"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#InitialConditionSoilLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1649,9 +1722,9 @@
         <rdfs:label>sllb</rdfs:label>
         <rdfs:label>soil_layer_base_depth</rdfs:label>
         <rdfs:comment xml:lang="en">Soil layer base depth</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#InitialCondition"/>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysis"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#InitialConditionSoilLayer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysisLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1671,7 +1744,7 @@
         <rdfs:label>haht</rdfs:label>
         <rdfs:label>harvest_cut_height</rdfs:label>
         <rdfs:comment xml:lang="en">Harvest, height of cut</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Harvest"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#HarvestEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1691,7 +1764,7 @@
         <rdfs:label>irthr</rdfs:label>
         <rdfs:label>autoirrig_threshold_h2o</rdfs:label>
         <rdfs:comment xml:lang="en">Irrigation threshold water content for automatic application</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#AutomaticIrrigation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1721,7 +1794,7 @@
         <rdfs:label>slmh</rdfs:label>
         <rdfs:label>master_horizon</rdfs:label>
         <rdfs:comment xml:lang="en">Master horizon</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1771,7 +1844,7 @@
         <rdfs:label>slwp</rdfs:label>
         <rdfs:label>soil_water_wilting_pt</rdfs:label>
         <rdfs:comment xml:lang="en">Soil water content (wilting point) at 15 atmosphere pressure </rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1801,7 +1874,7 @@
         <rdfs:label>icsc</rdfs:label>
         <rdfs:label>initial_soil_stable_c</rdfs:label>
         <rdfs:comment xml:lang="en">Stable organic carbon by layer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#InitialCondition"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#InitialConditionSoilLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1831,7 +1904,7 @@
         <rdfs:label>tiday</rdfs:label>
         <rdfs:label>tillage_operations_day</rdfs:label>
         <rdfs:comment xml:lang="en">Tillage operations day</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Tillage"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#TillageEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1861,7 +1934,7 @@
         <rdfs:label>ich2o</rdfs:label>
         <rdfs:label>initial_watr_conc_by_lyr</rdfs:label>
         <rdfs:comment xml:lang="en">Initial water concentration by layer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#InitialCondition"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#InitialConditionSoilLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1901,7 +1974,7 @@
         <rdfs:label>mlryr</rdfs:label>
         <rdfs:label>mulch_removal_year</rdfs:label>
         <rdfs:comment xml:lang="en">Mulch removal year</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Mulch"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#MulchRemove"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1931,7 +2004,7 @@
         <rdfs:label>slbdm</rdfs:label>
         <rdfs:label>soil_bulk_density_moist</rdfs:label>
         <rdfs:comment xml:lang="en">Soil bulk density when moist for layer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1942,16 +2015,6 @@
         <rdfs:label>crop_ident_icasa</rdfs:label>
         <rdfs:comment xml:lang="en">Crop (or weed) species identifier</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Genotype"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://http://purl.org/icasa#drainage -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#drainage">
-        <rdfs:label>drainage</rdfs:label>
-        <rdfs:label>soil_drainage_class</rdfs:label>
-        <rdfs:comment xml:lang="en">Soil profile drainage class</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -1996,16 +2059,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#rating_mgmt -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#rating_mgmt">
-        <rdfs:label>rating_mgmt</rdfs:label>
-        <rdfs:label>agmip_rating_mgmt</rdfs:label>
-        <rdfs:comment xml:lang="en">AgMIP sentinel site rating for management data</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Experiment"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
     <!-- http://http://purl.org/icasa#op -->
     <owl:DatatypeProperty rdf:about="http://purl.org/icasa#op">
         <rdfs:label>op</rdfs:label>
@@ -2021,7 +2074,7 @@
         <rdfs:label>hastg</rdfs:label>
         <rdfs:label>harvest_stage</rdfs:label>
         <rdfs:comment xml:lang="en">Harvest, growth stage of crop at date</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Harvest"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#HarvestEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2031,7 +2084,7 @@
         <rdfs:label>ecrai</rdfs:label>
         <rdfs:label>environ_modif_code_rain</rdfs:label>
         <rdfs:comment xml:lang="en">Environmental modific.code, rain</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2041,7 +2094,7 @@
         <rdfs:label>mlayr</rdfs:label>
         <rdfs:label>mulch_applic_year</rdfs:label>
         <rdfs:comment xml:lang="en">Mulch application year</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Mulch"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#MulchAddition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2051,7 +2104,7 @@
         <rdfs:label>ecwnd</rdfs:label>
         <rdfs:label>environ_modif_code_wind</rdfs:label>
         <rdfs:comment xml:lang="en">Environmental modific.code, wind</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2146,16 +2199,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#rotational_analysis -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#rotational_analysis">
-        <rdfs:label>rotational_analysis</rdfs:label>
-        <rdfs:label>rotational_analysis</rdfs:label>
-        <rdfs:comment xml:lang="en">Name of rotational analysis DOME</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Simulation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
     <!-- http://http://purl.org/icasa#fep_no -->
     <owl:DatatypeProperty rdf:about="http://purl.org/icasa#fep_no">
         <rdfs:label>fep_no</rdfs:label>
@@ -2181,7 +2224,7 @@
         <rdfs:label>fecd</rdfs:label>
         <rdfs:label>fertilizer_material</rdfs:label>
         <rdfs:comment xml:lang="en">Fertilizer material</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Fertilizer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#FertilizerApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2283,7 +2326,7 @@
         <rdfs:label>irday</rdfs:label>
         <rdfs:label>irrigation_day</rdfs:label>
         <rdfs:comment xml:lang="en">Irrigation day</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#IrrigationApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2293,7 +2336,7 @@
         <rdfs:label>slfc2</rdfs:label>
         <rdfs:label>soil_water_field_cap_2</rdfs:label>
         <rdfs:comment xml:lang="en">Soil water content at 1/10 atmospheric pressure</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2303,7 +2346,7 @@
         <rdfs:label>slfc1</rdfs:label>
         <rdfs:label>soil_water_field_cap_1</rdfs:label>
         <rdfs:comment xml:lang="en">Soil water content at 1/3 atmosphere pressure</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2325,6 +2368,7 @@
         <rdfs:comment xml:lang="en">Irrigation level, links to IRRIGATIONS table</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Treatment"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#IrrigationApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2384,8 +2428,8 @@
         <rdfs:label>slke</rdfs:label>
         <rdfs:label>potassium_exchangeable</rdfs:label>
         <rdfs:comment xml:lang="en">Potassium, exchangeable</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysis"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysisLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2405,7 +2449,7 @@
         <rdfs:label>chday</rdfs:label>
         <rdfs:label>chemical_applic_day</rdfs:label>
         <rdfs:comment xml:lang="en">Chemicals application day of year or DAP if year = -99</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Chemical"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#ChemicalApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2437,7 +2481,7 @@
         <rdfs:label>omdep</rdfs:label>
         <rdfs:label>org_material_appl_depth</rdfs:label>
         <rdfs:comment xml:lang="en">Organic materials application depth</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterial"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterialApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2477,7 +2521,7 @@
         <rdfs:label>feno3</rdfs:label>
         <rdfs:label>no3_applied_fertilizer</rdfs:label>
         <rdfs:comment xml:lang="en">Nitrate applied fertilizer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Fertilizer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#FertilizerApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2487,7 +2531,7 @@
         <rdfs:label>mltp</rdfs:label>
         <rdfs:label>mulch_type</rdfs:label>
         <rdfs:comment xml:lang="en">Mulch type by codes for soild polythelene sheet, net, etc. </rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Mulch"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#MulchAddition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2507,7 +2551,7 @@
         <rdfs:label>emmin</rdfs:label>
         <rdfs:label>environ_modif_min_temp</rdfs:label>
         <rdfs:comment xml:lang="en">Environmental modification, minimum temperature</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2547,16 +2591,16 @@
         <rdfs:label>slfsc</rdfs:label>
         <rdfs:label>soil_stable_c_fraction</rdfs:label>
         <rdfs:comment xml:lang="en">Stable organic carbon by layer, fraction of total organic C</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#rating_wth -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#rating_wth">
-        <rdfs:label>rating_wth</rdfs:label>
-        <rdfs:label>agmip_rating_weather</rdfs:label>
-        <rdfs:comment xml:lang="en">AgMIP sentinel site rating for weather data</rdfs:comment>
+    <!-- http://http://purl.org/icasa#version -->
+    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#version">
+        <rdfs:label>version</rdfs:label>
+        <rdfs:label>file_version</rdfs:label>
+        <rdfs:comment xml:lang="en">File version for ICASA standard</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Experiment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -2567,7 +2611,7 @@
         <rdfs:label>chcd</rdfs:label>
         <rdfs:label>chemical_applic_material</rdfs:label>
         <rdfs:comment xml:lang="en">Chemicals application material</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Chemical"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#ChemicalApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2577,7 +2621,7 @@
         <rdfs:label>omamt</rdfs:label>
         <rdfs:label>org_material_applic_amnt</rdfs:label>
         <rdfs:comment xml:lang="en">Organic materials application amount, dry weight basis</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterial"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterialApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2617,7 +2661,7 @@
         <rdfs:label>ecdyl</rdfs:label>
         <rdfs:label>environ_mod_code_daylen</rdfs:label>
         <rdfs:comment xml:lang="en">Environmental modific.code, daylength</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2639,6 +2683,7 @@
         <rdfs:comment xml:lang="en">Harvest operations level, links to HARVEST table</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Harvest"/>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Treatment"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#HarvestEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2698,17 +2743,17 @@
         <rdfs:label>cdate</rdfs:label>
         <rdfs:label>chemical_applic_date</rdfs:label>
         <rdfs:comment xml:lang="en">Chemicals application date</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Chemical"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#ChemicalApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#sdat -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#sdat">
-        <rdfs:label>sdat</rdfs:label>
-        <rdfs:label>simulation_start_date</rdfs:label>
-        <rdfs:comment xml:lang="en">Simulation start date</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SimulationControl"/>
+    <!-- http://http://purl.org/icasa#nplsb -->
+    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#nplsb">
+        <rdfs:label>nplsb</rdfs:label>
+        <rdfs:label>seedbed_density</rdfs:label>
+        <rdfs:comment xml:lang="en">Planting density in nursery seed bed</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#Planting"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2728,7 +2773,7 @@
         <rdfs:label>irept</rdfs:label>
         <rdfs:label>autoirrigation_end_h2o</rdfs:label>
         <rdfs:comment xml:lang="en">Irrigation, ending % avail, automatic application</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#AutomaticIrrigation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2842,7 +2887,7 @@
         <rdfs:label>ti_op_name</rdfs:label>
         <rdfs:label>tillage_operation_name</rdfs:label>
         <rdfs:comment xml:lang="en">Tillage operations, name of specific event</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Tillage"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#TillageEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2915,7 +2960,7 @@
         <rdfs:label>harea</rdfs:label>
         <rdfs:label>harvest_area</rdfs:label>
         <rdfs:comment xml:lang="en">Harvest area</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Harvest"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#HarvestEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -2925,17 +2970,7 @@
         <rdfs:label>slic</rdfs:label>
         <rdfs:label>soil_inert_c</rdfs:label>
         <rdfs:comment xml:lang="en">Inert organic carbon by layer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://http://purl.org/icasa#agmip_date -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#agmip_date">
-        <rdfs:label>agmip_date</rdfs:label>
-        <rdfs:label>agmip_date_rated</rdfs:label>
-        <rdfs:comment xml:lang="en">Date of AgMIP rating</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Experiment"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3015,7 +3050,7 @@
         <rdfs:label>sani</rdfs:label>
         <rdfs:label>soil_n_conc_total</rdfs:label>
         <rdfs:comment xml:lang="en">Nitrogen, total soil, total</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysis"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysisLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3025,7 +3060,7 @@
         <rdfs:label>emrai</rdfs:label>
         <rdfs:label>environ_modif_rain</rdfs:label>
         <rdfs:comment xml:lang="en">Environmental modification,rain</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3036,16 +3071,6 @@
         <rdfs:label>fert_#_tot</rdfs:label>
         <rdfs:comment xml:lang="en">Total number of fertilizer applications over season</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Fertilizer"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://http://purl.org/icasa#seasonal_strategy -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#seasonal_strategy">
-        <rdfs:label>seasonal_strategy</rdfs:label>
-        <rdfs:label>seasonal_strategy</rdfs:label>
-        <rdfs:comment xml:lang="en">Name of seasonal strategy DOME</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Simulation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3120,12 +3145,12 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#wst_dist -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#wst_dist">
-        <rdfs:label>wst_dist</rdfs:label>
-        <rdfs:label>wsta_distance</rdfs:label>
-        <rdfs:comment xml:lang="en">Distance from weather station to field (m)</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Field"/>
+    <!-- http://http://purl.org/icasa#mladat -->
+    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#mladat">
+        <rdfs:label>mladat</rdfs:label>
+        <rdfs:label>mulch_applic_date</rdfs:label>
+        <rdfs:comment xml:lang="en">Mulch application date</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#MulchAddition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3150,22 +3175,33 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
+    <!-- http://http://purl.org/icasa#ch_targets -->
+    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#ch_targets">
+        <rdfs:label>ch_targets</rdfs:label>
+        <rdfs:label>chemical_applic_target</rdfs:label>
+        <rdfs:comment xml:lang="en">Chemicals application target</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#ChemicalApplication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+
     <!-- http://http://purl.org/icasa#abund -->
     <owl:DatatypeProperty rdf:about="http://purl.org/icasa#abund">
         <rdfs:label>abund</rdfs:label>
         <rdfs:label>bund_height</rdfs:label>
         <rdfs:comment xml:lang="en">Bund height (e.g., for flooded rice)</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#IrrigationApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#fl_lat -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#fl_lat">
-        <rdfs:label>fl_lat</rdfs:label>
-        <rdfs:label>field_latitude</rdfs:label>
-        <rdfs:comment xml:lang="en">Field latitude</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Field"/>
+    <!-- http://http://purl.org/icasa#slpx -->
+    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#slpx">
+        <rdfs:label>slpx</rdfs:label>
+        <rdfs:label>phosphorus_extractable</rdfs:label>
+        <rdfs:comment xml:lang="en">Phosphorus, extractable</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysisLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3175,7 +3211,7 @@
         <rdfs:label>emrad</rdfs:label>
         <rdfs:label>environ_modif_solar_rad</rdfs:label>
         <rdfs:comment xml:lang="en">Environmental modification,radiation</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3185,7 +3221,7 @@
         <rdfs:label>sksat</rdfs:label>
         <rdfs:label>sat_hydraul_conductivity</rdfs:label>
         <rdfs:comment xml:lang="en">Saturated hydraulic conductivity</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3195,7 +3231,7 @@
         <rdfs:label>feamc</rdfs:label>
         <rdfs:label>ca_in_applied_fertilizer</rdfs:label>
         <rdfs:comment xml:lang="en">Ca in applied fertilizer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Fertilizer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#FertilizerApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3225,7 +3261,7 @@
         <rdfs:label>tiimp</rdfs:label>
         <rdfs:label>tillage_implement</rdfs:label>
         <rdfs:comment xml:lang="en">Tillage implement</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Tillage"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#TillageEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3235,7 +3271,7 @@
         <rdfs:label>idate</rdfs:label>
         <rdfs:label>irrigation_date</rdfs:label>
         <rdfs:comment xml:lang="en">Irrigation date</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#IrrigationApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3280,22 +3316,12 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#rating_soil -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#rating_soil">
-        <rdfs:label>rating_soil</rdfs:label>
-        <rdfs:label>agmip_rating_soils</rdfs:label>
-        <rdfs:comment xml:lang="en">AgMIP sentinel site rating for soil data</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Experiment"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
     <!-- http://http://purl.org/icasa#snh4 -->
     <owl:DatatypeProperty rdf:about="http://purl.org/icasa#snh4">
         <rdfs:label>snh4</rdfs:label>
         <rdfs:label>nh4soil_kcl</rdfs:label>
         <rdfs:comment xml:lang="en">NH4 in soil based on KCl extraction, by layer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3305,7 +3331,7 @@
         <rdfs:label>slcf</rdfs:label>
         <rdfs:label>soil_coarse_fraction</rdfs:label>
         <rdfs:comment xml:lang="en">Soil texture, coarse fraction (&gt;2 mm), weight percent of fine earth</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3335,7 +3361,7 @@
         <rdfs:label>omkpc</rdfs:label>
         <rdfs:label>organic_material_k_conc</rdfs:label>
         <rdfs:comment xml:lang="en">Organic materials potasium concentration</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterial"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterialApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3355,7 +3381,7 @@
         <rdfs:label>chyr</rdfs:label>
         <rdfs:label>chemical_applic_year</rdfs:label>
         <rdfs:comment xml:lang="en">Chemicals application year</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Chemical"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#ChemicalApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3377,17 +3403,7 @@
         <rdfs:label>slcly</rdfs:label>
         <rdfs:label>soil_clay_fraction</rdfs:label>
         <rdfs:comment xml:lang="en">Soil texture, clay (&lt;0.002 mm), weight percent of fine earth</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://http://purl.org/icasa#agmip_rater -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#agmip_rater">
-        <rdfs:label>agmip_rater</rdfs:label>
-        <rdfs:label>agmip_rater</rdfs:label>
-        <rdfs:comment xml:lang="en">Initials of person assigning AgMIP rating</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Experiment"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3397,7 +3413,7 @@
         <rdfs:label>hacr</rdfs:label>
         <rdfs:label>harvest_crop</rdfs:label>
         <rdfs:comment xml:lang="en">Harvest operations, crop harvested</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Harvest"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#HarvestEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3447,7 +3463,7 @@
         <rdfs:label>omdat</rdfs:label>
         <rdfs:label>org_material_applic_date</rdfs:label>
         <rdfs:comment xml:lang="en">Organic materials application date</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterial"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterialApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3457,7 +3473,7 @@
         <rdfs:label>irstg</rdfs:label>
         <rdfs:label>auto_irrig_growth_stg</rdfs:label>
         <rdfs:comment xml:lang="en">Irrigation, growth stage, automatic appn</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#AutomaticIrrigation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3487,7 +3503,7 @@
         <rdfs:label>happc</rdfs:label>
         <rdfs:label>harv_operat_main_product</rdfs:label>
         <rdfs:comment xml:lang="en">Harvest operations, percent economic product harvested</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Harvest"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#HarvestEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3518,6 +3534,7 @@
         <rdfs:label>soil_profile_id</rdfs:label>
         <rdfs:comment xml:lang="en">Soil profile identifier</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3547,7 +3564,7 @@
         <rdfs:label>irval</rdfs:label>
         <rdfs:label>irrig_amount_depth</rdfs:label>
         <rdfs:comment xml:lang="en">Irrigation amount, depth of water</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#IrrigationApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3567,7 +3584,7 @@
         <rdfs:label>slpt</rdfs:label>
         <rdfs:label>phosphorus_total</rdfs:label>
         <rdfs:comment xml:lang="en">Phosphorus, total</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3577,8 +3594,8 @@
         <rdfs:label>slsc</rdfs:label>
         <rdfs:label>soil_stable_c</rdfs:label>
         <rdfs:comment xml:lang="en">Stable organic carbon by layer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysis"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysisLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3598,6 +3615,7 @@
         <rdfs:label>ti</rdfs:label>
         <rdfs:label>tillage_level</rdfs:label>
         <rdfs:comment xml:lang="en">Tillage operation level</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#TillageEvent"/>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Treatment"/>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Tillage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -3609,17 +3627,7 @@
         <rdfs:label>chamt</rdfs:label>
         <rdfs:label>chemical_applic_amount</rdfs:label>
         <rdfs:comment xml:lang="en">Chemicals application amount (active)</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Chemical"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://http://purl.org/icasa#em_name -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#em_name">
-        <rdfs:label>em_name</rdfs:label>
-        <rdfs:label>environ_modif_name</rdfs:label>
-        <rdfs:comment xml:lang="en">Environmental modifications level name</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#ChemicalApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3629,7 +3637,7 @@
         <rdfs:label>slres</rdfs:label>
         <rdfs:label>soil_water_residual</rdfs:label>
         <rdfs:comment xml:lang="en">Soil water, residual</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3639,19 +3647,9 @@
         <rdfs:label>sllt</rdfs:label>
         <rdfs:label>soil_layer_top_depth</rdfs:label>
         <rdfs:comment xml:lang="en">Soil layer top depth</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#InitialCondition"/>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysis"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://http://purl.org/icasa#rating_obs -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#rating_obs">
-        <rdfs:label>rating_obs</rdfs:label>
-        <rdfs:label>agmip_rating_observations</rdfs:label>
-        <rdfs:comment xml:lang="en">AgMIP sentinel site rating for observed data</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Experiment"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#InitialConditionSoilLayer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysisLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3671,7 +3669,7 @@
         <rdfs:label>haday</rdfs:label>
         <rdfs:label>harvest_operations_day</rdfs:label>
         <rdfs:comment xml:lang="en">Harvest operations day, DAP if year = -99</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Harvest"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#HarvestEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3681,7 +3679,7 @@
         <rdfs:label>chacd</rdfs:label>
         <rdfs:label>chemical_applic_method</rdfs:label>
         <rdfs:comment xml:lang="en">Chemicals application method</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Chemical"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#ChemicalApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3701,7 +3699,7 @@
         <rdfs:label>fenh4</rdfs:label>
         <rdfs:label>nh4_applied_fertilizer</rdfs:label>
         <rdfs:comment xml:lang="en">Ammonium in applied fertilizer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Fertilizer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#FertilizerApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3771,7 +3769,7 @@
         <rdfs:label>icnh4</rdfs:label>
         <rdfs:label>initial_nh4_concen_layer</rdfs:label>
         <rdfs:comment xml:lang="en">Initial NH4 conc., as elemental N on dry wt. basis, by layer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#InitialCondition"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#InitialConditionSoilLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3781,7 +3779,7 @@
         <rdfs:label>slfe</rdfs:label>
         <rdfs:label>iron</rdfs:label>
         <rdfs:comment xml:lang="en">Iron</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3791,7 +3789,7 @@
         <rdfs:label>omnpc</rdfs:label>
         <rdfs:label>organic_material_n_conc</rdfs:label>
         <rdfs:comment xml:lang="en">Organic materials nitrogen concentration</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterial"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterialApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3821,7 +3819,7 @@
         <rdfs:label>icslt</rdfs:label>
         <rdfs:label>initial_soil_temperature</rdfs:label>
         <rdfs:comment xml:lang="en">Initial soil temperature</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#InitialCondition"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#InitialConditionSoilLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3831,17 +3829,17 @@
         <rdfs:label>slfic</rdfs:label>
         <rdfs:label>soil_inert_c_fraction</rdfs:label>
         <rdfs:comment xml:lang="en">Inert organic carbon by layer, fraction of total organic C</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#sl_source -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#sl_source">
-        <rdfs:label>sl_source</rdfs:label>
-        <rdfs:label>soil_source</rdfs:label>
-        <rdfs:comment xml:lang="en">Source of soil data</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+    <!-- http://http://purl.org/icasa#suiteid -->
+    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#suiteid">
+        <rdfs:label>suiteid</rdfs:label>
+        <rdfs:label>suite_id</rdfs:label>
+        <rdfs:comment xml:lang="en">Suite identifiers</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#Suite"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3886,21 +3884,12 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#field_overlay -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#field_overlay">
-        <rdfs:label>field_overlay</rdfs:label>
-        <rdfs:label>fileld_overlay</rdfs:label>
-        <rdfs:comment xml:lang="en">Name of field overlay DOME</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Simulation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
     <!-- http://http://purl.org/icasa#sa -->
     <owl:DatatypeProperty rdf:about="http://purl.org/icasa#sa">
         <rdfs:label>sa</rdfs:label>
         <rdfs:label>soil_analysis_level</rdfs:label>
         <rdfs:comment xml:lang="en">Soil analysis, treatment level identifier linkage </rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysisLayer"/>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Treatment"/>
         <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysis"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -3912,7 +3901,7 @@
         <rdfs:label>mlcol</rdfs:label>
         <rdfs:label>mulch_color</rdfs:label>
         <rdfs:comment xml:lang="en">Mulch color </rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Mulch"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#MulchAddition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3922,7 +3911,7 @@
         <rdfs:label>irop_name</rdfs:label>
         <rdfs:label>irrigation_operation_name</rdfs:label>
         <rdfs:comment xml:lang="en">Name of irrigation operation or specific notes about this application</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#IrrigationApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3932,17 +3921,7 @@
         <rdfs:label>sladr</rdfs:label>
         <rdfs:label>soil_water_air_dry</rdfs:label>
         <rdfs:comment xml:lang="en">Soil water content, air dry</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://http://purl.org/icasa#suiteid -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#suiteid">
-        <rdfs:label>suiteid</rdfs:label>
-        <rdfs:label>suite_id</rdfs:label>
-        <rdfs:comment xml:lang="en">Suite identifiers</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Suite"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -3962,7 +3941,7 @@
         <rdfs:label>emdate</rdfs:label>
         <rdfs:label>environ_modificat_date</rdfs:label>
         <rdfs:comment xml:lang="en">Environmental modifications date</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4004,17 +3983,7 @@
         <rdfs:label>omlpc</rdfs:label>
         <rdfs:label>org_material_lignin_conc</rdfs:label>
         <rdfs:comment xml:lang="en">Organic materials lignin concentration</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterial"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://http://purl.org/icasa#agmip_rating -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#agmip_rating">
-        <rdfs:label>agmip_rating</rdfs:label>
-        <rdfs:label>agmip_rating</rdfs:label>
-        <rdfs:comment xml:lang="en">AgMIP sentinel site rating (gold, silver, etc.)</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Experiment"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterialApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4054,7 +4023,7 @@
         <rdfs:label>feocd</rdfs:label>
         <rdfs:label>fertiliz_code_other_elem</rdfs:label>
         <rdfs:comment xml:lang="en">Fertilizer code for other elements (e.g., Mg for magnesium)</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Fertilizer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#FertilizerApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4065,16 +4034,6 @@
         <rdfs:label>nodule_wt_previous_crop</rdfs:label>
         <rdfs:comment xml:lang="en">Nodule weight from previous crop</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/icasa#InitialCondition"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://http://purl.org/icasa#user_id -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#user_id">
-        <rdfs:label>user_id</rdfs:label>
-        <rdfs:label>user_id</rdfs:label>
-        <rdfs:comment xml:lang="en">id of user who uploaded data (typically email address)</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Experiment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4104,7 +4063,7 @@
         <rdfs:label>ecco2</rdfs:label>
         <rdfs:label>environ_modif_code_co2</rdfs:label>
         <rdfs:comment xml:lang="en">Environmental modific.code, CO2</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4125,7 +4084,7 @@
         <rdfs:label>slmg</rdfs:label>
         <rdfs:label>soil_magnesium_conc</rdfs:label>
         <rdfs:comment xml:lang="en">Magnesium</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4165,7 +4124,7 @@
         <rdfs:label>omcpc</rdfs:label>
         <rdfs:label>org_matter_carbon_conc</rdfs:label>
         <rdfs:comment xml:lang="en">Organic matter or residue added, carbon concentration</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterial"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterialApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4175,7 +4134,7 @@
         <rdfs:label>feday</rdfs:label>
         <rdfs:label>fertilizer_applic_day</rdfs:label>
         <rdfs:comment xml:lang="en">Fertilizer application day</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Fertilizer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#FertilizerApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4195,17 +4154,7 @@
         <rdfs:label>irop</rdfs:label>
         <rdfs:label>irrigation_operation</rdfs:label>
         <rdfs:comment xml:lang="en">Irrigation operation (e.g., furrow, sprinkler, drip…)</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://http://purl.org/icasa#dome_applied -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#dome_applied">
-        <rdfs:label>dome_applied</rdfs:label>
-        <rdfs:label>dome_applied</rdfs:label>
-        <rdfs:comment xml:lang="en">Logical indicating whether a DOME was applied</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Simulation"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#IrrigationApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4215,7 +4164,7 @@
         <rdfs:label>hadat</rdfs:label>
         <rdfs:label>harvest_operations_date</rdfs:label>
         <rdfs:comment xml:lang="en">Harvest operations date, DAP if year = -99</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Harvest"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#HarvestEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4230,32 +4179,12 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#sl_notes -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#sl_notes">
-        <rdfs:label>sl_notes</rdfs:label>
-        <rdfs:label>soil_notes</rdfs:label>
-        <rdfs:comment xml:lang="en">Notes describing soil dataset</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Soil"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
     <!-- http://http://purl.org/icasa#mltpr -->
     <owl:DatatypeProperty rdf:about="http://purl.org/icasa#mltpr">
         <rdfs:label>mltpr</rdfs:label>
         <rdfs:label>mulch_type_remove</rdfs:label>
         <rdfs:comment xml:lang="en">Mulch type removed by codes for soild polythelene sheet, net, etc. </rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Mulch"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://http://purl.org/icasa#ex_license -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#ex_license">
-        <rdfs:label>ex_license</rdfs:label>
-        <rdfs:label>experiment_license</rdfs:label>
-        <rdfs:comment xml:lang="en">License associated with experiment</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Experiment"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#MulchRemove"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4286,7 +4215,7 @@
         <rdfs:label>habpc</rdfs:label>
         <rdfs:label>harv_operation_byproduct</rdfs:label>
         <rdfs:comment xml:lang="en">Harvest operations, percent of by-product harvested</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Harvest"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#HarvestEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4316,7 +4245,7 @@
         <rdfs:label>slsil</rdfs:label>
         <rdfs:label>soil_silt_fraction</rdfs:label>
         <rdfs:comment xml:lang="en">Soil texture, silt (0.05 to 0.002 mm), weight percent of fine earth</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4326,7 +4255,7 @@
         <rdfs:label>apsim_kl</rdfs:label>
         <rdfs:label>plant_root_uptake_factor</rdfs:label>
         <rdfs:comment xml:lang="en">APSIM plant specific water uptake coefficient</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4346,7 +4275,7 @@
         <rdfs:label>iradp</rdfs:label>
         <rdfs:label>irrigation_applic_depth</rdfs:label>
         <rdfs:comment xml:lang="en">Irrigation application depth (e.g., for depth to drip line)</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#IrrigationApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4376,7 +4305,7 @@
         <rdfs:label>chdep</rdfs:label>
         <rdfs:label>application_depth_chem</rdfs:label>
         <rdfs:comment xml:lang="en">Chemicals application depth</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Chemical"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#ChemicalApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4396,7 +4325,7 @@
         <rdfs:label>omc2n</rdfs:label>
         <rdfs:label>org_material_c_to_n</rdfs:label>
         <rdfs:comment xml:lang="en">Organic materials C:N ratio</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterial"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterialApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4406,7 +4335,7 @@
         <rdfs:label>omyr</rdfs:label>
         <rdfs:label>org_materials_applic_yr</rdfs:label>
         <rdfs:comment xml:lang="en">Organic materials application year</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterial"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterialApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4466,7 +4395,7 @@
         <rdfs:label>ecmin</rdfs:label>
         <rdfs:label>environ_mod_code_tmin</rdfs:label>
         <rdfs:comment xml:lang="en">Environmental modific.code, minimum temperature</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4507,19 +4436,29 @@
         <rdfs:label>id</rdfs:label>
         <rdfs:comment xml:lang="en">id</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Planting"/>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterialApplication"/>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Genotype"/>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SimulationControl"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#ChemicalApplication"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#InitialConditionSoilLayer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#Chemical"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#FertilizerApplication"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#Tillage"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Mulch"/>
         <rdfs:domain rdf:resource="http://purl.org/icasa#InitialCondition"/>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysis"/>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Chemical"/>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Field"/>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterial"/>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Tillage"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SimulationControl"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysisLayer"/>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Fertilizer"/>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Harvest"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#HarvestEvent"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterial"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#MulchAddition"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#Field"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysis"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#IrrigationApplication"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#TillageEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4549,7 +4488,7 @@
         <rdfs:label>sabdm</rdfs:label>
         <rdfs:label>soil_bulk_dens_moist</rdfs:label>
         <rdfs:comment xml:lang="en">Soil bulk density, moist, determined on field sample</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysis"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysisLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4559,7 +4498,7 @@
         <rdfs:label>tdate</rdfs:label>
         <rdfs:label>tillage_date</rdfs:label>
         <rdfs:comment xml:lang="en">Tillage date</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Tillage"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#TillageEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4569,7 +4508,7 @@
         <rdfs:label>icno3</rdfs:label>
         <rdfs:label>initial_no3_concen_layer</rdfs:label>
         <rdfs:comment xml:lang="en">Initial NO3 conc., as elemental N on dry wt. basis, by layer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#InitialCondition"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#InitialConditionSoilLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4620,7 +4559,7 @@
         <rdfs:label>vg_alpha</rdfs:label>
         <rdfs:label>van_genuch_alpha</rdfs:label>
         <rdfs:comment xml:lang="en">Van Genuchten alpha parameter</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4630,7 +4569,7 @@
         <rdfs:label>mlcov</rdfs:label>
         <rdfs:label>mulch_cover_fraction</rdfs:label>
         <rdfs:comment xml:lang="en">Fraction of surface covered by mulch</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Mulch"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#MulchAddition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4650,7 +4589,7 @@
         <rdfs:label>saphb</rdfs:label>
         <rdfs:label>ph_in_buffer</rdfs:label>
         <rdfs:comment xml:lang="en">pH of soil measured in buffer solution, from in-field sample</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysis"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysisLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4660,7 +4599,7 @@
         <rdfs:label>slpo</rdfs:label>
         <rdfs:label>phosphorus_organic</rdfs:label>
         <rdfs:comment xml:lang="en">Phosphorus, organic</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4710,7 +4649,7 @@
         <rdfs:label>omh2o</rdfs:label>
         <rdfs:label>org_matter_moisture_conc</rdfs:label>
         <rdfs:comment xml:lang="en">Organic matter or residue added, moisture concentration</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterial"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterialApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4730,7 +4669,7 @@
         <rdfs:label>tiyr</rdfs:label>
         <rdfs:label>tillage_operations_year</rdfs:label>
         <rdfs:comment xml:lang="en">Tillage operations year</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Tillage"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#TillageEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4740,7 +4679,7 @@
         <rdfs:label>mlthk</rdfs:label>
         <rdfs:label>mulch_thickness</rdfs:label>
         <rdfs:comment xml:lang="en">Mulch thickness </rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Mulch"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#MulchAddition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4775,13 +4714,12 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#slpx -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#slpx">
-        <rdfs:label>slpx</rdfs:label>
-        <rdfs:label>phosphorus_extractable</rdfs:label>
-        <rdfs:comment xml:lang="en">Phosphorus, extractable</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysis"/>
+    <!-- http://http://purl.org/icasa#sl_notes -->
+    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#sl_notes">
+        <rdfs:label>sl_notes</rdfs:label>
+        <rdfs:label>soil_notes</rdfs:label>
+        <rdfs:comment xml:lang="en">Notes describing soil dataset</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#Soil"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4801,7 +4739,7 @@
         <rdfs:label>harm</rdfs:label>
         <rdfs:label>harvest_method</rdfs:label>
         <rdfs:comment xml:lang="en">Harvest method</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Harvest"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#HarvestEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4831,7 +4769,7 @@
         <rdfs:label>iame</rdfs:label>
         <rdfs:label>method_auto_applications</rdfs:label>
         <rdfs:comment xml:lang="en">Method for automatic applications</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#AutomaticIrrigation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4851,7 +4789,7 @@
         <rdfs:label>slni</rdfs:label>
         <rdfs:label>soil_organic_n_conc</rdfs:label>
         <rdfs:comment xml:lang="en">Nitrogen, total soil organic</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4921,7 +4859,7 @@
         <rdfs:label>feamo</rdfs:label>
         <rdfs:label>other_elements_appl_fert</rdfs:label>
         <rdfs:comment xml:lang="en">Other elements in applied fertilizer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Fertilizer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#FertilizerApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -4951,7 +4889,7 @@
         <rdfs:label>omcov</rdfs:label>
         <rdfs:label>org_material_cover</rdfs:label>
         <rdfs:comment xml:lang="en">Organic materials, percent ground covered by organic matter</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterial"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterialApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5022,7 +4960,7 @@
         <rdfs:label>mlady</rdfs:label>
         <rdfs:label>mulch_applic_day</rdfs:label>
         <rdfs:comment xml:lang="en">Mulch application date as day of year</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Mulch"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#MulchAddition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5042,7 +4980,7 @@
         <rdfs:label>irnpc</rdfs:label>
         <rdfs:label>irrigation_h2o_n_conc</rdfs:label>
         <rdfs:comment xml:lang="en">Irrigation water nitrogen concentration</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#IrrigationApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5072,7 +5010,7 @@
         <rdfs:label>omppc</rdfs:label>
         <rdfs:label>organic_material_p_conc</rdfs:label>
         <rdfs:comment xml:lang="en">Organic materials phosphorus concentration</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterial"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterialApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5102,7 +5040,7 @@
         <rdfs:label>tidep</rdfs:label>
         <rdfs:label>tillage_operations_depth</rdfs:label>
         <rdfs:comment xml:lang="en">Tillage operations depth</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Tillage"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#TillageEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5112,7 +5050,7 @@
         <rdfs:label>emwnd</rdfs:label>
         <rdfs:label>environ_modif_wind</rdfs:label>
         <rdfs:comment xml:lang="en">Environmental modification,wind</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5172,7 +5110,7 @@
         <rdfs:label>slphb</rdfs:label>
         <rdfs:label>soil_ph_in_buffer</rdfs:label>
         <rdfs:comment xml:lang="en">pH of soil measured in buffer solution, from profile description</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5233,17 +5171,7 @@
         <rdfs:label>slsat</rdfs:label>
         <rdfs:label>soil_water_saturated</rdfs:label>
         <rdfs:comment xml:lang="en">Soil water, saturated</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://http://purl.org/icasa#clim_cat -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#clim_cat">
-        <rdfs:label>clim_cat</rdfs:label>
-        <rdfs:label>climate_scenario_category</rdfs:label>
-        <rdfs:comment xml:lang="en">Climate scenario category</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Weather"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5253,7 +5181,7 @@
         <rdfs:label>sladc</rdfs:label>
         <rdfs:label>soil_adsorption_coef</rdfs:label>
         <rdfs:comment xml:lang="en">Soil adsorption coefficient (0 to 1 scale)</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5268,22 +5196,12 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#suite_license -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#suite_license">
-        <rdfs:label>suite_license</rdfs:label>
-        <rdfs:label>suite_license</rdfs:label>
-        <rdfs:comment xml:lang="en">License associated with experiment</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Suite"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
     <!-- http://http://purl.org/icasa#emmax -->
     <owl:DatatypeProperty rdf:about="http://purl.org/icasa#emmax">
         <rdfs:label>emmax</rdfs:label>
         <rdfs:label>environ_modif_max_temp</rdfs:label>
         <rdfs:comment xml:lang="en">Environmental modification, maximum temperature</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5293,7 +5211,7 @@
         <rdfs:label>slacc</rdfs:label>
         <rdfs:label>soil_active_c</rdfs:label>
         <rdfs:comment xml:lang="en">Biologically active soil organic carbon by layer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5303,7 +5221,7 @@
         <rdfs:label>feacd</rdfs:label>
         <rdfs:label>fertilizer_applic_method</rdfs:label>
         <rdfs:comment xml:lang="en">Fertilizer application method</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Fertilizer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#FertilizerApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5318,22 +5236,12 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#last_update -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#last_update">
-        <rdfs:label>last_update</rdfs:label>
-        <rdfs:label>last_update</rdfs:label>
-        <rdfs:comment xml:lang="en">Date of last upload of information to experimental data</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Experiment"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
     <!-- http://http://purl.org/icasa#slal -->
     <owl:DatatypeProperty rdf:about="http://purl.org/icasa#slal">
         <rdfs:label>slal</rdfs:label>
         <rdfs:label>soil_aluminum_conc</rdfs:label>
         <rdfs:comment xml:lang="en">Soil aluminum concentration in profile described</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5363,8 +5271,8 @@
         <rdfs:label>scmpf</rdfs:label>
         <rdfs:label>soil_compac_fact_by_lyr</rdfs:label>
         <rdfs:comment xml:lang="en">Soil compaction factor by layer (0 to 1 scale)</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysis"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysisLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5374,7 +5282,7 @@
         <rdfs:label>hayr</rdfs:label>
         <rdfs:label>harvest_operations_year</rdfs:label>
         <rdfs:comment xml:lang="en">Harvest operations year</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Harvest"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#HarvestEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5464,7 +5372,7 @@
         <rdfs:label>slfac</rdfs:label>
         <rdfs:label>soil_active_c_fraction</rdfs:label>
         <rdfs:comment xml:lang="en">Biologically active soil organic carbon by layer, fraction of total organic C</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5494,7 +5402,7 @@
         <rdfs:label>vg_n</rdfs:label>
         <rdfs:label>van_genuch_n</rdfs:label>
         <rdfs:comment xml:lang="en">Van Genuchten N parameter</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5504,7 +5412,7 @@
         <rdfs:label>saoc</rdfs:label>
         <rdfs:label>organic_carbon_conc</rdfs:label>
         <rdfs:comment xml:lang="en">Organic carbon</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysis"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilAnalysisLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5546,17 +5454,7 @@
         <rdfs:label>mlrdat</rdfs:label>
         <rdfs:label>mulch_removal_date</rdfs:label>
         <rdfs:comment xml:lang="en">Mulch removal date</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Mulch"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://http://purl.org/icasa#mladat -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#mladat">
-        <rdfs:label>mladat</rdfs:label>
-        <rdfs:label>mulch_applic_date</rdfs:label>
-        <rdfs:comment xml:lang="en">Mulch application date</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Mulch"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#MulchRemove"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5566,7 +5464,7 @@
         <rdfs:label>omacd</rdfs:label>
         <rdfs:label>org_material_applic_meth</rdfs:label>
         <rdfs:comment xml:lang="en">Organic materials application method</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterial"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterialApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5586,17 +5484,7 @@
         <rdfs:label>slna</rdfs:label>
         <rdfs:label>soil_sodium_conc</rdfs:label>
         <rdfs:comment xml:lang="en">Sodium in soil layer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://http://purl.org/icasa#suite_data_source -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#suite_data_source">
-        <rdfs:label>suite_data_source</rdfs:label>
-        <rdfs:label>suite_data_source</rdfs:label>
-        <rdfs:comment xml:lang="en">Original format of  data (DSSAT, APSIM, CIMMYT, field log, etc)</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Suite"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5606,7 +5494,7 @@
         <rdfs:label>hacom</rdfs:label>
         <rdfs:label>harvest_operat_component</rdfs:label>
         <rdfs:comment xml:lang="en">Harvest operations, crop component harvested</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Harvest"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#HarvestEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5616,7 +5504,7 @@
         <rdfs:label>ominp</rdfs:label>
         <rdfs:label>org_material_incorp_perc</rdfs:label>
         <rdfs:comment xml:lang="en">Organic materials application, fraction incorporporated as %</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterial"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterialApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5626,7 +5514,7 @@
         <rdfs:label>ecrad</rdfs:label>
         <rdfs:label>environ_mod_code_radiat</rdfs:label>
         <rdfs:comment xml:lang="en">Environmental modific.code, radiation</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5646,7 +5534,7 @@
         <rdfs:label>slinc</rdfs:label>
         <rdfs:label>soil_intermediate_c</rdfs:label>
         <rdfs:comment xml:lang="en">Intermediate soil organic carbon by layer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5691,12 +5579,12 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#nplsb -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#nplsb">
-        <rdfs:label>nplsb</rdfs:label>
-        <rdfs:label>seedbed_density</rdfs:label>
-        <rdfs:comment xml:lang="en">Planting density in nursery seed bed</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Planting"/>
+    <!-- http://http://purl.org/icasa#sdat -->
+    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#sdat">
+        <rdfs:label>sdat</rdfs:label>
+        <rdfs:label>simulation_start_date</rdfs:label>
+        <rdfs:comment xml:lang="en">Simulation start date</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SimulationControl"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5706,7 +5594,7 @@
         <rdfs:label>feyr</rdfs:label>
         <rdfs:label>fertilizer_applic_year</rdfs:label>
         <rdfs:comment xml:lang="en">Fertilizer application year</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Fertilizer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#FertilizerApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5746,7 +5634,7 @@
         <rdfs:label>timix</rdfs:label>
         <rdfs:label>till_mix_effectiveness</rdfs:label>
         <rdfs:comment xml:lang="en">Tillage operations mixing effectiveness</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Tillage"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#TillageEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5761,12 +5649,12 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#ch_targets -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#ch_targets">
-        <rdfs:label>ch_targets</rdfs:label>
-        <rdfs:label>chemical_applic_target</rdfs:label>
-        <rdfs:comment xml:lang="en">Chemicals application target</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Chemical"/>
+    <!-- http://http://purl.org/icasa#wst_dist -->
+    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#wst_dist">
+        <rdfs:label>wst_dist</rdfs:label>
+        <rdfs:label>wsta_distance</rdfs:label>
+        <rdfs:comment xml:lang="en">Distance from weather station to field (m)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#Field"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5806,7 +5694,7 @@
         <rdfs:label>feamp</rdfs:label>
         <rdfs:label>phosphorus_applied_fert</rdfs:label>
         <rdfs:comment xml:lang="en">Phosphorus in applied fertilizer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Fertilizer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#FertilizerApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5821,12 +5709,12 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#version -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#version">
-        <rdfs:label>version</rdfs:label>
-        <rdfs:label>file_version</rdfs:label>
-        <rdfs:comment xml:lang="en">File version for ICASA standard</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Experiment"/>
+    <!-- http://http://purl.org/icasa#em_name -->
+    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#em_name">
+        <rdfs:label>em_name</rdfs:label>
+        <rdfs:label>environ_modif_name</rdfs:label>
+        <rdfs:comment xml:lang="en">Environmental modifications level name</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5837,16 +5725,6 @@
         <rdfs:label>temp_max_dry_days_st_dev</rdfs:label>
         <rdfs:comment xml:lang="en">Temperature maximum, dry days, standard deviation</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/icasa#WeatherStationParameter"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://http://purl.org/icasa#rotational_dome_applied -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#rotational_dome_applied">
-        <rdfs:label>rotational_dome_applied</rdfs:label>
-        <rdfs:label>rotational_dome_applied</rdfs:label>
-        <rdfs:comment xml:lang="en">Logical indicating whether a rotational analysis DOME was applied</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Simulation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5906,7 +5784,7 @@
         <rdfs:label>hamt</rdfs:label>
         <rdfs:label>harvest_amount</rdfs:label>
         <rdfs:comment xml:lang="en">Harvest, total amount removed as mass</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Harvest"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#HarvestEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -5927,6 +5805,7 @@
         <rdfs:label>org_materials_applic_lev</rdfs:label>
         <rdfs:comment xml:lang="en">Organic materials application level, links to OM table</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterial"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#OrganicMaterialApplication"/>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Treatment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -5958,6 +5837,7 @@
         <rdfs:label>soil_file_id</rdfs:label>
         <rdfs:comment xml:lang="en">Soil profile file name</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -6017,7 +5897,7 @@
         <rdfs:label>fedep</rdfs:label>
         <rdfs:label>application_depth_fert</rdfs:label>
         <rdfs:comment xml:lang="en">Fertilizer application depth</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Fertilizer"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#FertilizerApplication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -6047,7 +5927,7 @@
         <rdfs:label>tiord</rdfs:label>
         <rdfs:label>tillage_order</rdfs:label>
         <rdfs:comment xml:lang="en">Tillage operations order within a single day</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Tillage"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#TillageEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -6057,7 +5937,7 @@
         <rdfs:label>slphw</rdfs:label>
         <rdfs:label>soil_ph_in_water</rdfs:label>
         <rdfs:comment xml:lang="en">pH of soil in water, from profile description</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfile"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#SoilProfileLayer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -6082,16 +5962,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#suite_citation -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#suite_citation">
-        <rdfs:label>suite_citation</rdfs:label>
-        <rdfs:label>suite_citation</rdfs:label>
-        <rdfs:comment xml:lang="en">Full citation for experimental data</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Suite"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
     <!-- http://http://purl.org/icasa#icpnh4 -->
     <owl:DatatypeProperty rdf:about="http://purl.org/icasa#icpnh4">
         <rdfs:label>icpnh4</rdfs:label>
@@ -6112,22 +5982,12 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
 
-    <!-- http://http://purl.org/icasa#field_dome_applied -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#field_dome_applied">
-        <rdfs:label>field_dome_applied</rdfs:label>
-        <rdfs:label>field_dome_applied</rdfs:label>
-        <rdfs:comment xml:lang="en">Logical indicating whether a field overlay DOME was applied</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Simulation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
     <!-- http://http://purl.org/icasa#emdew -->
     <owl:DatatypeProperty rdf:about="http://purl.org/icasa#emdew">
         <rdfs:label>emdew</rdfs:label>
         <rdfs:label>environ_modif_dew_pt</rdfs:label>
         <rdfs:comment xml:lang="en">Environmental modification, dewpoint</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModification"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#EnvironmentModificationLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -6138,16 +5998,6 @@
         <rdfs:label>genotype_level_id</rdfs:label>
         <rdfs:comment xml:lang="en">Genotype level database key</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Treatment"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://http://purl.org/icasa#seasonal_dome_applied -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#seasonal_dome_applied">
-        <rdfs:label>seasonal_dome_applied</rdfs:label>
-        <rdfs:label>seasonal_dome_applied</rdfs:label>
-        <rdfs:comment xml:lang="en">Logical indicating whether a seasonal strategy DOME was applied</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Simulation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -6217,17 +6067,7 @@
         <rdfs:label>iamt</rdfs:label>
         <rdfs:label>auto_irrig_amnt_applied</rdfs:label>
         <rdfs:comment xml:lang="en">Irrigation amount, automatic application</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Irrigation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-
-    <!-- http://http://purl.org/icasa#ex_citation -->
-    <owl:DatatypeProperty rdf:about="http://purl.org/icasa#ex_citation">
-        <rdfs:label>ex_citation</rdfs:label>
-        <rdfs:label>experiment_citation</rdfs:label>
-        <rdfs:comment xml:lang="en">Full citation for experimental data</rdfs:comment>
-        <rdfs:domain rdf:resource="http://purl.org/icasa#Experiment"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#AutomaticIrrigation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
@@ -6278,6 +6118,7 @@
         <rdfs:label>chemical_applic_level</rdfs:label>
         <rdfs:comment xml:lang="en">Chemicals application level, liks to CHEMICALS table</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Chemical"/>
+        <rdfs:domain rdf:resource="http://purl.org/icasa#ChemicalApplication"/>
         <rdfs:domain rdf:resource="http://purl.org/icasa#Treatment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>

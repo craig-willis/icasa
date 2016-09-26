@@ -1,24 +1,37 @@
-dataset_subset_group,class_name,definition
+dataset_subset_group_subgroup,class_name,definition
 EXPERIMENT METADATA GENERAL,Experiment,"Complete description of management and initial conditions for a real or synthetic experiment (or very closely linked set of experiments). Data measured during or at the end of the experiment. The information presented should be sufficient to allow thorough interpretation or analysis of the results and for simulation of the experiment"
+EXPERIMENT METADATA GENERAL AGMIP,AgMIP,""
 EXPERIMENT METADATA DOCUMENTS,Document,"Any publications or other media associated with the experiment, especially journal articles or project reports"
 EXPERIMENT METADATA INSTITUTIONS,Institution,"Names, roles and contact information for institutions involved in the experiment"
 EXPERIMENT METADATA NOTES,Note,"Information on constraints or complications affecting the usability of the dataset"
 EXPERIMENT METADATA PERSONS,Person,"Names, roles and contact information for persons involved in the experiment or preparation of the dataset"
 EXPERIMENT METADATA PLOT_DETAILS,PlotDetail,"Information on the plot size and characteristics"
 EXPERIMENT MANAGEMENT CHEMICALS,Chemical,"Herbicide, pesticide, or growth regulator application details"
+EXPERIMENT MANAGEMENT CHEMICALS CHEMICAL_APPLICS,ChemicalApplication,"Chemical application"
 EXPERIMENT MANAGEMENT ENVIRON_MODIFICATIONS,EnvironmentModification,"Adjustments to weather variable such as those that could be made during growth chamber, CO2 enrichment, or rainout shelter studies"
+EXPERIMENT MANAGEMENT ENVIRON_MODIFICATIONS ENVIRON_MODIF_LEVELS,EnvironmentModificationLevel,"Environment modification level"
 EXPERIMENT MANAGEMENT FERTILIZERS,Fertilizer,"Fertilizer amounts, types, and dates of applications"
+EXPERIMENT MANAGEMENT FERTILIZERS FERTILIZER_APPLICS,FertilizerApplication,"Fertilizer application"
 EXPERIMENT MANAGEMENT FIELDS,Field,"Field description including links to weather station and soil profile information"
 EXPERIMENT MANAGEMENT GENOTYPES,Genotype,"Crop and cultivar identifiers, names, and background"
 EXPERIMENT MANAGEMENT HARVESTS,Harvest,"Harvest dates, components harvested, and percentages removed"
+EXPERIMENT MANAGEMENT HARVESTS HARVEST_EVENTS,HarvestEvent,"Harvest event"
 EXPERIMENT MANAGEMENT INITIAL_CONDITIONS,InitialCondition,"Starting conditions including above- and below-ground residues, and water and nitrogen in the complete profile"
+EXPERIMENT MANAGEMENT INITIAL_CONDITIONS INITIAL_CONDITION_LAYER,InitialConditionSoilLayer,"Initial condition soil layer"
 EXPERIMENT MANAGEMENT IRRIGATIONS,Irrigation,"Irrigation dates and amounts, flood and water table depths, thresholds for automatic applications"
+EXPERIMENT MANAGEMENT IRRIGATIONS IRRIGATION_APPLICATIONS,IrrigationApplication,"Irrigation application"
+EXPERIMENT MANAGEMENT IRRIGATIONS AUTOMATIC_IRRIG,AutomaticIrrigation,"Automaatic irrigation"
 EXPERIMENT MANAGEMENT MULCHES,Mulch,"Details of soil covers such as plastic sheeting or fabrics"
+EXPERIMENT MANAGEMENT MULCHES MULCH_ADD,MulchAddition,"Mulch addition"
+EXPERIMENT MANAGEMENT MULCHES MULCH_REMOVE,MulchRemove,"Mulch removal"
 EXPERIMENT MANAGEMENT ORGANIC_MATERIALS,OrganicMaterial,"Details of straw, manure and other organic material applications"
+EXPERIMENT MANAGEMENT ORGANIC_MATERIALS ORGANIC_MATERIAL_APPLICS,OrganicMaterialApplication,"Organic material application"
 EXPERIMENT MANAGEMENT PLANTINGS,Planting,"Planting date, seed and initial plant populations, seeding depth, and plant distribution (row spacing, etc.)"
 EXPERIMENT MANAGEMENT SIMULATION_CONTROLS,SimulationControl
 EXPERIMENT MANAGEMENT SOIL_ANALYSES,SoilAnalysis,"Details of classical soil surface layer analyses"
+EXPERIMENT MANAGEMENT SOIL_ANALYSES SOIL_ANALYSES_LAYERS,SoilAnalysisLayer,"Soil anlaysis soil layer"
 EXPERIMENT MANAGEMENT TILLAGE,Tillage,"Dates and types of tillage operations"
+EXPERIMENT MANAGEMENT TILLAGE TILLAGE_EVENTS,TillageEvent,"Tillage event"
 EXPERIMENT MANAGEMENT TREATMENTS,Treatment,"Treatment names and level codes for crop rotations, crop components and experimental factors"
 EXPERIMENT MANAGEMENT VALIDATION_CRITERIA,ValidationCriteria
 SOILS SOIL_METADATA GENERAL,Soil,"Set of soil profile data for pedons from one or more sites in a region"
@@ -27,6 +40,7 @@ SOILS SOIL_METADATA INSTITUTIONS,SoilInstitution,"Institutions involved in prepa
 SOILS SOIL_METADATA PERSONS,SoilPerson,"Persons involved in preparing the soil data"
 SOIL SOIL_PROFILES PROFILE_METADATA,SoilProfile,"Background information on a single profile"
 SOIL SOIL_PROFILES SOIL_PROFILE,SoilProfile,"Soil profile data for individual pedons"
+SOIL SOIL_PROFILES SOIL_PROFILE SOIL_PROFILE_LAYERS,SoilProfileLayer,"Soil profile layer"
 WEATHER WEATHER_METADATA GENERAL,Weather,"Daily weather data from one or more stations"
 WEATHER WEATHER_METADATA DOCUMENTS,WeatherDocument,"Documents describing the source or applications of the weather data"
 WEATHER WEATHER_METADATA INSTITUTIONS,WeatherInstitution,"Institutions involved in preparing the weather data"
@@ -38,4 +52,4 @@ SUITE METADATA DOCUMENTS,SuiteDocument
 SUITE METADATA GENERAL,Suite
 SUITE METADATA INSTITUTIONS,SuiteInstitution
 SUITE METADATA PERSONS,SuitePerson
-EXPERIMENT DOME SIMULATION,Simulation,
+EXPERIMENT DOME SIMULATION AGMIP,Simulation,

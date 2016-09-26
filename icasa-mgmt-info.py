@@ -51,7 +51,7 @@ subsetmap = dict()
 with open('icasa-mgmt-info-subgroups.csv', 'rb') as mapcsv:
     r = csv.DictReader(mapcsv)
     for row in r:
-        key = row["dataset_subset_group"]
+        key = row["dataset_subset_group_subgroup"]
         className = row["class_name"]
         definition = row["definition"]
         subsetmap[key] = className
@@ -84,7 +84,10 @@ with open('icasa-mgmt-info.csv', 'rb') as csvfile:
         dataset = row["Dataset"]
         subset = row["Subset"]
         group = row["Group"]
-	className = subsetmap[("%s %s %s" % (dataset,subset, group)).strip()]
+        subgroup = row["Subgroup"]
+        if subgroup == "AGMIP":
+            continue
+	className = subsetmap[("%s %s %s %s" % (dataset,subset,group,subgroup)).strip()]
 
         if  variable_name not in variableMap:
             variableMap[variable_name] = dict()
@@ -117,7 +120,7 @@ for variable_name in variableMap:
            '    </owl:DatatypeProperty>\n'
        )
     else: 
-        print("No class found for " + ("%s %s %s" % (dataset,subset, group)).strip())
+        print("No class found for " + ("%s %s %s %s" % (dataset,subset,group,subgroup)).strip())
 
 
 print('</rdf:RDF>\n')
