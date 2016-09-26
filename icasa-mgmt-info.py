@@ -89,7 +89,7 @@ with open('icasa-mgmt-info.csv', 'rb') as csvfile:
         if  variable_name not in variableMap:
             variableMap[variable_name] = dict()
 
-        variableMap[variable_name]['code'] = row["Code_Display"].lower()
+        variableMap[variable_name]['code'] = row["Code_Query"].lower()
         variableMap[variable_name]['desc'] = row["Description"]
         variableMap[variable_name]['unit'] = row["Unit_or_type"]
         if 'class' not in variableMap[variable_name]:
