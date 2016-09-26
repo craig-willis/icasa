@@ -81,6 +81,18 @@ Files:
 * icasa-measured-data-subgroups.csv: Mapping of dataset/subset/group to category
 * icasa-measured-data-units-types.csv: List of units and types (not currently used)
 
+
+## Units
+
+The ICASA master variable list contains a "Units_or_type" column with the units for the variable.  While some of these units may
+already be addressed by another ontology (e.g., Units of Measurement), it would be helpful to get specific definitions for those used by the 
+ICASA community.
+
+For the non-SME, this is helpful: http://www.fao.org/docrep/x0490e/x0490e0i.htm
+
+Files:
+* icasa-units.csv: Mapping of unit to definition
+
 ## Notes
 * Assumes PURL created at purl.org/icasa (login currently disabled on purl.org site)
 * Object properties have not yet been added (relations)
