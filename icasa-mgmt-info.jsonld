@@ -1,0 +1,2493 @@
+{
+  "@context" : {
+    "plthl" : {
+      "@id" : "http://purl.org/icasa#plthl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tamp" : {
+      "@id" : "http://purl.org/icasa#tamp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "WeatherDocument" : {
+      "@id" : "http://purl.org/icasa#WeatherDocument"
+    },
+    "slfinc" : {
+      "@id" : "http://purl.org/icasa#slfinc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "omkpc" : {
+      "@id" : "http://purl.org/icasa#omkpc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wst_address" : {
+      "@id" : "http://purl.org/icasa#wst_address",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ir_no" : {
+      "@id" : "http://purl.org/icasa#ir_no",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sno3" : {
+      "@id" : "http://purl.org/icasa#sno3",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fl_loc_3" : {
+      "@id" : "http://purl.org/icasa#fl_loc_3",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rm" : {
+      "@id" : "http://purl.org/icasa#rm",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "omc2n" : {
+      "@id" : "http://purl.org/icasa#omc2n",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "SoilPerson" : {
+      "@id" : "http://purl.org/icasa#SoilPerson"
+    },
+    "soil_dataset" : {
+      "@id" : "http://purl.org/icasa#soil_dataset",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "seasonal_strategy" : {
+      "@id" : "http://purl.org/icasa#seasonal_strategy",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sldr" : {
+      "@id" : "http://purl.org/icasa#sldr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ts9d" : {
+      "@id" : "http://purl.org/icasa#ts9d",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icno3" : {
+      "@id" : "http://purl.org/icasa#icno3",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slfsc" : {
+      "@id" : "http://purl.org/icasa#slfsc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "site_type" : {
+      "@id" : "http://purl.org/icasa#site_type",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "xdmn" : {
+      "@id" : "http://purl.org/icasa#xdmn",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "factors" : {
+      "@id" : "http://purl.org/icasa#factors",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suite_address" : {
+      "@id" : "http://purl.org/icasa#suite_address",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "caco3" : {
+      "@id" : "http://purl.org/icasa#caco3",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sldp" : {
+      "@id" : "http://purl.org/icasa#sldp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "smke" : {
+      "@id" : "http://purl.org/icasa#smke",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pltln" : {
+      "@id" : "http://purl.org/icasa#pltln",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "omcpc" : {
+      "@id" : "http://purl.org/icasa#omcpc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plyre" : {
+      "@id" : "http://purl.org/icasa#plyre",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pp_role" : {
+      "@id" : "http://purl.org/icasa#pp_role",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plage" : {
+      "@id" : "http://purl.org/icasa#plage",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "emdew" : {
+      "@id" : "http://purl.org/icasa#emdew",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "user_id" : {
+      "@id" : "http://purl.org/icasa#user_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suite_name" : {
+      "@id" : "http://purl.org/icasa#suite_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suite_distrib" : {
+      "@id" : "http://purl.org/icasa#suite_distrib",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hacom" : {
+      "@id" : "http://purl.org/icasa#hacom",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "emco2" : {
+      "@id" : "http://purl.org/icasa#emco2",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasiz" : {
+      "@id" : "http://purl.org/icasa#hasiz",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rating_soil" : {
+      "@id" : "http://purl.org/icasa#rating_soil",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "model_ver" : {
+      "@id" : "http://purl.org/icasa#model_ver",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wst_lat" : {
+      "@id" : "http://purl.org/icasa#wst_lat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "ecmin" : {
+      "@id" : "http://purl.org/icasa#ecmin",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slke" : {
+      "@id" : "http://purl.org/icasa#slke",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "cr_system" : {
+      "@id" : "http://purl.org/icasa#cr_system",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "feacd" : {
+      "@id" : "http://purl.org/icasa#feacd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pldp" : {
+      "@id" : "http://purl.org/icasa#pldp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tdate" : {
+      "@id" : "http://purl.org/icasa#tdate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "min" : {
+      "@id" : "http://purl.org/icasa#min",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "psycon" : {
+      "@id" : "http://purl.org/icasa#psycon",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ic_name" : {
+      "@id" : "http://purl.org/icasa#ic_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ts4d" : {
+      "@id" : "http://purl.org/icasa#ts4d",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fep_tot" : {
+      "@id" : "http://purl.org/icasa#fep_tot",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "seasonal_dome_applied" : {
+      "@id" : "http://purl.org/icasa#seasonal_dome_applied",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slpb" : {
+      "@id" : "http://purl.org/icasa#slpb",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tdry" : {
+      "@id" : "http://purl.org/icasa#tdry",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "in_role" : {
+      "@id" : "http://purl.org/icasa#in_role",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slfic" : {
+      "@id" : "http://purl.org/icasa#slfic",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slro" : {
+      "@id" : "http://purl.org/icasa#slro",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "feyr" : {
+      "@id" : "http://purl.org/icasa#feyr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "omcd" : {
+      "@id" : "http://purl.org/icasa#omcd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icrze" : {
+      "@id" : "http://purl.org/icasa#icrze",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slsnd" : {
+      "@id" : "http://purl.org/icasa#slsnd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fd_month" : {
+      "@id" : "http://purl.org/icasa#fd_month",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sq" : {
+      "@id" : "http://purl.org/icasa#sq",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "iradp" : {
+      "@id" : "http://purl.org/icasa#iradp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "flsla" : {
+      "@id" : "http://purl.org/icasa#flsla",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "xwsd" : {
+      "@id" : "http://purl.org/icasa#xwsd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "summeru" : {
+      "@id" : "http://purl.org/icasa#summeru",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plthno" : {
+      "@id" : "http://purl.org/icasa#plthno",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sl_slope" : {
+      "@id" : "http://purl.org/icasa#sl_slope",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icnd" : {
+      "@id" : "http://purl.org/icasa#icnd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ireff" : {
+      "@id" : "http://purl.org/icasa#ireff",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slfc1" : {
+      "@id" : "http://purl.org/icasa#slfc1",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fldrd" : {
+      "@id" : "http://purl.org/icasa#fldrd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "flsl" : {
+      "@id" : "http://purl.org/icasa#flsl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plma" : {
+      "@id" : "http://purl.org/icasa#plma",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rotational_analysis" : {
+      "@id" : "http://purl.org/icasa#rotational_analysis",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icsw" : {
+      "@id" : "http://purl.org/icasa#icsw",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rev_date_latest_sl" : {
+      "@id" : "http://purl.org/icasa#rev_date_latest_sl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sl_loc_2" : {
+      "@id" : "http://purl.org/icasa#sl_loc_2",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "feamo" : {
+      "@id" : "http://purl.org/icasa#feamo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "cul_name" : {
+      "@id" : "http://purl.org/icasa#cul_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "pldoe" : {
+      "@id" : "http://purl.org/icasa#pldoe",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "scday" : {
+      "@id" : "http://purl.org/icasa#scday",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fen_no" : {
+      "@id" : "http://purl.org/icasa#fen_no",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "local_id" : {
+      "@id" : "http://purl.org/icasa#local_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "em_name" : {
+      "@id" : "http://purl.org/icasa#em_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "xdsd" : {
+      "@id" : "http://purl.org/icasa#xdsd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rtot" : {
+      "@id" : "http://purl.org/icasa#rtot",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icrag" : {
+      "@id" : "http://purl.org/icasa#icrag",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sani" : {
+      "@id" : "http://purl.org/icasa#sani",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sllt" : {
+      "@id" : "http://purl.org/icasa#sllt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sayr" : {
+      "@id" : "http://purl.org/icasa#sayr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fecd_name" : {
+      "@id" : "http://purl.org/icasa#fecd_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wst_elev" : {
+      "@id" : "http://purl.org/icasa#wst_elev",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "DailyWeather" : {
+      "@id" : "http://purl.org/icasa#DailyWeather"
+    },
+    "tiord" : {
+      "@id" : "http://purl.org/icasa#tiord",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Note" : {
+      "@id" : "http://purl.org/icasa#Note"
+    },
+    "tmxy" : {
+      "@id" : "http://purl.org/icasa#tmxy",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suite_data_source" : {
+      "@id" : "http://purl.org/icasa#suite_data_source",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "om_notes" : {
+      "@id" : "http://purl.org/icasa#om_notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wst_citation" : {
+      "@id" : "http://purl.org/icasa#wst_citation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fl_land" : {
+      "@id" : "http://purl.org/icasa#fl_land",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "feno3" : {
+      "@id" : "http://purl.org/icasa#feno3",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Institution" : {
+      "@id" : "http://purl.org/icasa#Institution"
+    },
+    "ch" : {
+      "@id" : "http://purl.org/icasa#ch",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Simulation" : {
+      "@id" : "http://purl.org/icasa#Simulation"
+    },
+    "version_sl" : {
+      "@id" : "http://purl.org/icasa#version_sl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icrm" : {
+      "@id" : "http://purl.org/icasa#icrm",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ir_notes" : {
+      "@id" : "http://purl.org/icasa#ir_notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "co2d" : {
+      "@id" : "http://purl.org/icasa#co2d",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suite_doi" : {
+      "@id" : "http://purl.org/icasa#suite_doi",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "site_name" : {
+      "@id" : "http://purl.org/icasa#site_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "salbm" : {
+      "@id" : "http://purl.org/icasa#salbm",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fe_notes" : {
+      "@id" : "http://purl.org/icasa#fe_notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slcec" : {
+      "@id" : "http://purl.org/icasa#slcec",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ominp" : {
+      "@id" : "http://purl.org/icasa#ominp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sabdm" : {
+      "@id" : "http://purl.org/icasa#sabdm",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pltwi" : {
+      "@id" : "http://purl.org/icasa#pltwi",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sl_loc_1" : {
+      "@id" : "http://purl.org/icasa#sl_loc_1",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "clim_cat" : {
+      "@id" : "http://purl.org/icasa#clim_cat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "cul_notes" : {
+      "@id" : "http://purl.org/icasa#cul_notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "exname" : {
+      "@id" : "http://purl.org/icasa#exname",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "swsd" : {
+      "@id" : "http://purl.org/icasa#swsd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "chyr" : {
+      "@id" : "http://purl.org/icasa#chyr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "flele" : {
+      "@id" : "http://purl.org/icasa#flele",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "om_name" : {
+      "@id" : "http://purl.org/icasa#om_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "crid" : {
+      "@id" : "http://purl.org/icasa#crid",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "psyvnt" : {
+      "@id" : "http://purl.org/icasa#psyvnt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slna" : {
+      "@id" : "http://purl.org/icasa#slna",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wst_loc_1" : {
+      "@id" : "http://purl.org/icasa#wst_loc_1",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "da3d" : {
+      "@id" : "http://purl.org/icasa#da3d",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ha_name" : {
+      "@id" : "http://purl.org/icasa#ha_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rating_mgmt" : {
+      "@id" : "http://purl.org/icasa#rating_mgmt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "samhb" : {
+      "@id" : "http://purl.org/icasa#samhb",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suite_obj" : {
+      "@id" : "http://purl.org/icasa#suite_obj",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "trtno" : {
+      "@id" : "http://purl.org/icasa#trtno",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "haht" : {
+      "@id" : "http://purl.org/icasa#haht",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "document_wst" : {
+      "@id" : "http://purl.org/icasa#document_wst",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suite_orcid" : {
+      "@id" : "http://purl.org/icasa#suite_orcid",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tidep" : {
+      "@id" : "http://purl.org/icasa#tidep",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "revision_notes_sl" : {
+      "@id" : "http://purl.org/icasa#revision_notes_sl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suite_main_fac" : {
+      "@id" : "http://purl.org/icasa#suite_main_fac",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rnum" : {
+      "@id" : "http://purl.org/icasa#rnum",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "main_factor" : {
+      "@id" : "http://purl.org/icasa#main_factor",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "iamt" : {
+      "@id" : "http://purl.org/icasa#iamt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gsdu" : {
+      "@id" : "http://purl.org/icasa#gsdu",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sampx" : {
+      "@id" : "http://purl.org/icasa#sampx",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Tillage" : {
+      "@id" : "http://purl.org/icasa#Tillage"
+    },
+    "sray" : {
+      "@id" : "http://purl.org/icasa#sray",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "timix" : {
+      "@id" : "http://purl.org/icasa#timix",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plthm" : {
+      "@id" : "http://purl.org/icasa#plthm",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "iame" : {
+      "@id" : "http://purl.org/icasa#iame",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "haday" : {
+      "@id" : "http://purl.org/icasa#haday",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "methods" : {
+      "@id" : "http://purl.org/icasa#methods",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plrd" : {
+      "@id" : "http://purl.org/icasa#plrd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rev_date_latest" : {
+      "@id" : "http://purl.org/icasa#rev_date_latest",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "digital_obj_id_wst" : {
+      "@id" : "http://purl.org/icasa#digital_obj_id_wst",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slpx" : {
+      "@id" : "http://purl.org/icasa#slpx",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "digital_obj_id" : {
+      "@id" : "http://purl.org/icasa#digital_obj_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icrn" : {
+      "@id" : "http://purl.org/icasa#icrn",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fek_tot" : {
+      "@id" : "http://purl.org/icasa#fek_tot",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wndht" : {
+      "@id" : "http://purl.org/icasa#wndht",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "habpc" : {
+      "@id" : "http://purl.org/icasa#habpc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "om" : {
+      "@id" : "http://purl.org/icasa#om",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pdate" : {
+      "@id" : "http://purl.org/icasa#pdate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fl_drntype" : {
+      "@id" : "http://purl.org/icasa#fl_drntype",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slfac" : {
+      "@id" : "http://purl.org/icasa#slfac",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "max" : {
+      "@id" : "http://purl.org/icasa#max",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wst_long" : {
+      "@id" : "http://purl.org/icasa#wst_long",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suite_keywords" : {
+      "@id" : "http://purl.org/icasa#suite_keywords",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "omcov" : {
+      "@id" : "http://purl.org/icasa#omcov",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "w_date" : {
+      "@id" : "http://purl.org/icasa#w_date",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "feday" : {
+      "@id" : "http://purl.org/icasa#feday",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "version_wst" : {
+      "@id" : "http://purl.org/icasa#version_wst",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "em" : {
+      "@id" : "http://purl.org/icasa#em",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "mlady" : {
+      "@id" : "http://purl.org/icasa#mlady",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "cdate" : {
+      "@id" : "http://purl.org/icasa#cdate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "agmip_rater" : {
+      "@id" : "http://purl.org/icasa#agmip_rater",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ecdew" : {
+      "@id" : "http://purl.org/icasa#ecdew",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ti_name" : {
+      "@id" : "http://purl.org/icasa#ti_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "feamn" : {
+      "@id" : "http://purl.org/icasa#feamn",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "vprsd" : {
+      "@id" : "http://purl.org/icasa#vprsd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "omyr" : {
+      "@id" : "http://purl.org/icasa#omyr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plmwt" : {
+      "@id" : "http://purl.org/icasa#plmwt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ha_comments" : {
+      "@id" : "http://purl.org/icasa#ha_comments",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Chemical" : {
+      "@id" : "http://purl.org/icasa#Chemical"
+    },
+    "ValidationCriteria" : {
+      "@id" : "http://purl.org/icasa#ValidationCriteria"
+    },
+    "icrdp" : {
+      "@id" : "http://purl.org/icasa#icrdp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rating_obs" : {
+      "@id" : "http://purl.org/icasa#rating_obs",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "id" : {
+      "@id" : "http://purl.org/icasa#id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slca" : {
+      "@id" : "http://purl.org/icasa#slca",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "saphb" : {
+      "@id" : "http://purl.org/icasa#saphb",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "winteru" : {
+      "@id" : "http://purl.org/icasa#winteru",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "irmdp" : {
+      "@id" : "http://purl.org/icasa#irmdp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "diffusslope" : {
+      "@id" : "http://purl.org/icasa#diffusslope",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ic" : {
+      "@id" : "http://purl.org/icasa#ic",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tavd" : {
+      "@id" : "http://purl.org/icasa#tavd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "samke" : {
+      "@id" : "http://purl.org/icasa#samke",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "irstg" : {
+      "@id" : "http://purl.org/icasa#irstg",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "smhb" : {
+      "@id" : "http://purl.org/icasa#smhb",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plthw" : {
+      "@id" : "http://purl.org/icasa#plthw",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sl_loc_3" : {
+      "@id" : "http://purl.org/icasa#sl_loc_3",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "start_yr" : {
+      "@id" : "http://purl.org/icasa#start_yr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tiyr" : {
+      "@id" : "http://purl.org/icasa#tiyr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "doc_id" : {
+      "@id" : "http://purl.org/icasa#doc_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pl" : {
+      "@id" : "http://purl.org/icasa#pl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slphw" : {
+      "@id" : "http://purl.org/icasa#slphw",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "PlotDetail" : {
+      "@id" : "http://purl.org/icasa#PlotDetail"
+    },
+    "mladat" : {
+      "@id" : "http://purl.org/icasa#mladat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "irday" : {
+      "@id" : "http://purl.org/icasa#irday",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icpcr" : {
+      "@id" : "http://purl.org/icasa#icpcr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "chcd" : {
+      "@id" : "http://purl.org/icasa#chcd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Fertilizer" : {
+      "@id" : "http://purl.org/icasa#Fertilizer"
+    },
+    "pred" : {
+      "@id" : "http://purl.org/icasa#pred",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "vl_notes" : {
+      "@id" : "http://purl.org/icasa#vl_notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Person" : {
+      "@id" : "http://purl.org/icasa#Person"
+    },
+    "saoc" : {
+      "@id" : "http://purl.org/icasa#saoc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "co" : {
+      "@id" : "http://purl.org/icasa#co",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fe" : {
+      "@id" : "http://purl.org/icasa#fe",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "field_dome_applied" : {
+      "@id" : "http://purl.org/icasa#field_dome_applied",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Soil" : {
+      "@id" : "http://purl.org/icasa#Soil"
+    },
+    "plday" : {
+      "@id" : "http://purl.org/icasa#plday",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fen_tot" : {
+      "@id" : "http://purl.org/icasa#fen_tot",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "SoilInstitution" : {
+      "@id" : "http://purl.org/icasa#SoilInstitution"
+    },
+    "rev_date_first_sl" : {
+      "@id" : "http://purl.org/icasa#rev_date_first_sl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "edate" : {
+      "@id" : "http://purl.org/icasa#edate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "omdep" : {
+      "@id" : "http://purl.org/icasa#omdep",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ex_citation" : {
+      "@id" : "http://purl.org/icasa#ex_citation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "digital_obj_id_sl" : {
+      "@id" : "http://purl.org/icasa#digital_obj_id_sl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sl_notes" : {
+      "@id" : "http://purl.org/icasa#sl_notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sscol" : {
+      "@id" : "http://purl.org/icasa#sscol",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ts8d" : {
+      "@id" : "http://purl.org/icasa#ts8d",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tdew" : {
+      "@id" : "http://purl.org/icasa#tdew",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "emmin" : {
+      "@id" : "http://purl.org/icasa#emmin",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Treatment" : {
+      "@id" : "http://purl.org/icasa#Treatment"
+    },
+    "amth" : {
+      "@id" : "http://purl.org/icasa#amth",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fecd" : {
+      "@id" : "http://purl.org/icasa#fecd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "soil_name" : {
+      "@id" : "http://purl.org/icasa#soil_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "abund" : {
+      "@id" : "http://purl.org/icasa#abund",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Mulch" : {
+      "@id" : "http://purl.org/icasa#Mulch"
+    },
+    "fe_name" : {
+      "@id" : "http://purl.org/icasa#fe_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "omamt" : {
+      "@id" : "http://purl.org/icasa#omamt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sl_source" : {
+      "@id" : "http://purl.org/icasa#sl_source",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plenv" : {
+      "@id" : "http://purl.org/icasa#plenv",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "clim_id" : {
+      "@id" : "http://purl.org/icasa#clim_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "omh2o" : {
+      "@id" : "http://purl.org/icasa#omh2o",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fl_lat" : {
+      "@id" : "http://purl.org/icasa#fl_lat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icsc" : {
+      "@id" : "http://purl.org/icasa#icsc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "inst_name" : {
+      "@id" : "http://purl.org/icasa#inst_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "durn" : {
+      "@id" : "http://purl.org/icasa#durn",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "doc_id_sl" : {
+      "@id" : "http://purl.org/icasa#doc_id_sl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "treat_id" : {
+      "@id" : "http://purl.org/icasa#treat_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pltod" : {
+      "@id" : "http://purl.org/icasa#pltod",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ex_funding_source" : {
+      "@id" : "http://purl.org/icasa#ex_funding_source",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suite_institution" : {
+      "@id" : "http://purl.org/icasa#suite_institution",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "document" : {
+      "@id" : "http://purl.org/icasa#document",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "SimulationControl" : {
+      "@id" : "http://purl.org/icasa#SimulationControl"
+    },
+    "sldul" : {
+      "@id" : "http://purl.org/icasa#sldul",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "document_sl" : {
+      "@id" : "http://purl.org/icasa#document_sl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "emdate" : {
+      "@id" : "http://purl.org/icasa#emdate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ts5d" : {
+      "@id" : "http://purl.org/icasa#ts5d",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slll" : {
+      "@id" : "http://purl.org/icasa#slll",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ti" : {
+      "@id" : "http://purl.org/icasa#ti",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "ecco2" : {
+      "@id" : "http://purl.org/icasa#ecco2",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "revision_notes" : {
+      "@id" : "http://purl.org/icasa#revision_notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ecwnd" : {
+      "@id" : "http://purl.org/icasa#ecwnd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ti_practice" : {
+      "@id" : "http://purl.org/icasa#ti_practice",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tmxa" : {
+      "@id" : "http://purl.org/icasa#tmxa",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "flagw" : {
+      "@id" : "http://purl.org/icasa#flagw",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icpnh4" : {
+      "@id" : "http://purl.org/icasa#icpnh4",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tav" : {
+      "@id" : "http://purl.org/icasa#tav",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "mltpr" : {
+      "@id" : "http://purl.org/icasa#mltpr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "loc_source" : {
+      "@id" : "http://purl.org/icasa#loc_source",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ecrai" : {
+      "@id" : "http://purl.org/icasa#ecrai",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "dtr" : {
+      "@id" : "http://purl.org/icasa#dtr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sa" : {
+      "@id" : "http://purl.org/icasa#sa",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slsat" : {
+      "@id" : "http://purl.org/icasa#slsat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slcly" : {
+      "@id" : "http://purl.org/icasa#slcly",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wst_loc_3" : {
+      "@id" : "http://purl.org/icasa#wst_loc_3",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ir" : {
+      "@id" : "http://purl.org/icasa#ir",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "id_field" : {
+      "@id" : "http://purl.org/icasa#id_field",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "irval" : {
+      "@id" : "http://purl.org/icasa#irval",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rain" : {
+      "@id" : "http://purl.org/icasa#rain",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tiimp" : {
+      "@id" : "http://purl.org/icasa#tiimp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icpno3" : {
+      "@id" : "http://purl.org/icasa#icpno3",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "flsll" : {
+      "@id" : "http://purl.org/icasa#flsll",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slni" : {
+      "@id" : "http://purl.org/icasa#slni",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "feocd" : {
+      "@id" : "http://purl.org/icasa#feocd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "vg_alpha" : {
+      "@id" : "http://purl.org/icasa#vg_alpha",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "twet" : {
+      "@id" : "http://purl.org/icasa#twet",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ts2d" : {
+      "@id" : "http://purl.org/icasa#ts2d",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "emrad" : {
+      "@id" : "http://purl.org/icasa#emrad",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "SoilProfile" : {
+      "@id" : "http://purl.org/icasa#SoilProfile"
+    },
+    "wst_loc_2" : {
+      "@id" : "http://purl.org/icasa#wst_loc_2",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pltha" : {
+      "@id" : "http://purl.org/icasa#pltha",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icn_tot" : {
+      "@id" : "http://purl.org/icasa#icn_tot",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plpop" : {
+      "@id" : "http://purl.org/icasa#plpop",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sunh" : {
+      "@id" : "http://purl.org/icasa#sunh",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tmax" : {
+      "@id" : "http://purl.org/icasa#tmax",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "omlpc" : {
+      "@id" : "http://purl.org/icasa#omlpc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icrdat" : {
+      "@id" : "http://purl.org/icasa#icrdat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wst_site" : {
+      "@id" : "http://purl.org/icasa#wst_site",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ha_notes" : {
+      "@id" : "http://purl.org/icasa#ha_notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slfe" : {
+      "@id" : "http://purl.org/icasa#slfe",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sdmn" : {
+      "@id" : "http://purl.org/icasa#sdmn",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icrzn" : {
+      "@id" : "http://purl.org/icasa#icrzn",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wtdoy" : {
+      "@id" : "http://purl.org/icasa#wtdoy",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "EnvironmentModification" : {
+      "@id" : "http://purl.org/icasa#EnvironmentModification"
+    },
+    "fl" : {
+      "@id" : "http://purl.org/icasa#fl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ch_targets" : {
+      "@id" : "http://purl.org/icasa#ch_targets",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slpo" : {
+      "@id" : "http://purl.org/icasa#slpo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sl_distrib" : {
+      "@id" : "http://purl.org/icasa#sl_distrib",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slwp" : {
+      "@id" : "http://purl.org/icasa#slwp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sksat" : {
+      "@id" : "http://purl.org/icasa#sksat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "srad" : {
+      "@id" : "http://purl.org/icasa#srad",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tgrd" : {
+      "@id" : "http://purl.org/icasa#tgrd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Irrigation" : {
+      "@id" : "http://purl.org/icasa#Irrigation"
+    },
+    "suiteid" : {
+      "@id" : "http://purl.org/icasa#suiteid",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sa_name" : {
+      "@id" : "http://purl.org/icasa#sa_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ti_notes" : {
+      "@id" : "http://purl.org/icasa#ti_notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sldn" : {
+      "@id" : "http://purl.org/icasa#sldn",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wid" : {
+      "@id" : "http://purl.org/icasa#wid",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tdyd" : {
+      "@id" : "http://purl.org/icasa#tdyd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fek_no" : {
+      "@id" : "http://purl.org/icasa#fek_no",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "cnstr" : {
+      "@id" : "http://purl.org/icasa#cnstr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "dayd" : {
+      "@id" : "http://purl.org/icasa#dayd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "soil_site" : {
+      "@id" : "http://purl.org/icasa#soil_site",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pllay" : {
+      "@id" : "http://purl.org/icasa#pllay",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "agmip_rating" : {
+      "@id" : "http://purl.org/icasa#agmip_rating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "irop_name" : {
+      "@id" : "http://purl.org/icasa#irop_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ml" : {
+      "@id" : "http://purl.org/icasa#ml",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "em_notes" : {
+      "@id" : "http://purl.org/icasa#em_notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sc_year" : {
+      "@id" : "http://purl.org/icasa#sc_year",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sl_license" : {
+      "@id" : "http://purl.org/icasa#sl_license",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slrgf" : {
+      "@id" : "http://purl.org/icasa#slrgf",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hadat" : {
+      "@id" : "http://purl.org/icasa#hadat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "emmax" : {
+      "@id" : "http://purl.org/icasa#emmax",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wst_id" : {
+      "@id" : "http://purl.org/icasa#wst_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "temht" : {
+      "@id" : "http://purl.org/icasa#temht",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "emyr" : {
+      "@id" : "http://purl.org/icasa#emyr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pp" : {
+      "@id" : "http://purl.org/icasa#pp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "soil_file_id" : {
+      "@id" : "http://purl.org/icasa#soil_file_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Harvest" : {
+      "@id" : "http://purl.org/icasa#Harvest"
+    },
+    "nplsb" : {
+      "@id" : "http://purl.org/icasa#nplsb",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icrk" : {
+      "@id" : "http://purl.org/icasa#icrk",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ecmax" : {
+      "@id" : "http://purl.org/icasa#ecmax",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "local_name" : {
+      "@id" : "http://purl.org/icasa#local_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "agmip_date" : {
+      "@id" : "http://purl.org/icasa#agmip_date",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "in_type" : {
+      "@id" : "http://purl.org/icasa#in_type",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "mlrday" : {
+      "@id" : "http://purl.org/icasa#mlrday",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sloc" : {
+      "@id" : "http://purl.org/icasa#sloc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plph" : {
+      "@id" : "http://purl.org/icasa#plph",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "emwnd" : {
+      "@id" : "http://purl.org/icasa#emwnd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plgpc" : {
+      "@id" : "http://purl.org/icasa#plgpc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slacc" : {
+      "@id" : "http://purl.org/icasa#slacc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "WeatherInstitution" : {
+      "@id" : "http://purl.org/icasa#WeatherInstitution"
+    },
+    "pltrno" : {
+      "@id" : "http://purl.org/icasa#pltrno",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ha" : {
+      "@id" : "http://purl.org/icasa#ha",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "flst" : {
+      "@id" : "http://purl.org/icasa#flst",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "WeatherPerson" : {
+      "@id" : "http://purl.org/icasa#WeatherPerson"
+    },
+    "soil_elev" : {
+      "@id" : "http://purl.org/icasa#soil_elev",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gsst" : {
+      "@id" : "http://purl.org/icasa#gsst",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "emdyl" : {
+      "@id" : "http://purl.org/icasa#emdyl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "irrig" : {
+      "@id" : "http://purl.org/icasa#irrig",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pard" : {
+      "@id" : "http://purl.org/icasa#pard",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tr_notes" : {
+      "@id" : "http://purl.org/icasa#tr_notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "last_name" : {
+      "@id" : "http://purl.org/icasa#last_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "harm" : {
+      "@id" : "http://purl.org/icasa#harm",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rotation" : {
+      "@id" : "http://purl.org/icasa#rotation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wst_distrib" : {
+      "@id" : "http://purl.org/icasa#wst_distrib",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "samn" : {
+      "@id" : "http://purl.org/icasa#samn",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "flob" : {
+      "@id" : "http://purl.org/icasa#flob",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "iadate" : {
+      "@id" : "http://purl.org/icasa#iadate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "farea" : {
+      "@id" : "http://purl.org/icasa#farea",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sm_id" : {
+      "@id" : "http://purl.org/icasa#sm_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fldrs" : {
+      "@id" : "http://purl.org/icasa#fldrs",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "revision_notes_wst" : {
+      "@id" : "http://purl.org/icasa#revision_notes_wst",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ecrad" : {
+      "@id" : "http://purl.org/icasa#ecrad",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "dtwt" : {
+      "@id" : "http://purl.org/icasa#dtwt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ex_license" : {
+      "@id" : "http://purl.org/icasa#ex_license",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "exper_id" : {
+      "@id" : "http://purl.org/icasa#exper_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "InitialCondition" : {
+      "@id" : "http://purl.org/icasa#InitialCondition"
+    },
+    "plds" : {
+      "@id" : "http://purl.org/icasa#plds",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slcf" : {
+      "@id" : "http://purl.org/icasa#slcf",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rhumd" : {
+      "@id" : "http://purl.org/icasa#rhumd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icryr" : {
+      "@id" : "http://purl.org/icasa#icryr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rotational_dome_applied" : {
+      "@id" : "http://purl.org/icasa#rotational_dome_applied",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sltx" : {
+      "@id" : "http://purl.org/icasa#sltx",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "data_source" : {
+      "@id" : "http://purl.org/icasa#data_source",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "omacd" : {
+      "@id" : "http://purl.org/icasa#omacd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "chacd" : {
+      "@id" : "http://purl.org/icasa#chacd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pldr" : {
+      "@id" : "http://purl.org/icasa#pldr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hamt" : {
+      "@id" : "http://purl.org/icasa#hamt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slmg" : {
+      "@id" : "http://purl.org/icasa#slmg",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ir_tot" : {
+      "@id" : "http://purl.org/icasa#ir_tot",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "snh4" : {
+      "@id" : "http://purl.org/icasa#snh4",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "omnpc" : {
+      "@id" : "http://purl.org/icasa#omnpc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sdsd" : {
+      "@id" : "http://purl.org/icasa#sdsd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wth_subset" : {
+      "@id" : "http://purl.org/icasa#wth_subset",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "iryr" : {
+      "@id" : "http://purl.org/icasa#iryr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "WeatherStationParameter" : {
+      "@id" : "http://purl.org/icasa#WeatherStationParameter"
+    },
+    "ge" : {
+      "@id" : "http://purl.org/icasa#ge",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rev_date_latest_wst" : {
+      "@id" : "http://purl.org/icasa#rev_date_latest_wst",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fe_no" : {
+      "@id" : "http://purl.org/icasa#fe_no",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "first_name" : {
+      "@id" : "http://purl.org/icasa#first_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "xamn" : {
+      "@id" : "http://purl.org/icasa#xamn",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "feamk" : {
+      "@id" : "http://purl.org/icasa#feamk",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "Planting" : {
+      "@id" : "http://purl.org/icasa#Planting"
+    },
+    "evap" : {
+      "@id" : "http://purl.org/icasa#evap",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "omppc" : {
+      "@id" : "http://purl.org/icasa#omppc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ml_notes" : {
+      "@id" : "http://purl.org/icasa#ml_notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rhmxd" : {
+      "@id" : "http://purl.org/icasa#rhmxd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slu1" : {
+      "@id" : "http://purl.org/icasa#slu1",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slmn" : {
+      "@id" : "http://purl.org/icasa#slmn",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suite_factors" : {
+      "@id" : "http://purl.org/icasa#suite_factors",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "objectives" : {
+      "@id" : "http://purl.org/icasa#objectives",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "mlrdat" : {
+      "@id" : "http://purl.org/icasa#mlrdat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fllwr" : {
+      "@id" : "http://purl.org/icasa#fllwr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suite_notes" : {
+      "@id" : "http://purl.org/icasa#suite_notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fl_sltx" : {
+      "@id" : "http://purl.org/icasa#fl_sltx",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icrzc" : {
+      "@id" : "http://purl.org/icasa#icrzc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rhavd" : {
+      "@id" : "http://purl.org/icasa#rhavd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Genotype" : {
+      "@id" : "http://purl.org/icasa#Genotype"
+    },
+    "tgad" : {
+      "@id" : "http://purl.org/icasa#tgad",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "idate" : {
+      "@id" : "http://purl.org/icasa#idate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "irnpc" : {
+      "@id" : "http://purl.org/icasa#irnpc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "exper_type" : {
+      "@id" : "http://purl.org/icasa#exper_type",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icswpc" : {
+      "@id" : "http://purl.org/icasa#icswpc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icwt" : {
+      "@id" : "http://purl.org/icasa#icwt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wtyr" : {
+      "@id" : "http://purl.org/icasa#wtyr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plspl" : {
+      "@id" : "http://purl.org/icasa#plspl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icdat" : {
+      "@id" : "http://purl.org/icasa#icdat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slsil" : {
+      "@id" : "http://purl.org/icasa#slsil",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ts10d" : {
+      "@id" : "http://purl.org/icasa#ts10d",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slsc" : {
+      "@id" : "http://purl.org/icasa#slsc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fl_loc_2" : {
+      "@id" : "http://purl.org/icasa#fl_loc_2",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "nasd" : {
+      "@id" : "http://purl.org/icasa#nasd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "angb" : {
+      "@id" : "http://purl.org/icasa#angb",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icin" : {
+      "@id" : "http://purl.org/icasa#icin",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sllb" : {
+      "@id" : "http://purl.org/icasa#sllb",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ti_op_name" : {
+      "@id" : "http://purl.org/icasa#ti_op_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "mlryr" : {
+      "@id" : "http://purl.org/icasa#mlryr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plrs" : {
+      "@id" : "http://purl.org/icasa#plrs",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wst_source" : {
+      "@id" : "http://purl.org/icasa#wst_source",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "version" : {
+      "@id" : "http://purl.org/icasa#version",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ts6d" : {
+      "@id" : "http://purl.org/icasa#ts6d",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Suite" : {
+      "@id" : "http://purl.org/icasa#Suite"
+    },
+    "diffusconst" : {
+      "@id" : "http://purl.org/icasa#diffusconst",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suite_document" : {
+      "@id" : "http://purl.org/icasa#suite_document",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ti_no" : {
+      "@id" : "http://purl.org/icasa#ti_no",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slbs" : {
+      "@id" : "http://purl.org/icasa#slbs",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "om_tot" : {
+      "@id" : "http://purl.org/icasa#om_tot",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wst_dataset" : {
+      "@id" : "http://purl.org/icasa#wst_dataset",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sl_system" : {
+      "@id" : "http://purl.org/icasa#sl_system",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tmin" : {
+      "@id" : "http://purl.org/icasa#tmin",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ge_id" : {
+      "@id" : "http://purl.org/icasa#ge_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icslt" : {
+      "@id" : "http://purl.org/icasa#icslt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fedep" : {
+      "@id" : "http://purl.org/icasa#fedep",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fertilizer" : {
+      "@id" : "http://purl.org/icasa#fertilizer",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icrt" : {
+      "@id" : "http://purl.org/icasa#icrt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "nrcsfam" : {
+      "@id" : "http://purl.org/icasa#nrcsfam",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "chday" : {
+      "@id" : "http://purl.org/icasa#chday",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suite_email" : {
+      "@id" : "http://purl.org/icasa#suite_email",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rp" : {
+      "@id" : "http://purl.org/icasa#rp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "eto" : {
+      "@id" : "http://purl.org/icasa#eto",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "shmn" : {
+      "@id" : "http://purl.org/icasa#shmn",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "alpha" : {
+      "@id" : "http://purl.org/icasa#alpha",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "trt_name" : {
+      "@id" : "http://purl.org/icasa#trt_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slbdm" : {
+      "@id" : "http://purl.org/icasa#slbdm",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pltor" : {
+      "@id" : "http://purl.org/icasa#pltor",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "feamc" : {
+      "@id" : "http://purl.org/icasa#feamc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "unit" : {
+      "@id" : "http://purl.org/icasa#unit",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tmny" : {
+      "@id" : "http://purl.org/icasa#tmny",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suite_person_notes" : {
+      "@id" : "http://purl.org/icasa#suite_person_notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "date" : {
+      "@id" : "http://purl.org/dc/elements/1.1/date"
+    },
+    "apsim_kl" : {
+      "@id" : "http://purl.org/icasa#apsim_kl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "aco2" : {
+      "@id" : "http://purl.org/icasa#aco2",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "smpx" : {
+      "@id" : "http://purl.org/icasa#smpx",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slfc2" : {
+      "@id" : "http://purl.org/icasa#slfc2",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icrli" : {
+      "@id" : "http://purl.org/icasa#icrli",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "WeatherStation" : {
+      "@id" : "http://purl.org/icasa#WeatherStation"
+    },
+    "slpf" : {
+      "@id" : "http://purl.org/icasa#slpf",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "co2y" : {
+      "@id" : "http://purl.org/icasa#co2y",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ts3d" : {
+      "@id" : "http://purl.org/icasa#ts3d",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "co2a" : {
+      "@id" : "http://purl.org/icasa#co2a",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "mlthk" : {
+      "@id" : "http://purl.org/icasa#mlthk",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "soil_lat" : {
+      "@id" : "http://purl.org/icasa#soil_lat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plpoe" : {
+      "@id" : "http://purl.org/icasa#plpoe",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sladc" : {
+      "@id" : "http://purl.org/icasa#sladc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ml_name" : {
+      "@id" : "http://purl.org/icasa#ml_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "emday" : {
+      "@id" : "http://purl.org/icasa#emday",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "mlcol" : {
+      "@id" : "http://purl.org/icasa#mlcol",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sldrl" : {
+      "@id" : "http://purl.org/icasa#sldrl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wst_license" : {
+      "@id" : "http://purl.org/icasa#wst_license",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Weather" : {
+      "@id" : "http://purl.org/icasa#Weather"
+    },
+    "irop" : {
+      "@id" : "http://purl.org/icasa#irop",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ecdyl" : {
+      "@id" : "http://purl.org/icasa#ecdyl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "xwmn" : {
+      "@id" : "http://purl.org/icasa#xwmn",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sadat" : {
+      "@id" : "http://purl.org/icasa#sadat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "trdate" : {
+      "@id" : "http://purl.org/icasa#trdate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wst_email" : {
+      "@id" : "http://purl.org/icasa#wst_email",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "cona" : {
+      "@id" : "http://purl.org/icasa#cona",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slec" : {
+      "@id" : "http://purl.org/icasa#slec",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "bmth" : {
+      "@id" : "http://purl.org/icasa#bmth",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pdw" : {
+      "@id" : "http://purl.org/icasa#pdw",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fl_notes" : {
+      "@id" : "http://purl.org/icasa#fl_notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sladr" : {
+      "@id" : "http://purl.org/icasa#sladr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slcom" : {
+      "@id" : "http://purl.org/icasa#slcom",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "cmplc" : {
+      "@id" : "http://purl.org/icasa#cmplc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "swmn" : {
+      "@id" : "http://purl.org/icasa#swmn",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "inp" : {
+      "@id" : "http://purl.org/icasa#inp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "vg_n" : {
+      "@id" : "http://purl.org/icasa#vg_n",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slphb" : {
+      "@id" : "http://purl.org/icasa#slphb",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icday" : {
+      "@id" : "http://purl.org/icasa#icday",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slres" : {
+      "@id" : "http://purl.org/icasa#slres",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "mlayr" : {
+      "@id" : "http://purl.org/icasa#mlayr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "twld" : {
+      "@id" : "http://purl.org/icasa#twld",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "op" : {
+      "@id" : "http://purl.org/icasa#op",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "SuitePerson" : {
+      "@id" : "http://purl.org/icasa#SuitePerson"
+    },
+    "feamp" : {
+      "@id" : "http://purl.org/icasa#feamp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slnf" : {
+      "@id" : "http://purl.org/icasa#slnf",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "chdep" : {
+      "@id" : "http://purl.org/icasa#chdep",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Field" : {
+      "@id" : "http://purl.org/icasa#Field"
+    },
+    "wst_notes" : {
+      "@id" : "http://purl.org/icasa#wst_notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slpt" : {
+      "@id" : "http://purl.org/icasa#slpt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "eid" : {
+      "@id" : "http://purl.org/icasa#eid",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "irthr" : {
+      "@id" : "http://purl.org/icasa#irthr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "saphw" : {
+      "@id" : "http://purl.org/icasa#saphw",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ch_name" : {
+      "@id" : "http://purl.org/icasa#ch_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "last_update" : {
+      "@id" : "http://purl.org/icasa#last_update",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "SuiteInstitution" : {
+      "@id" : "http://purl.org/icasa#SuiteInstitution"
+    },
+    "Document" : {
+      "@id" : "http://purl.org/icasa#Document"
+    },
+    "soil_subset" : {
+      "@id" : "http://purl.org/icasa#soil_subset",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ts7d" : {
+      "@id" : "http://purl.org/icasa#ts7d",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plftn" : {
+      "@id" : "http://purl.org/icasa#plftn",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "page" : {
+      "@id" : "http://purl.org/icasa#page",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icrp" : {
+      "@id" : "http://purl.org/icasa#icrp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "scmpf" : {
+      "@id" : "http://purl.org/icasa#scmpf",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "mltp" : {
+      "@id" : "http://purl.org/icasa#mltp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icrip" : {
+      "@id" : "http://purl.org/icasa#icrip",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wst_dist" : {
+      "@id" : "http://purl.org/icasa#wst_dist",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wind" : {
+      "@id" : "http://purl.org/icasa#wind",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icyr" : {
+      "@id" : "http://purl.org/icasa#icyr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fl_name" : {
+      "@id" : "http://purl.org/icasa#fl_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sname" : {
+      "@id" : "http://purl.org/icasa#sname",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slpa" : {
+      "@id" : "http://purl.org/icasa#slpa",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "happc" : {
+      "@id" : "http://purl.org/icasa#happc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slic" : {
+      "@id" : "http://purl.org/icasa#slic",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ich2o" : {
+      "@id" : "http://purl.org/icasa#ich2o",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rev_date_first" : {
+      "@id" : "http://purl.org/icasa#rev_date_first",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "irept" : {
+      "@id" : "http://purl.org/icasa#irept",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fenh4" : {
+      "@id" : "http://purl.org/icasa#fenh4",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "flaga" : {
+      "@id" : "http://purl.org/icasa#flaga",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "field_overlay" : {
+      "@id" : "http://purl.org/icasa#field_overlay",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icnh4" : {
+      "@id" : "http://purl.org/icasa#icnh4",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "mid_initial" : {
+      "@id" : "http://purl.org/icasa#mid_initial",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rating_wth" : {
+      "@id" : "http://purl.org/icasa#rating_wth",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "chamt" : {
+      "@id" : "http://purl.org/icasa#chamt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tmna" : {
+      "@id" : "http://purl.org/icasa#tmna",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "SuiteDocument" : {
+      "@id" : "http://purl.org/icasa#SuiteDocument"
+    },
+    "cldd" : {
+      "@id" : "http://purl.org/icasa#cldd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "omdat" : {
+      "@id" : "http://purl.org/icasa#omdat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "mlcov" : {
+      "@id" : "http://purl.org/icasa#mlcov",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "drainage" : {
+      "@id" : "http://purl.org/icasa#drainage",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hacr" : {
+      "@id" : "http://purl.org/icasa#hacr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "cul_id" : {
+      "@id" : "http://purl.org/icasa#cul_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fedate" : {
+      "@id" : "http://purl.org/icasa#fedate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "emrai" : {
+      "@id" : "http://purl.org/icasa#emrai",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suite_exper_type" : {
+      "@id" : "http://purl.org/icasa#suite_exper_type",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fl_plowd" : {
+      "@id" : "http://purl.org/icasa#fl_plowd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hayr" : {
+      "@id" : "http://purl.org/icasa#hayr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "namn" : {
+      "@id" : "http://purl.org/icasa#namn",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ir_name" : {
+      "@id" : "http://purl.org/icasa#ir_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pltsp" : {
+      "@id" : "http://purl.org/icasa#pltsp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "harea" : {
+      "@id" : "http://purl.org/icasa#harea",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "mgmt_type" : {
+      "@id" : "http://purl.org/icasa#mgmt_type",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "refht" : {
+      "@id" : "http://purl.org/icasa#refht",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sdat" : {
+      "@id" : "http://purl.org/icasa#sdat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "omday" : {
+      "@id" : "http://purl.org/icasa#omday",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Experiment" : {
+      "@id" : "http://purl.org/icasa#Experiment"
+    },
+    "tiday" : {
+      "@id" : "http://purl.org/icasa#tiday",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fldrad" : {
+      "@id" : "http://purl.org/icasa#fldrad",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sm" : {
+      "@id" : "http://purl.org/icasa#sm",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "soil_long" : {
+      "@id" : "http://purl.org/icasa#soil_long",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fep_no" : {
+      "@id" : "http://purl.org/icasa#fep_no",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "SoilDocument" : {
+      "@id" : "http://purl.org/icasa#SoilDocument"
+    },
+    "salb" : {
+      "@id" : "http://purl.org/icasa#salb",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "name_code" : {
+      "@id" : "http://purl.org/icasa#name_code",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "miss" : {
+      "@id" : "http://purl.org/icasa#miss",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rev_date_first_wst" : {
+      "@id" : "http://purl.org/icasa#rev_date_first_wst",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "OrganicMaterial" : {
+      "@id" : "http://purl.org/icasa#OrganicMaterial"
+    },
+    "slmh" : {
+      "@id" : "http://purl.org/icasa#slmh",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wst_name" : {
+      "@id" : "http://purl.org/icasa#wst_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fl_plowdc" : {
+      "@id" : "http://purl.org/icasa#fl_plowdc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plyr" : {
+      "@id" : "http://purl.org/icasa#plyr",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "exp_dur" : {
+      "@id" : "http://purl.org/icasa#exp_dur",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ts1d" : {
+      "@id" : "http://purl.org/icasa#ts1d",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "dome_applied" : {
+      "@id" : "http://purl.org/icasa#dome_applied",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "description" : {
+      "@id" : "http://purl.org/icasa#description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suite_citation" : {
+      "@id" : "http://purl.org/icasa#suite_citation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "anga" : {
+      "@id" : "http://purl.org/icasa#anga",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "icrdy" : {
+      "@id" : "http://purl.org/icasa#icrdy",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "raiy" : {
+      "@id" : "http://purl.org/icasa#raiy",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sltop" : {
+      "@id" : "http://purl.org/icasa#sltop",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "saday" : {
+      "@id" : "http://purl.org/icasa#saday",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plta" : {
+      "@id" : "http://purl.org/icasa#plta",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slal" : {
+      "@id" : "http://purl.org/icasa#slal",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "SoilAnalysis" : {
+      "@id" : "http://purl.org/icasa#SoilAnalysis"
+    },
+    "doc_id_wst" : {
+      "@id" : "http://purl.org/icasa#doc_id_wst",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slsu" : {
+      "@id" : "http://purl.org/icasa#slsu",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plmsource" : {
+      "@id" : "http://purl.org/icasa#plmsource",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "in" : {
+      "@id" : "http://purl.org/icasa#in",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ch_notes" : {
+      "@id" : "http://purl.org/icasa#ch_notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sl_citation" : {
+      "@id" : "http://purl.org/icasa#sl_citation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suite_license" : {
+      "@id" : "http://purl.org/icasa#suite_license",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pl_name" : {
+      "@id" : "http://purl.org/icasa#pl_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "classification" : {
+      "@id" : "http://purl.org/icasa#classification",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slxf" : {
+      "@id" : "http://purl.org/icasa#slxf",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fl_long" : {
+      "@id" : "http://purl.org/icasa#fl_long",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sid" : {
+      "@id" : "http://purl.org/icasa#sid",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "endat" : {
+      "@id" : "http://purl.org/icasa#endat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "slinc" : {
+      "@id" : "http://purl.org/icasa#slinc",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "soil_id" : {
+      "@id" : "http://purl.org/icasa#soil_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "person_notes" : {
+      "@id" : "http://purl.org/icasa#person_notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fl_loc_1" : {
+      "@id" : "http://purl.org/icasa#fl_loc_1",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rep_no" : {
+      "@id" : "http://purl.org/icasa#rep_no",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hastg" : {
+      "@id" : "http://purl.org/icasa#hastg",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    }
+  }
+}
