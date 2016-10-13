@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/icasa/vu"
+  xml:base="http://purl.org/icasa/vu"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Ontology rdf:about="http://purl.org/icasa/vu">
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICASA Ontology for Variables and Units</dc:title>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology intended to model variables and units  capturing the ICASA measured data variables as well as CF standard names and BETYdb variables. </dc:description>
+    <dc:date>2016-09-24</dc:date>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0-alpha</owl:versionInfo>
+  </owl:Ontology>
+
+  <owl:Class rdf:about="http://purl.org/icasa/vu#Variable">
+     <rdfs:label>Variable</rdfs:label>
+     <rdfs:comment xml:lang="en">Quantity that can be measured in an experiment</rdfs:comment>
+     <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/icasa/vu#Unit">
+     <rdfs:label>Unit</rdfs:label>
+	 <rdfs:comment xml:lang="en">Magnitude of a quantity chosen as a standard for measurement of the same quantity</rdfs:comment>
+     <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	 <owl:sameAs rdf:resource="http://mmisw.org/ont/mmi/udunits2/Unit"/>
+  </owl:Class>
+
+  <owl:FunctionalProperty rdf:about="http://purl.org/icasa/vu#name">
+   <rdfs:domain rdf:about="http://purl.org/icasa/vu#Variable">
+   <rdfs:label>Name</rdfs:label>
+   <rdfs:comment>Preferred name used to identify the variable</rdfs:comment>
+  </owl:FunctionalProperty>
+
+  <owl:FunctionalProperty rdf:about="http://purl.org/icasa/vu#standardName">
+   <rdfs:domain rdf:about="http://purl.org/icasa/vu#Variable">
+   <rdfs:label>Standard name</rdfs:label>
+   <rdfs:comment>Standard name by CF conventions used to identify the variable</rdfs:comment>
+  </owl:FunctionalProperty>
+
+  <owl:DatatypeProperty rdf:about="http://purl.org/icasa/vu#alternateName">
+   <rdfs:domain rdf:about="http://purl.org/icasa/vu#Variable">
+   <rdfs:domain rdf:about="http://purl.org/icasa/vu#Unit">
+   <rdfs:label>Alternate name</rdfs:label>
+   <rdfs:comment>Alternate name used to identify the variable or unit</rdfs:comment>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://purl.org/icasa/vu#definition">
+   <rdfs:domain rdf:about="http://purl.org/icasa/vu#Variable">
+   <rdfs:domain rdf:about="http://purl.org/icasa/vu#Unit">
+   <rdfs:label>Definition</rdfs:label>
+   <rdfs:comment>Definition of the variable or unit</rdfs:comment>
+  </owl:DatatypeProperty>
+
+</rdf:RDF>

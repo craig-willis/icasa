@@ -1,14 +1,16 @@
 # ICASA OWL Ontologies and RDF Variables/Units
 
 This is an initial rendering of the [ICASA Master Variable List](https://docs.google.com/spreadsheets/d/1MYx1ukUsCAM1pcixbVQSu49NU-LfXg-Dtt-ncLBzGAM/pub?output=html#) 
-in RDF and OWL. This is a very rough draft and intended for community feedback.
+in OWL. This is a very rough draft and intended for community feedback.
 
 What's been done:
 * ICASA "Mangement_Info" entities and attributes are rendered as an [OWL ontology for experiments and managements](icasa-mgmt-info.owl) [ [HTML](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa-mgmt-info.owl)].
-* A separate OWL ontology was manually created to describe [Variables and Units](icasa-measured-data.owl) [[HTML](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa-measured-data.owl)].  This is a proof of concept and will ideally be replaced by another standard once identified.
+* A separate OWL ontology was manually created to describe [Variables and Units](variables-units.owl) [[HTML](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa-measured-data.owl)].  This is a proof of concept and will ideally be replaced by another standard once identified. Certainly the [MMI UDUNIT2](http://mmisw.org/orr/) can use used for units.
 * The "Measured_Data" sheet is rendered as a set of [Variables in RDF](icasa-measured-data.rdf).
 
 See the [Design Notes](docs/design.md) for more information on the basic requirements, recommendations, and design considerations.
+
+The PURL http://purl.org/icasa has been registered with the [Internet Archive](http://www.purl.org).
 
 ## Management Info
 
@@ -56,7 +58,7 @@ Time series variables are divided into thirteen cagegories: plant growth, plant 
 
 Of course, there can certainly be other types of measured data.  While ICASA assumes daily measurements, the time series granularity can be different.  Also, while ICASA assumes crop-level measurements, this is not necessarily a requirement.
 
-A  different approach is taken for the Measured_Data sheet.  A simple OWL ontology was manually created to describe [variables and units](measured-data.owl).  This will likely be replaced by another standard ontology or model, once a suitable candidate is found.
+A  different approach is taken for the Measured_Data sheet.  A simple OWL ontology was manually created to describe [variables and units](variables-units.owl).  This will likely be replaced by another standard ontology or model, once a suitable candidate is found.
 
 The python script [icasa-measured-data.py]icasa-measured-data.py) converts the Measured_Data into a set of [variable descriptions in RDF](icasa-measured-data.rdf).  We can imagine similar sets of variables for BETYdb, TERRA-REF, and other projects.
 ```
@@ -84,17 +86,14 @@ Files:
 
 ## Units
 
-The ICASA master variable list contains a "Units_or_type" column with the units for the variable.  While some of these units may
-already be addressed by another ontology (e.g., Units of Measurement), it would be helpful to get specific definitions for those used by the 
-ICASA community.
+The ICASA master variable list contains a "Units_or_type" column with the units for the variable.  While some of these units may already be addressed by another ontology (e.g., [Units of Measurement](http://bioportal.bioontology.org/ontologies/UO)), it would be helpful to get specific definitions for those used by the ICASA community.
 
-For the non-SME, this is helpful: http://www.fao.org/docrep/x0490e/x0490e0i.htm
+For the non-subject matter expert, this is helpful: http://www.fao.org/docrep/x0490e/x0490e0i.htm
 
 Files:
 * icasa-units.csv: Mapping of unit to definition
 
 ## Notes
-* Assumes PURL created at purl.org/icasa (login currently disabled on purl.org site)
 * Object properties have not yet been added (relations)
 * Some classes are duplicated (Person/Institution/Document) for experiment, soil, weather station, etc.  These can likely be consolidated to a single class.
 * Some of the terms in the original vocabulary are ID fields and relational keys intended for use in an RDBMS.
