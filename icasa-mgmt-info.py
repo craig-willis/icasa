@@ -5,7 +5,7 @@ import cgi
 Read icasa-mgmt-info.csv (CSV export of ICASA Master Variable List Google doc https://docs.google.com/spreadsheets/d/1MYx1ukUsCAM1pcixbVQSu49NU-LfXg-Dtt-ncLBzGAM/pub?output=html) and generate an Owl ontology. 
 '''
 
-baseUrl = "http://purl.org/icasa"
+baseUrl = "http://purl.org/icasa/core"
 
 print(
 '<?xml version="1.0"?>\n' + 
