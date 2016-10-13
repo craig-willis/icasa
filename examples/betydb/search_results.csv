@@ -1,0 +1,22 @@
+"# LeBauer, David, Michael Dietze, Rob Kooper, Steven Long, Patrick Mulrooney, Gareth Scott Rohde, Dan Wang (2010).  Biofuel Ecophysiological Traits and Yields Database (BETYdb), Energy Biosciences Institute, University of Illinois at Urbana-Champaign. doi:10.13012/J8H41PB9 All public data in BETYdb is made available under the Open Data Commons Attribution License (ODC-By) v1.0. You are free to share, create, and adapt its contents. Data with an access_level field and value <= 2 is is not covered by this license but may be available for use with consent."
+checked,sitename,city,lat,lon,scientificname,commonname,genus,author,citation_year,treatment
+
+checked,University of Queensland Farm,Redland Bay,-27.47,152.74,Manihot esculenta,cassava,Manihot,Tsay,1988,sole-cropping
+
+date,month,year,dateloc,trait,mean,units,n,statname,stat,notes
+
+"traits" {
+   "a_biomass" : {
+       "units" : "Mg/Ha",
+       "dateloc" : "5",
+       "data" : {
+         [
+          "date": "1982-12-04 08:00:00 -0600", "mean": "0.410",
+          "date": "1983-02-04 08:00:00 -0600", "mean": "3.68",
+          "date": "1983-04-04 08:00:00 -0600", "mean": "8.30",
+          "date": "1983-06-04 09:00:00 -0500", "mean": "10.6",
+          "date": "1983-08-04 09:00:00 -0500", "mean": "11.6"
+         ]
+       }
+   }
+}

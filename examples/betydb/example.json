@@ -1,0 +1,46 @@
+{
+   "site": {
+        "city": "Redland Bay",
+        "country": "AU",
+        "geometry": "POINT (152.7366092 -27.4703942 0.0)",
+        "sitename": "University of Queensland Farm",
+        "state": "Queensland",
+        "time_zone": "Australia/Brisbane"
+    },
+    "citation": {
+        "author": "Tsay",
+        "doi": "10.1016/0378-4290(88)90045-7",
+        "journal": "Field Crops Research",
+        "pg": "227\u2013239",
+        "title": "Effects of Relative Sowing time of soybean on growth and yield of cassava in cassava/soybean intercropping",
+        "url": "http://www.sciencedirect.com/science/article/pii/0378429088900457",
+        "vol": 19,
+        "year": 1988
+    },
+    "cultivar": {
+        "scientificname": "Manihot esculenta",
+        "AcceptedSymbol": "MAES",
+        "commonname": "cassava",
+        "genus": "Manihot",
+        "species": "esculenta",
+        "name": "MAus",
+    },
+    "treatment": {
+        "control": true,
+        "name": "sole-cropping",
+    },
+    "traits": {
+		[
+       	   "variable": "a_biomass",
+           "units" : "Mg/Ha",
+           "dateloc" : "5",
+           "data" : {
+             ["date": "1982-12-04 08:00:00 -0600", "mean": "0.410"],
+			 ["date": "1983-02-04 08:00:00 -0600", "mean": "3.68"],
+			 ["date": "1983-04-04 08:00:00 -0600", "mean": "8.30"],
+			 ["date": "1983-06-04 09:00:00 -0500", "mean": "10.6"],
+			 ["date": "1983-08-04 09:00:00 -0500", "mean": "11.6"]
+		   }
+		]
+	}
+}
