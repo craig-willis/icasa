@@ -7,7 +7,7 @@ This is a very rough draft and intended for community feedback.
 
 What's been done:
 * ICASA "Mangement_Info" entities and attributes are rendered as an [OWL ontology for experiments and managements](icasa-mgmt-info.owl) [ [HTML](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa-mgmt-info.owl)].
-* A separate OWL ontology was manually created to describe [Variables and Units](variables-units.owl) [[HTML](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa-measured-data.owl)].  This is a proof of concept and will ideally be replaced by another standard once identified. Certainly the [MMI UDUNIT2](http://mmisw.org/orr/) can use used for units.
+* A separate OWL ontology was manually created to describe [Variables and Units](variables-units.owl) [[HTML](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa-measured-data.owl)].  This is a proof of concept and will ideally be replaced by another standard once identified. For example, the [MMI UDUNIT2](http://mmisw.org/orr/) for units.
 * The "Measured_Data" sheet is rendered as a set of [Variables in RDF](icasa-measured-data.rdf). 
 
 See the [Design Notes](docs/design.md) for more information on the basic requirements, recommendations, and design considerations.
