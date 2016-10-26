@@ -1,9 +1,9 @@
 # ICASA OWL Ontologies and RDF Variables/Units
 
 This is an initial rendering of the [ICASA Master Variable List](https://docs.google.com/spreadsheets/d/1MYx1ukUsCAM1pcixbVQSu49NU-LfXg-Dtt-ncLBzGAM/pub?output=html#) 
-in OWL. The primary goal of this project is to create a practical and faithful implementation of the [ICASA Master Variable List](http://research.agmip.org/display/dev/ICASA+Master+Variable+List) that can be used for linked-data applications and covers the existing [AgMIP JSON Data Objects](http://research.agmip.org/display/dev/JSON+Data+Objects). 
+in OWL. The primary goal of this project is to create a practical and faithful implementation of the [ICASA Master Variable List](http://research.agmip.org/display/dev/ICASA+Master+Variable+List) that can be used for linked-data applications and covers the existing [AgMIP JSON Data Objects](http://research.agmip.org/display/dev/JSON+Data+Objects) and can be be combined with other linked-data contexts to support the [TERRA-REF](http://terraref.org/) project, particularly information available through [BETYdb](https://terraref.ncsa.illinois.edu/bety/).
 
-This is a very rough draft and intended for community feedback.
+This is an early and rough draft and intended for community feedback.
 
 What's been done:
 * ICASA "Mangement_Info" entities and attributes are rendered as an [OWL ontology for experiments and managements](icasa-mgmt-info.owl) [ [HTML](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa-mgmt-info.owl)].
@@ -16,7 +16,7 @@ The PURL http://purl.org/icasa has been registered with the [Internet Archive](h
 
 ## Management Info
 
-Each dataset/subset/group is added as an RDF Class. Each variable/code is added as a datatype property with domain as the associated class (dataset/subset/group) and range xsd:string. For example:
+Each dataset/subset/group is added as an OWL Class. Each variable/code is added as a datatype property with domain as the associated class (dataset/subset/group) and range xsd:string. For example:
 
 ```
 <!-- http://purl.org/icasa/core#Experiment -->
@@ -39,11 +39,13 @@ Each dataset/subset/group is added as an RDF Class. Each variable/code is added 
 </owl:DatatypeProperty>
 ```
 
+Class names are manually generated from the dataset/subset/group columns and descriptions from White et al (2013).
+
 Files:
-* icasa-mgmt-info.csv: Management_Info sheet as CSV
+* icasa-mgmt-info.csv: Management_Info sheet exported from Google spreadsheet as CSV
 * icasa-mgmt-info.owl: OWL ontology (output of icasa-mgmt-info.py)
 * icasa-mgmt-info.py: Python script that reads icasa-mgmt-info.csv, icasa-mgmt-info-subgroups.csv and generates icasa-mgmt-info.owl
-* icasa-mgmt-info-subgroups.csv: Manual mapping of dataset/subset/group information to RDF Class Names. Descriptions taken from White et al (2013).
+* icasa-mgmt-info-subgroups.csv: Manual mapping of dataset/subset/group information to class names.
 
 To run:
 ```
@@ -52,11 +54,11 @@ python icasa-mgmt-info.py > icasa-mgmt-info.owl
 
 ## Measured Data
 
-ICASA supports measured data through summary (recorded once for a treatment) and time series (measured at specific intervals throughout an experiment).  Variables are grouped based on specific categories and include attributes variable name, code, definition, units, and types.
+ICASA supports measured data through summary (recorded once for a treatment) and time series (measured at specific intervals throughout an experiment) variables.  Variables are grouped based on specific categories and have attributes variable name, code, definition, units, and types.
 
 In ICASA, summary data variables are divided into five categories: development, growth, water balance, soils, and environment. Overall, there are approximately 165 summary variables.  Time series variables are divided into thirteen cagegories: plant growth, plant nitrogen, plant phosphorous, plant water balance, soil layers, soil nitrogen, soil organic matter, soil phosporous, surface litter, soil plant atmossphere, management, floodwater and pest population effects.
 
-Of course, there can certainly be other types of measured data.  While ICASA assumes daily measurements, the time series granularity can be different.  Also, while ICASA assumes crop-level measurements, this is not necessarily a requirement.
+Of course, there can certainly be other types of measured data.  While ICASA assumes daily measurements, the time series granularity can be different for other applications.  Also, while ICASA assumes crop-level measurements, this is not necessarily a requirement.
 
 A  different approach is taken for the Measured_Data sheet.  A simple OWL ontology was manually created to describe the top-level concepts of [variables and units](variables-units.owl).  This will likely be replaced by another standard ontology or model, once a suitable candidate is found.
 
@@ -86,7 +88,7 @@ Files:
 
 ## Units
 
-The ICASA master variable list contains a "Units_or_type" column with the units for the variable.  While some of these units may already be addressed by another ontology (e.g., [Units of Measurement](http://bioportal.bioontology.org/ontologies/UO)), it would be helpful to get specific definitions for those used by the ICASA community.
+The ICASA master variable list contains a "Units_or_type" column with the units for the variable.  While some of these units may already be addressed by other ontologyies (e.g., [Units of Measurement](http://bioportal.bioontology.org/ontologies/UO)), it would be helpful to get specific definitions for those used by the ICASA community.
 
 For the non-subject matter expert, this is helpful: http://www.fao.org/docrep/x0490e/x0490e0i.htm
 
