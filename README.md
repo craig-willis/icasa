@@ -19,8 +19,8 @@ The PURL http://purl.org/icasa has been registered with the [Internet Archive](h
 Each dataset/subset/group is added as an RDF Class. Each variable/code is added as a datatype property with domain as the associated class (dataset/subset/group) and range xsd:string. For example:
 
 ```
-<!-- http://purl.org/icasa#Experiment -->
-<owl:Class rdf:about="http://purl.org/icasa#Experiment">
+<!-- http://purl.org/icasa/core#Experiment -->
+<owl:Class rdf:about="http://purl.org/icasa/core#Experiment">
    <rdfs:label>Experiment</rdfs:label> 
    <rdfs:comment xml:lang="en">Complete description of management and initial conditions for a real or 
    synthetic experiment (or very closely linked set of experiments). Data measured during or at the end 
@@ -29,11 +29,11 @@ Each dataset/subset/group is added as an RDF Class. Each variable/code is added 
    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 </owl:Class>
 
-<!-- http://http://purl.org/icasa#data_source -->
-<owl:DatatypeProperty rdf:about="http://purl.org/icasa#data_source">
+<!-- http://http://purl.org/icasa/core#data_source -->
+<owl:DatatypeProperty rdf:about="http://purl.org/icasa/core#data_source">
     <rdfs:label>data_source</rdfs:label>
     <rdfs:comment xml:lang="en">Original format of  data (DSSAT, APSIM, CIMMYT, field log, etc)</rdfs:comment>     
-    <rdfs:domain rdf:resource="http://purl.org/icasa#Experiment"/>
+    <rdfs:domain rdf:resource="http://purl.org/icasa/core#Experiment"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
 </owl:DatatypeProperty>
@@ -54,24 +54,22 @@ python icasa-mgmt-info.py > icasa-mgmt-info.owl
 
 ICASA supports measured data through summary (recorded once for a treatment) and time series (measured at specific intervals throughout an experiment).  Variables are grouped based on specific categories and include attributes variable name, code, definition, units, and types.
 
-Summary data variables are divided into five categories: development, growth, water balance, soils, and environment. Overall, there are approximately 165 summary variables.
-
-Time series variables are divided into thirteen cagegories: plant growth, plant nitrogen, plant phosphorous, plant water balance, soil layers, soil nitrogen, soil organic matter, soil phosporous, surface litter, soil plant atmossphere, management, floodwater and pest population effects.
+In ICASA, summary data variables are divided into five categories: development, growth, water balance, soils, and environment. Overall, there are approximately 165 summary variables.  Time series variables are divided into thirteen cagegories: plant growth, plant nitrogen, plant phosphorous, plant water balance, soil layers, soil nitrogen, soil organic matter, soil phosporous, surface litter, soil plant atmossphere, management, floodwater and pest population effects.
 
 Of course, there can certainly be other types of measured data.  While ICASA assumes daily measurements, the time series granularity can be different.  Also, while ICASA assumes crop-level measurements, this is not necessarily a requirement.
 
-A  different approach is taken for the Measured_Data sheet.  A simple OWL ontology was manually created to describe [variables and units](variables-units.owl).  This will likely be replaced by another standard ontology or model, once a suitable candidate is found.
+A  different approach is taken for the Measured_Data sheet.  A simple OWL ontology was manually created to describe the top-level concepts of [variables and units](variables-units.owl).  This will likely be replaced by another standard ontology or model, once a suitable candidate is found.
 
 The python script [icasa-measured-data.py]icasa-measured-data.py) converts the Measured_Data into a set of [variable descriptions in RDF](icasa-measured-data.rdf).  We can imagine similar sets of variables for BETYdb, TERRA-REF, and other projects.
 ```
     <!-- http://http://purl.org/icasa/variables#irrd -->
     <rdf:Description rdf:about="http://purl.org/icasa/variables#irrd">
-        <rdf:type rdf:resource="http://purl.org/icasa/md#Variable"/>
-        <md:name>irrigation</md:name>
-        <md:alternateName>irrd</md:alternateName>
-        <md:definition>Irrigation amount per day</md:definition>
-        <md:unit>mm/d</md:unit>
-        <md:category>Management</md:category>
+        <rdf:type rdf:resource="http://purl.org/icasa/vu#Variable"/>
+        <vu:name>irrigation</vu:name>
+        <vu:alternateName>irrd</vu:alternateName>
+        <vu:definition>Irrigation amount per day</vu:definition>
+        <vu:unit>mm/d</vu:unit>
+        <vu:category>Management</vu:category>
     </rdf:Description>
 ```
 
