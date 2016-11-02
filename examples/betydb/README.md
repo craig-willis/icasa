@@ -27,7 +27,22 @@ A previously noted difference between BETYdb and ICASA: BETYdb has treatments an
 * Site: Sites have studies and treatments
 * Treatment: Independent units within a site. Categorical identifier. Rates of fertilizer application shoule be recorded in the managements table. Level of treatment recorded as a managment. 
 
-
-
+## BETYdb to ICASA coverage
+| Table | Coverage | 
+| ------------- | ------------- |
+| Citations | ICASA has citation fields (experiment_citation, soil_citation, weather_citation) as well as documents fields for experiments, soils, and weather stations)| 
+| Covariates | Not covered by ICASA| 
+| Cultivars | The genotypes entity has cultivar_identity, cultivar_name and cultivar_notes. However, these appear to be modeled only as attributes of management events, not as separate classes. | 
+| Managements | BETYdb managements are more like ICASA treatment events. The ICASA "management" concept is much broader covering initial conditions, soil analyses, treatments, plantings, fertilizations, mulching, etc..  | 
+| Methods | BETYdb "methods" are intended to be documented protocols. This concept isn't addressed by ICASA | 
+| PFTs | Not covered by ICASA |
+| Priors | Not covered by ICASA | 
+| Site groups | Not covered by ICASA| 
+| Site | ICASA has site_name and site_type. BETYdb sites also include location, soil, geometry, and soil characteristics covered by the ICASA fields and plot_details classes. |
+| Species | ICASA has only a species identifier in the genotype class| 
+| Traits | Covered by ICASA only via summary or timeSeries classes|
+| Treatments | ICASA has specific treatment classes (fertilizations, mulching, etc)|
+| Variables | Only covered by measured data| 
+| Yields | Covered by ICASA only via summary or timeSeries classes| 
 
 
