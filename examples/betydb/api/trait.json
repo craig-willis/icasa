@@ -1,0 +1,209 @@
+{
+  "metadata": {
+    "URI": "https://terraref.ncsa.illinois.edu/bety/api/beta/traits?key=&variable_id=6000000007&site_id=6000001863",
+    "timestamp": "2016-11-02T14:32:18-05:00",
+    "count": 5
+  },
+  "data": [
+    {
+      "trait": {
+        "id": 6000000055,
+        "site_id": 6000001863,
+        "specie_id": 2588,
+        "citation_id": 6000000001,
+        "cultivar_id": 6000000002,
+        "treatment_id": 6000000014,
+        "date": "2016-06-23T02:00:00-05:00",
+        "dateloc": "5.0",
+        "time": null,
+        "timeloc": "9.0",
+        "mean": 122.0,
+        "n": null,
+        "statname": "",
+        "stat": null,
+        "notes": "",
+        "created_at": "2016-08-12T14:06:19-05:00",
+        "updated_at": "2016-09-27T11:10:53-05:00",
+        "variable_id": 6000000007,
+        "user_id": 6000000005,
+        "checked": 1,
+        "access_level": 2,
+        "entity_id": 6000000035,
+        "method_id": null,
+        "date_year": null,
+        "date_month": null,
+        "date_day": null,
+        "time_hour": null,
+        "time_minute": null,
+        "associated covariate ids": [
+
+        ],
+        "associated variable ids": [
+
+        ],
+        "view_url": "https://terraref.ncsa.illinois.edu/bety/traits/6000000055",
+        "edit_url": "https://terraref.ncsa.illinois.edu/bety/traits/6000000055/edit"
+      }
+    },
+    {
+      "trait": {
+        "id": 6000000001,
+        "site_id": 6000001863,
+        "specie_id": 2588,
+        "citation_id": 6000000001,
+        "cultivar_id": 6000000002,
+        "treatment_id": 6000000014,
+        "date": "2016-06-15T02:00:00-05:00",
+        "dateloc": "5.0",
+        "time": null,
+        "timeloc": "9.0",
+        "mean": 101.0,
+        "n": null,
+        "statname": "",
+        "stat": null,
+        "notes": "",
+        "created_at": "2016-08-12T14:06:19-05:00",
+        "updated_at": "2016-09-27T11:10:53-05:00",
+        "variable_id": 6000000007,
+        "user_id": 6000000005,
+        "checked": 1,
+        "access_level": 2,
+        "entity_id": 6000000008,
+        "method_id": null,
+        "date_year": null,
+        "date_month": null,
+        "date_day": null,
+        "time_hour": null,
+        "time_minute": null,
+        "associated covariate ids": [
+
+        ],
+        "associated variable ids": [
+
+        ],
+        "view_url": "https://terraref.ncsa.illinois.edu/bety/traits/6000000001",
+        "edit_url": "https://terraref.ncsa.illinois.edu/bety/traits/6000000001/edit"
+      }
+    },
+    {
+      "trait": {
+        "id": 6000000233,
+        "site_id": 6000001863,
+        "specie_id": 2588,
+        "citation_id": 6000000001,
+        "cultivar_id": 6000000002,
+        "treatment_id": 6000000014,
+        "date": "2016-05-31T02:00:00-05:00",
+        "dateloc": "5.0",
+        "time": null,
+        "timeloc": "9.0",
+        "mean": 28.0,
+        "n": null,
+        "statname": "",
+        "stat": null,
+        "notes": "",
+        "created_at": "2016-08-12T14:12:55-05:00",
+        "updated_at": "2016-09-27T11:10:53-05:00",
+        "variable_id": 6000000007,
+        "user_id": 6000000005,
+        "checked": 1,
+        "access_level": 2,
+        "entity_id": 6000000140,
+        "method_id": null,
+        "date_year": null,
+        "date_month": null,
+        "date_day": null,
+        "time_hour": null,
+        "time_minute": null,
+        "associated covariate ids": [
+
+        ],
+        "associated variable ids": [
+
+        ],
+        "view_url": "https://terraref.ncsa.illinois.edu/bety/traits/6000000233",
+        "edit_url": "https://terraref.ncsa.illinois.edu/bety/traits/6000000233/edit"
+      }
+    },
+    {
+      "trait": {
+        "id": 6000001679,
+        "site_id": 6000001863,
+        "specie_id": 2588,
+        "citation_id": 6000000001,
+        "cultivar_id": 6000000002,
+        "treatment_id": 6000000014,
+        "date": "2016-06-07T02:00:00-05:00",
+        "dateloc": "5.0",
+        "time": null,
+        "timeloc": "9.0",
+        "mean": 55.0,
+        "n": null,
+        "statname": "",
+        "stat": null,
+        "notes": "",
+        "created_at": "2016-08-12T14:13:01-05:00",
+        "updated_at": "2016-09-27T11:10:53-05:00",
+        "variable_id": 6000000007,
+        "user_id": 6000000005,
+        "checked": 1,
+        "access_level": 2,
+        "entity_id": 6000001586,
+        "method_id": null,
+        "date_year": null,
+        "date_month": null,
+        "date_day": null,
+        "time_hour": null,
+        "time_minute": null,
+        "associated covariate ids": [
+
+        ],
+        "associated variable ids": [
+
+        ],
+        "view_url": "https://terraref.ncsa.illinois.edu/bety/traits/6000001679",
+        "edit_url": "https://terraref.ncsa.illinois.edu/bety/traits/6000001679/edit"
+      }
+    },
+    {
+      "trait": {
+        "id": 6000005818,
+        "site_id": 6000001863,
+        "specie_id": 2588,
+        "citation_id": 6000000001,
+        "cultivar_id": 6000000002,
+        "treatment_id": 6000000014,
+        "date": "2016-07-11T02:00:00-05:00",
+        "dateloc": "5.0",
+        "time": null,
+        "timeloc": "9.0",
+        "mean": 149.0,
+        "n": null,
+        "statname": "",
+        "stat": null,
+        "notes": "",
+        "created_at": "2016-08-12T14:13:23-05:00",
+        "updated_at": "2016-09-27T11:10:53-05:00",
+        "variable_id": 6000000007,
+        "user_id": 6000000005,
+        "checked": 1,
+        "access_level": 2,
+        "entity_id": 6000005725,
+        "method_id": null,
+        "date_year": null,
+        "date_month": null,
+        "date_day": null,
+        "time_hour": null,
+        "time_minute": null,
+        "associated covariate ids": [
+
+        ],
+        "associated variable ids": [
+
+        ],
+        "view_url": "https://terraref.ncsa.illinois.edu/bety/traits/6000005818",
+        "edit_url": "https://terraref.ncsa.illinois.edu/bety/traits/6000005818/edit"
+      }
+    }
+  ]
+}

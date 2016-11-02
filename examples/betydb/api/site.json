@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "URI": "https://terraref.ncsa.illinois.edu/bety/api/beta/sites?key=&sitename=MAC%20Field%20Scanner%20Field%20Plot%2036%20W",
+    "timestamp": "2016-11-02T14:30:27-05:00",
+    "count": 1
+  },
+  "data": [
+    {
+      "site": {
+        "id": 6000001863,
+        "city": "Maricopa",
+        "state": "Arizona",
+        "country": "USA",
+        "mat": null,
+        "map": null,
+        "soil": "",
+        "som": null,
+        "notes": "",
+        "soilnotes": "",
+        "created_at": "2016-08-08T13:39:49-05:00",
+        "updated_at": "2016-10-13T17:25:58-05:00",
+        "sitename": "MAC Field Scanner Field Plot 36 W",
+        "greenhouse": false,
+        "user_id": 6000000004,
+        "sand_pct": null,
+        "clay_pct": null,
+        "geometry": null,
+        "time_zone": "America/Phoenix",
+        "associated citation ids": [
+          6000000001,
+          6000000002
+        ],
+        "associated sitegroup ids": [
+
+        ],
+        "associated yield ids": [
+
+        ],
+        "associated trait ids": [
+          6000000055,
+          6000000056,
+          6000000001,
+          6000000002,
+          6000000233,
+          6000001679,
+          6000005818
+        ],
+        "associated run ids": [
+
+        ],
+        "associated input ids": [
+
+        ],
+        "view_url": "https://terraref.ncsa.illinois.edu/bety/sites/6000001863",
+        "edit_url": "https://terraref.ncsa.illinois.edu/bety/sites/6000001863/edit"
+      }
+    }
+  ]
+}

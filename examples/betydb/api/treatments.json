@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "URI": "https://terraref.ncsa.illinois.edu/bety/api/beta/treatments?key=&id=6000000014",
+    "timestamp": "2016-11-02T15:24:05-05:00",
+    "count": 1
+  },
+  "data": [
+    {
+      "treatment": {
+        "id": 6000000014,
+        "name": "Control",
+        "definition": "",
+        "created_at": "2016-08-08T15:55:24-05:00",
+        "updated_at": "2016-08-08T15:55:24-05:00",
+        "control": true,
+        "user_id": 6000000004,
+        "associated trait ids": [
+   	    ],
+        "associated yield ids": [
+        ],
+        "associated management ids": [
+          6000000001
+        ],
+        "associated citation ids": [
+          6000000001
+        ],
+        "view_url": "https://terraref.ncsa.illinois.edu/bety/treatments/6000000014",
+        "edit_url": "https://terraref.ncsa.illinois.edu/bety/treatments/6000000014/edit"
+      }
+    }
+  ]
+}

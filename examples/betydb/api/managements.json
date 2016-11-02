@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "URI": "https://terraref.ncsa.illinois.edu/bety/api/beta/managements?key=",
+    "timestamp": "2016-11-02T14:49:57-05:00",
+    "count": 1
+  },
+  "data": [
+    {
+      "management": {
+        "id": 6000000001,
+        "citation_id": 6000000001,
+        "date": "2016-04-19",
+        "dateloc": "5.0",
+        "mgmttype": "planting (plants / m2)",
+        "level": null,
+        "units": "",
+        "notes": "",
+        "created_at": "2016-08-15T12:19:57-05:00",
+        "updated_at": "2016-08-15T12:19:57-05:00",
+        "user_id": null,
+        "associated treatment ids": [
+          6000000014
+        ],
+        "view_url": "https://terraref.ncsa.illinois.edu/bety/managements/6000000001",
+        "edit_url": "https://terraref.ncsa.illinois.edu/bety/managements/6000000001/edit"
+      }
+    }
+  ]
+}
