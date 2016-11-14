@@ -10,6 +10,7 @@ in the variable name (LAID = leaf area index on a given day). Variables also hav
 ## BETYdb Traits and Variables
 
 According to the BETYdb [schema](https://www.betydb.org/schemas), variables have the following primary attributes:
+
 | Attribute     | Description |
 | ---           | --- |
 | Name          | Short variable name | 
@@ -18,9 +19,10 @@ According to the BETYdb [schema](https://www.betydb.org/schemas), variables have
 | Min           | Minimum value | 
 | Standard Name | CF standard name | 
 | Standard Units| CF standard units |
-| Notes         | Additional Notes
+| Notes         | Additional Notes |
 
 [Traits](https://www.betydb.org/schemas?partial=traits_table) have the following attributes:
+
 | Attribute     | Description |
 | ---           | --- |
 | Site          | Site at which measurement was taken. | 
