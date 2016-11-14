@@ -106,8 +106,8 @@ From [The Crop Ontology Harmonizing Semantics for Agricultural Field Data](http:
 * "Variable = Property (trait) + Method + Scales/Units
 * Unique name, real value of measurement
 * Standard variable naming convention P_M_S:
-** Methods: measurement, counting, estimation, computation
-** Scales/units: nominal, ordinal, numerical, time, duration, text, code
+  * Methods: measurement, counting, estimation, computation
+  * Scales/units: nominal, ordinal, numerical, time, duration, text, code
 
 Example:
 TFlow_CountTo50Flow_d: "Time to flowering" is_a "Time to 50% flowing - method" method_of "Days" scale_of
