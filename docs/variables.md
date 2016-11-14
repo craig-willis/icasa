@@ -1,11 +1,10 @@
 # Variables
 
-Below is a review of how ICASA, BETYdb, the Crop Ontology, and Plant Breeder's API represent traits and variables.
+Below is an overview of how ICASA, BETYdb, the Crop Ontology, and Plant Breeder's API represent traits and variables.
 
 ## ICASA Measured Data
-The ICASA Master Variable List uses the concept "variable" broadly. In this context, we are concerned primarily with variables defined on the "Measured Data" worksheet.
 
-Measured Data variables have the following attributes:
+In the [ICASA Master Variable List](https://docs.google.com/spreadsheets/d/1MYx1ukUsCAM1pcixbVQSu49NU-LfXg-Dtt-ncLBzGAM/pub?output=html#), "Measured Data" variables have the following primary attributes:
 
 | Attribute     | Description |
 | --- | --- |
@@ -14,11 +13,11 @@ Measured Data variables have the following attributes:
 | Description | Variable description | 
 | Unit/Type | Variable type or units |
 
-Temporal granularity is encoded in the variable name (LAID = leaf area index on a given day).
+Variables appear to be strictly quantitative. Temporal granularity is encoded in the variable name (LAID = leaf area index on a given day).
 
 ### AgMIP JSON Data Objects
 
-Below is an example of the ICASA measured variables encoded using the AgMIP JSON Data Objects:
+Below is an example of the ICASA measured variables encoded using the AgMIP JSON Data Objects. Method and units are assumed:
 ```
 "observed": {
     "summary": {
@@ -76,11 +75,12 @@ According to the BETYdb [schema](https://www.betydb.org/schemas), variables have
 | Variable  | Variable measured | 
 | Method    | Method used | 
 
-In BETYdb, variables are implicitly quantitative -- characteristics that can be measured or counted. 
-Triats are statistics summarizing the measurement of variable in a context (site, species, cultivar, date/time). The method of measurement belongs to the trait, not the variable.
+Variables appear to be strictly quantitative. 
+
+Triats are statistics summarizing the measurement of a variable in a context (site, species, cultivar, date/time). The method of measurement belongs to the trait, not the variable.
 
 
-### Examples
+### Example
 
 Below is the CSV output from BETYdb for search "a_biomass cassava":
 ```
@@ -113,28 +113,8 @@ Example:
 TFlow_CountTo50Flow_d: "Time to flowering" is_a "Time to 50% flowing - method" method_of "Days" scale_of
 
 ### Summary
-In the Crop Ontology, a variable is the measurement of a trait using a specific method with specified unit/scale.
+In the Crop Ontology, a trait is a general concept. A variable is a specific combination of trait, method, and scale. Variables may be qualitative or quantitative. See the Plant Breeder's API example below.
 
-
-## CF Conventions
-The [CF (Climate and Forecast) conventions ](http://cfconventions.org/) are intended to promote exchange of NetCDF data. CF conventions include the [CF Standard Names](http://cfconventions.org/Data/cf-standard-names/docs/guidelines.html) as defined in CF Conventions [section 1.6](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html#standard-name). In short, CF Standard Names are variable names that follow a well-defined convention that is supported by different software packages, such as [Udunits](http://www.unidata.ucar.edu/software/udunits/).
-
-In addition to some basic rules (lower case, digits and underscores, begin with letter, U.S. spelling), standard names move into the rather obtuse and domain-specific "qualifications" defined as:
-
-```
-[surface] [component] standard_name [at surface] [in medium] [due to process] [assuming condition]
-```
-
-For example
-```
-air_temperature
-acoustic_signal_roundtrip_travel_time_in_sea_water
-atmosphere_mass_content_of_atomic_bromine
-```
-
-Additionally, each standard name is associated with canonical units, which are usually the [SI units](https://en.wikipedia.org/wiki/International_System_of_Units) for the quantity.
-
-CF conventions are widely used in the NetCDF community. 
 
 ## [Plant Breeder's API](http://docs.brapi.apiary.io/)
 
@@ -193,3 +173,23 @@ An observational variable is a trait, method, and scale:
   }
 }
 ```
+
+## CF Conventions
+The [CF (Climate and Forecast) conventions ](http://cfconventions.org/) are intended to promote exchange of NetCDF data. CF conventions include the [CF Standard Names](http://cfconventions.org/Data/cf-standard-names/docs/guidelines.html) as defined in CF Conventions [section 1.6](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html#standard-name). In short, CF Standard Names are variable names that follow a well-defined convention that is supported by different software packages, such as [Udunits](http://www.unidata.ucar.edu/software/udunits/).
+
+In addition to some basic rules (lower case, digits and underscores, begin with letter, U.S. spelling), standard names move into the rather obtuse and domain-specific "qualifications" defined as:
+
+```
+[surface] [component] standard_name [at surface] [in medium] [due to process] [assuming condition]
+```
+
+For example
+```
+air_temperature
+acoustic_signal_roundtrip_travel_time_in_sea_water
+atmosphere_mass_content_of_atomic_bromine
+```
+
+Additionally, each standard name is associated with canonical units, which are usually the [SI units](https://en.wikipedia.org/wiki/International_System_of_Units) for the quantity.
+
+CF conventions are widely used in the NetCDF community. 
