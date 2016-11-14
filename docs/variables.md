@@ -13,7 +13,7 @@ In the [ICASA Master Variable List](https://docs.google.com/spreadsheets/d/1MYx1
 | Description | Variable description | 
 | Unit/Type | Variable type or units |
 
-Variables appear to be strictly quantitative. Temporal granularity is encoded in the variable name (LAID = leaf area index on a given day).
+Variables appear to be strictly quantitative. Temporal granularity is encoded in the variable name (LAID = leaf area index on a given day). Measure variables can be represented as summary values or time series.
 
 ### AgMIP JSON Data Objects
 
