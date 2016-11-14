@@ -193,3 +193,27 @@ atmosphere_mass_content_of_atomic_bromine
 Additionally, each standard name is associated with canonical units, which are usually the [SI units](https://en.wikipedia.org/wiki/International_System_of_Units) for the quantity.
 
 CF conventions are widely used in the NetCDF community. 
+
+
+## Observations and Measurements
+
+The [OGC Observations and Measurements](http://www.opengeospatial.org/standards/om) standard presents another model of representing measured data. O&M supports quantitative and qualitative variables, as well as spatial and temporal contexts, specimen and sampling strategies:
+
+Observations are defined in Table 12 of the [OGC JSON Implementation](https://portal.opengeospatial.org/files/64910).
+
+For example:
+```
+{
+		"id":"measure-instance-test",
+		"type”: "Measurement",
+		"phenomenonTime": { "instant":"2011-05-11T00:00:00+10:00" },
+		"observedProperty": {"href":"http://environment.data.gov.au/def/property/air_temperature"},
+		"procedure": {"href":"http://www.opengis.net/def/waterml/2.0/processType/Sensor"},
+		"featureOfInterest": {"href":"http://waterml2.csiro.au/rgs-api/v1/monitoring-point/419009/"},
+		"resultTime": "2011-05-12T09:00:00+10:00",
+		"result": {
+						"value": 3.2,
+						"uom": "http://qudt.org/vocab/unit#DegreeCelsius"
+				}
+}
+```
