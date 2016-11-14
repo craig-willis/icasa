@@ -220,6 +220,9 @@ For example:
 }
 ```
 
+
+More JSON examples from https://github.com/peterataylor/om-json.
+
 ### [UDUNITS-2](http://www.unidata.ucar.edu/software/udunits/)
 
 UDUNITS-2 is a software package for units of physical quantities. It includes a C libary for unit conversions as well as an extensive [XML units database](http://www.unidata.ucar.edu/software/udunits/udunits-2.2.20/doc/udunits/udunits2.html#Database).
