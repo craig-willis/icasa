@@ -1,8 +1,8 @@
-# Variables
+# Variables, Traits, and Units
 
 Below is an overview of how ICASA, BETYdb, the Crop Ontology, and Plant Breeder's API represent traits and variables.
 
-## ICASA Measured Data
+## ICASA: Measured Data
 
 In the [ICASA Master Variable List](https://docs.google.com/spreadsheets/d/1MYx1ukUsCAM1pcixbVQSu49NU-LfXg-Dtt-ncLBzGAM/pub?output=html#), "Measured Data" variables have the following primary attributes:
 
@@ -45,7 +45,7 @@ Below is an example of the ICASA measured variables encoded using the AgMIP JSON
 ```
 
 
-## BETYdb Traits and Variables
+## BETYdb: Traits and Variables
 
 According to the BETYdb [schema](https://www.betydb.org/schemas), variables have the following primary attributes:
 
@@ -90,7 +90,7 @@ checked,University of Queensland Farm,Redland Bay,-27.47,152.74,Manihot esculent
 
 
 
-## Crop Ontology Traits, Variables, Methods and Scales/Units
+## Crop Ontology: Traits, Variables, Methods and Scales/Units
 
 From [The Crop Ontology Harmonizing Semantics for Agricultural Field Data](http://www.slideshare.net/CIARD_AIMS/the-crop-ontology-harmonizing-semantics-for-agricultural-field-data-by-elizabeth-arnaud).
 
@@ -174,7 +174,9 @@ An observational variable is a trait, method, and scale:
 }
 ```
 
-## CF Conventions
+## Other related standards
+
+### CF Conventions
 The [CF (Climate and Forecast) conventions ](http://cfconventions.org/) are intended to promote exchange of NetCDF data. CF conventions include the [CF Standard Names](http://cfconventions.org/Data/cf-standard-names/docs/guidelines.html) as defined in CF Conventions [section 1.6](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html#standard-name). In short, CF Standard Names are variable names that follow a well-defined convention that is supported by different software packages, such as [Udunits](http://www.unidata.ucar.edu/software/udunits/).
 
 In addition to some basic rules (lower case, digits and underscores, begin with letter, U.S. spelling), standard names move into the rather obtuse and domain-specific "qualifications" defined as:
@@ -195,7 +197,7 @@ Additionally, each standard name is associated with canonical units, which are u
 CF conventions are widely used in the NetCDF community. 
 
 
-## Observations and Measurements
+### OGC Observations and Measurements
 
 The [OGC Observations and Measurements](http://www.opengeospatial.org/standards/om) standard presents another model of representing measured data. O&M supports quantitative and qualitative variables, as well as spatial and temporal contexts, specimen and sampling strategies:
 
@@ -217,3 +219,15 @@ For example:
 				}
 }
 ```
+
+### [UDUNITS-2](http://www.unidata.ucar.edu/software/udunits/)
+
+UDUNITS-2 is a software package for units of physical quantities. It includes a C libary for unit conversions as well as an extensive [XML units database](http://www.unidata.ucar.edu/software/udunits/udunits-2.2.20/doc/udunits/udunits2.html#Database).
+
+The UDUNITS database has been converted to RDF by the MMI project
+* [MMI UDUNITS](https://github.com/mmisw/udunits2rdf)
+
+### UO: [Units of Measure Ontology](http://purl.bioontology.org/ontology/UO)
+
+It's unclear whether there is an existing relationship between UO and UDUNITs. The definitions appear similar.
+
