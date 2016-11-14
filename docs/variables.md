@@ -1,11 +1,50 @@
 # Variables
 
-Review of how each system handles the concept of measured variables and units.
+Below is a review of how ICASA, BETYdb, the Crop Ontology, and Plant Breeder's API represent traits and variables.
 
 ## ICASA Measured Data
-The ICASA Master Variable List uses the concept "variable" broadly. Variables in the sense used here are only those used for 
-"Measured Data". The variables in the Measured Data list lack a precise definition and method. Temporal granularity is encoded 
-in the variable name (LAID = leaf area index on a given day). Variables also have units.
+The ICASA Master Variable List uses the concept "variable" broadly. In this context, we are concerned primarily with variables defined on the "Measured Data" worksheet.
+
+Measured Data variables have the following attributes:
+
+| Attribute     | Description |
+| --- | --- |
+| Identifier | Unique identifier | 
+| Code | Short identifier | 
+| Description | Variable description | 
+| Unit/Type | Variable type or units |
+
+Temporal granularity is encoded in the variable name (LAID = leaf area index on a given day).
+
+### AgMIP JSON Data Objects
+
+Below is an example of the ICASA measured variables encoded using the AgMIP JSON Data Objects:
+```
+"observed": {
+    "summary": {
+        "hwam": "2929.",
+        "hwum": "0.218",
+        "h#am": "917.",
+        "h#um": "229.",
+        "laix": "2.26",
+        "cwam": "5532.",
+        "bwah": "3530.",
+        "adat": "19820512",
+        "mdat": "19820704",
+        "gn%m": "1.80",
+        "cnam": "69.5",
+        "snam": "37.8",
+        "gnam": "31.7"
+    },
+    "timeSeries": {
+        "data": [
+        {"date": "19820226","cwad": "0","laid": "0.00","gwad": "0"},
+        {"date": "19820330","cwad": "88","laid": "0.17","lwad": "48","swad": "39","vn%d": "3.63"},
+        {"date": "19820413","cwad": "341","laid": "0.56","gwad": "0","lwad": "215","swad": "126"},
+        {"date": "19820426","cwad": "1070","laid": "1.43","gwad": "0","lwad": "597","swad": "473"}
+        ]}}
+```
+
 
 ## BETYdb Traits and Variables
 
@@ -37,9 +76,18 @@ According to the BETYdb [schema](https://www.betydb.org/schemas), variables have
 | Variable  | Variable measured | 
 | Method    | Method used | 
 
-### Summary
 In BETYdb, variables are implicitly quantitative -- characteristics that can be measured or counted. 
 Triats are statistics summarizing the measurement of variable in a context (site, species, cultivar, date/time). The method of measurement belongs to the trait, not the variable.
+
+
+### Examples
+
+Below is the CSV output from BETYdb for search "a_biomass cassava":
+```
+checked,sitename,city,lat,lon,scientificname,commonname,genus,author,citation_year,treatment,date,month,year,dateloc,trait,mean,units,n,statname,stat,notes
+checked,University of Queensland Farm,Redland Bay,-27.47,152.74,Manihot esculenta,cassava,Manihot,Tsay,1988,sole-cropping,1982-12-04 08:00:00 -0600,12.0,1982.0,5.0,a_biomass,0.410,Mg/ha,"","",[missing],""
+```
+
 
 
 ## Crop Ontology Traits, Variables, Methods and Scales/Units
