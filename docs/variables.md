@@ -77,7 +77,7 @@ According to the BETYdb [schema](https://www.betydb.org/schemas), variables have
 
 Variables appear to be strictly quantitative. 
 
-Triats are statistics summarizing the measurement of a variable in a context (site, species, cultivar, date/time). The method of measurement belongs to the trait, not the variable.
+Traits are statistics summarizing the measurement of a variable in a context (site, species, cultivar, date/time). The method of measurement belongs to the trait, not the variable.
 
 
 ### Example
