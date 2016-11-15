@@ -14,7 +14,7 @@ In the [ICASA Master Variable List](https://docs.google.com/spreadsheets/d/1MYx1
 | Description | Variable description | 
 | Unit/Type | Variable type or units |
 
-Variables appear to be strictly quantitative. Temporal granularity is encoded in the variable name (LAID = leaf area index on a given day). Measure variables can be represented as summary values or time series.
+Variables are quantitative and qualitative ("code"). Temporal granularity is encoded in the variable name (LAID = leaf area index on a given day). Measure variables can be represented as summary values or time series.
 
 ### Traits
 Traits are not explicitly modeled, but are represented as named variables with descriptions and units.
