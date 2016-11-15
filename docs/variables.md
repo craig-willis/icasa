@@ -1,6 +1,6 @@
 # Variables, Traits, and Units
 
-Below is an overview of how ICASA, BETYdb, the Crop Ontology, and Plant Breeder's API represent traits and variables. Also includes a few notes about CF Standard Names, OGC Observations & Measurements, and UDUNITS.
+Below is an overview of how ICASA, BETYdb, the Crop Ontology, and Plant Breeder's API represent traits and variables. Also included are a few notes about CF Standard Names, OGC Observations & Measurements, and UDUNITS standards.
 
 ## ICASA: Measured Data
 
