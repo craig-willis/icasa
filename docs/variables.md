@@ -17,10 +17,10 @@ In the [ICASA Master Variable List](https://docs.google.com/spreadsheets/d/1MYx1
 Variables appear to be strictly quantitative. Temporal granularity is encoded in the variable name (LAID = leaf area index on a given day). Measure variables can be represented as summary values or time series.
 
 ### Traits
-Traits appear to be variables.
+Traits are not explicitly modeled, but are represented as named variables with descriptions and units.
 
 ### Units
-See the [list of unique ICASA units](../examples/units/icasa-units.csv)
+See the [list of unique ICASA units](../examples/units/icasa-units.csv) extracted from the spreadsheet.
 
 ### Methods
 Methods are not explicity defined within the context of trait/variable measurement.
@@ -57,7 +57,7 @@ Below is an example of the ICASA measured variables encoded using the AgMIP JSON
 
 ## BETYdb: Traits and Variables
 
-BETYdb models variables and traits explicitly.  Units are an attribute of a variable.
+BETYdb models variables, traits and methods explicitly.  Units are an attribute of a variable.
 
 ### Variables
 According to the BETYdb [schema](https://www.betydb.org/schemas), variables have the following primary attributes:
@@ -72,6 +72,7 @@ According to the BETYdb [schema](https://www.betydb.org/schemas), variables have
 | Standard Units| CF standard units |
 | Notes         | Additional Notes |
 
+Variables appear to be strictly quantitative. See the section on CF Standard Names below.
 
 ### Traits
 [Traits](https://www.betydb.org/schemas?partial=traits_table) have the following attributes:
@@ -90,12 +91,7 @@ According to the BETYdb [schema](https://www.betydb.org/schemas), variables have
 | Variable  | Variable measured | 
 | Method    | Method used | 
 
-Variables appear to be strictly quantitative. 
-
 Traits are statistics summarizing the measurement of a variable in a context (site, species, cultivar, date/time). The method of measurement belongs to the trait, not the variable.
-
-### Units
-Units are properties of variables. 
 
 ### Methods
 [Methods](https://www.betydb.org/schemas?partial=methods) have the following attributes:
@@ -106,7 +102,10 @@ Units are properties of variables.
 | Description   | Method description |
 | Citation      | Reference to citation | 
 
-Methods belong to traits. 
+Methods belong to traits and are defined by citations.
+
+### Units
+Units are properties of variables. 
 
 ### Example
 
