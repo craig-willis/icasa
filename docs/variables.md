@@ -173,6 +173,10 @@ TFlow_CountTo50Flow_d: "Time to flowering" is_a "Time to 50% flowing - method" m
 |Language|2 letter ISO code for the language of submission of the variable.| 
 |Crop|Name of the crop for which the variable is recorded|
 
+According to this table, the variable also has a growth stage, crop, institution, scientist, and language. 
+
+Example:  Pigeonpea [PHT_Avg_cm](http://www.cropontology.org/terms/CO_341:0000021/).
+
 ### Units (Scales)
 
 Based on the [example spreadsheet](https://drive.google.com/drive/folders/0ByUhvGN3ZVgXekFPMVhFYzlKVGM), Crop Ontology "scales" have the following attributes:
@@ -201,6 +205,7 @@ See the [list of unique scales](../examples/units/co-scales.csv).
 |Formula	 |For computational methods i.e., when the method consists in assessing the trait by computing measurements, write the |generic formula used for the calculation|
 |Method reference	 |Bibliographical reference describing the method. |
 
+Examples: Pigeonpea [plant height average](http://www.cropontology.org/terms/CO_341:0000021/) and [plant height measured](http://www.cropontology.org/terms/CO_341:0000021/) methods.
 
 ### Summary
 In the Crop Ontology, a trait is a general concept. A variable is a specific combination of trait, method, and scale. Variables may be qualitative or quantitative. See the Plant Breeder's API example below.
@@ -310,7 +315,6 @@ For example:
 }
 ```
 
-
 More JSON examples from https://github.com/peterataylor/om-json.
 
 ### [UDUNITS-2](http://www.unidata.ucar.edu/software/udunits/)
@@ -343,9 +347,10 @@ Prefix:
 | Value |  1e9 |
 
 
-
-
 ### UO: [Units of Measure Ontology](http://purl.bioontology.org/ontology/UO)
 
-It's unclear whether there is an existing relationship between UO and UDUNITs. The definitions appear similar.
+Defined as "Metrical units for use in conjunction with PATO." Includes prefixes and units organized by type (pressure, length, mass, etc).  Does not differentiate between SI and non-SI units. Includes units not in UDUNITS (e.g., centiRay, centiMorgan).
+
+
+
 
