@@ -346,7 +346,6 @@ Prefix:
 | Symbol |   G |
 | Value |  1e9 |
 
-
 ### UO: [Units of Measure Ontology](http://purl.bioontology.org/ontology/UO)
 
 Defined as "Metrical units for use in conjunction with PATO." Includes prefixes and units organized by type (pressure, length, mass, etc).  Does not differentiate between SI and non-SI units. Includes units not in UDUNITS (e.g., centiRay, centiMorgan).
@@ -359,7 +358,6 @@ Defined as "Metrical units for use in conjunction with PATO." Includes prefixes 
 * Traits in BETYdb are summary statistics of a set of measurements/observations of a variable in a context (crop, cultivar, site). For example [spike height -cm, MAC season 1 field plot 76 W, Sorghum bicolor](https://terraref.ncsa.illinois.edu/bety/traits/6000000006).
 * ICASA doesn't explicitly model traits, but it's likely that some (all?) "Measured Data" variables are traits.
 * It seems that BETYdb and CO have different view of what a trait is. For CO it is an abstract concept (plant height) and for BETYdb it is the summary of a measured variable for a specific crop, cultivar, site. 
-
 
 ### Variables
 * Variables in CO are abstract concepts representing a method of measuring a trait with certain units in a context (crop). Variables are tightly-coupled to traits and crops (e.g.,  [PHT_Avg_cm](http://www.cropontology.org/terms/CO_341:0000249/) - Cowpea).
@@ -383,4 +381,4 @@ Defined as "Metrical units for use in conjunction with PATO." Includes prefixes 
 * BETYdb methods are associated with variables and have a description and citation
 * CO methods similarly include a description and reference (citation or URL). CO also includes a formula and method class.
 
-
+### How can we reconcile these differences?
