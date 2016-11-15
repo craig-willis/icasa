@@ -352,5 +352,32 @@ Prefix:
 Defined as "Metrical units for use in conjunction with PATO." Includes prefixes and units organized by type (pressure, length, mass, etc).  Does not differentiate between SI and non-SI units. Includes units not in UDUNITS (e.g., centiRay, centiMorgan).
 
 
+## Analysis Notes
 
+### Traits
+* Traits in CO are abstract concepts (e.g., Plant Height), instantiated through variables (e.g.,  [PHT_Avg_cm](http://www.cropontology.org/terms/CO_341:0000249/))
+* Traits in BETYdb are summary statistics of a set of measurements/observations of a variable in a context (crop, cultivar, site). For example [spike height -cm, MAC season 1 field plot 76 W, Sorghum bicolor](https://terraref.ncsa.illinois.edu/bety/traits/6000000006).
+* ICASA doesn't explicitly model traits, but it's likely that some (all?) "Measured Data" variables are traits.
+* It seems that BETYdb and CO have different view of what a trait is. For CO it is an abstract concept (plant height) and for BETYdb it is the summary of a measured variable for a specific crop, cultivar, site. 
 
+### Variables
+* Variables in CO are abstract concepts representing a method of measuring a trait with certain units in a context (crop). Variables are tightly-coupled to traits and coprs.
+* CO does not model specific observations 
+* CO defined a format for variable names.
+* Variables in BETYdb are names representing characteristics that can be measured (with units). Variables are defined independent of trait and crop.  Interestingly, the [trait view](https://terraref.ncsa.illinois.edu/bety/traits) renders the variable name as the trait.
+* BETYdb includes support for CF-style standard names.
+* ICASA Measured Data variables are characteristics that can be measured (with units).
+
+### Units
+* BETYdb and ICASA represent units simply as strings. BETYdb does include the ability to specify standard units for a variable.
+* CO represents units as separate concepts (e.g., http://www.cropontology.org/terms/CO_341:0000023/) with the intent of mapping to UO.
+* UDUNITS is great for users that use the UDUNITS libraries. However, UDUNITS does not cover all possible units.
+* UDUNITS defines an XML database for internal use that has become a de-facto standard.
+* CF Conventions requires that units be recognizable strings for the UDUNITS package
+* The Unit Ontology covers much of the same ground, without explicit mapping to UDUNITS
+* It's unclear how units are added to the UO
+
+### Methods
+* ICASA does not specify methods outside of the variable description
+* BETYdb methods are associated with variables and have a description and citation
+* CO methods similarly include a description and reference (citation or URL). CO also includes a formula and method class.
