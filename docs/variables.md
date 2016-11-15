@@ -315,10 +315,35 @@ More JSON examples from https://github.com/peterataylor/om-json.
 
 ### [UDUNITS-2](http://www.unidata.ucar.edu/software/udunits/)
 
-UDUNITS-2 is a software package for units of physical quantities. It includes a C libary for unit conversions as well as an extensive [XML units database](http://www.unidata.ucar.edu/software/udunits/udunits-2.2.20/doc/udunits/udunits2.html#Database).
+UDUNITS-2 is a software package for units of physical quantities. It includes a C libary for unit conversions as well as an extensive [XML units database](http://www.unidata.ucar.edu/software/udunits/udunits-2.2.20/doc/udunits/udunits2.html#Database). It's worth noting that the units database was defined for internal use and does not have an associated schema.
 
-The UDUNITS database has been converted to RDF by the MMI project
+UDUNITS include SI base units (base), accepted SI units (accepted), SI derived units with special names and symbols (derived), units not accepted for use with the SI (common), and prefixes.
+
+The UDUNITS database has been converted to SKOS by the MMI project
 * [MMI UDUNITS](https://github.com/mmisw/udunits2rdf)
+
+UDUNITS defines the following attributes for a unit with examples (Definitions and comments excluded):
+
+| Attribute     | Example Base   | Example Accepted | Example Derived | Example Common|
+| ---           | ---            | ---              | ---             | ---  |
+| Def           |                | 1e-10 m          | N/m^2           | 1e-15 m |
+| Symbol        | m              | Å                | Pa              |  |
+| Name-Singular | metre |        | angstrom         | pascal          | fermi |
+| Aliases       |                | ångström         |                 | |
+| Definition    | ...            | ...              | ...             | |
+| Comment       |                |                  |                 |  |       
+
+
+Prefix: 
+
+| Attribute     | Example |
+| ---           | --- |
+| Name |   giga |
+| Symbol |   G |
+| Value |  1e9 |
+
+
+
 
 ### UO: [Units of Measure Ontology](http://purl.bioontology.org/ontology/UO)
 
