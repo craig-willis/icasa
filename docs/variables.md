@@ -15,6 +15,8 @@ In the [ICASA Master Variable List](https://docs.google.com/spreadsheets/d/1MYx1
 
 Variables appear to be strictly quantitative. Temporal granularity is encoded in the variable name (LAID = leaf area index on a given day). Measure variables can be represented as summary values or time series.
 
+### Units
+See the [list of unique ICASA units](../examples/units/icasa-units.csv)
 ### AgMIP JSON Data Objects
 
 Below is an example of the ICASA measured variables encoded using the AgMIP JSON Data Objects. Method and units are assumed:
@@ -98,9 +100,23 @@ From [The Crop Ontology Harmonizing Semantics for Agricultural Field Data](http:
 * "Trait = Entity + Quality"
 * Trait can group multiple variables
 * "Grain Weight" is:
-** Weight of 100 grains, expressed in g
-** Average weight of 100 graints, expressed in g
-** Weight of 100 graints, expressed on categorical scale 1=low (50-100g), 2=medium (100-150g), 3=high (150-200g)
+  * Weight of 100 grains, expressed in g
+  * Average weight of 100 graints, expressed in g
+  * Weight of 100 graints, expressed on categorical scale 1=low (50-100g), 2=medium (100-150g), 3=high (150-200g)
+
+| Attribute     | Description |
+| ---           | --- |
+|Trait	|Trait ID	Unique identifier for the trait.|
+|Trait name	|Trait name (property)|
+|Trait class	|General class to which trait belongs. Consensus trait classes are 'morphological trait', 'phenological trait', 'agronomical trait', 'physiological trait', 'abiotic stress trait', 'biotic stress trait', 'biochemical trait', 'quality traits trait' and 'fertility trait'|
+|Trait description	|Textual description of trait.|
+|Trait synonyms	|Full text synonyms, if any,  of the trait. If several synonyms, separate with commas.|
+|Main trait abbreviation	|Main abbreviation of the trait name. It is mandatory and has to be unique within a crop TD. By convention, this abbreviation must not start with a digit, must have no space.|
+|Alternative trait abbreviations	|Other frequent abbreviations of the trait, if any. These abreviations do not have to follow a convention. If several aternative abbreviations, separate with commas.|
+|Entity |A trait can be decomposed as "Trait" = "Entity" + "Attribute", the entity is the part of the plant that the trait refers to e.g., for "grain colour", entity = "grain"|
+|Attribute	|A trait can be decomposed as "Trait" = "Entity" + "Attribute", the attribute is the observed feature (or characteristic) of the entity e.g., for "grain colour", attribute = "colour"|
+|Trait status	|Status of the trait. Possible entries are 'recommended', 'standard for <institution or community>', 'obsolete', 'legacy'|
+|Trait Xref	|Cross reference of the trait to an external ontology or database term e.g., Xref to a GCAP (Medha Excel file)|
 
 ### Variable
 * "Variable = Property (trait) + Method + Scales/Units
@@ -111,6 +127,39 @@ From [The Crop Ontology Harmonizing Semantics for Agricultural Field Data](http:
 
 Example:
 TFlow_CountTo50Flow_d: "Time to flowering" is_a "Time to 50% flowing - method" method_of "Days" scale_of
+
+| Attribute     | Description |
+| ---           | --- |
+|Variable	|Variable ID	Unique identifier for the trait. |
+|Variable name	|Name of the variable following the convetion <trait abbreviation>_<method abbreviation>_<scale abbreviation>.|
+|Variable synonyms|Other names, if any, given to this variable|
+|Context of use	|Indication of how trait is routinely used. If several "contexts of use", separate with ","|
+|Growth stage|Growth stage at which measurement is made. Follow standards. If variable used in time series, leave blank|
+|Variable status|Status of the variable. Possible entries are 'recommended', 'standard for <institution or community>', 'obsolete', 'legacy'|
+|Variable Xref|Cross reference of the variable term to a term from an external ontolgy or to a database of a major system.- Here cross-ref with ICASA|
+|Institution|Name of institution submitting the variable|
+|Scientist|Name of scientist submitting the variable.|
+|Date|Date of submission of the variable.|
+|Language|2 letter ISO code for the language of submission of the variable.| 
+|Crop|Name of the crop for which the variable is recorded|
+
+### Units (Scales)
+
+Based on the [example spreadsheet](https://drive.google.com/drive/folders/0ByUhvGN3ZVgXekFPMVhFYzlKVGM), Crop Ontology "scales" have the following attributes:
+
+
+| Attribute     | Description |
+| ---           | --- |
+|Scale ID	|Unique identifier of the scale. If left blank, the upload system will automatically generate a scale ID.|
+|Scale name	|Name of the scale|
+|Scale class	|Class of the scale, entries can be "Numerical", "Nominal", "Ordinal", "Text",  "Code", "Time", "Duration"|
+|Decimal places	|For numerical, number of decimal places to be reported|
+|Lower limit	|Minimum value (used for data capture control) for numerical and date scales|
+|Upper limit	|Maximum value (used for field data capture control).|
+|Scale Xref	|Cross reference to the scale, for example to a unit ontology such as UO or to a unit of an external major database|
+|Category n	|If the scale is categorical, class value and meaning of the n-th category. |
+
+See the [list of unique scales](../examples/units/co-scales.csv).
 
 ### Summary
 In the Crop Ontology, a trait is a general concept. A variable is a specific combination of trait, method, and scale. Variables may be qualitative or quantitative. See the Plant Breeder's API example below.
