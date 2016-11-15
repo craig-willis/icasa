@@ -360,10 +360,11 @@ Defined as "Metrical units for use in conjunction with PATO." Includes prefixes 
 * ICASA doesn't explicitly model traits, but it's likely that some (all?) "Measured Data" variables are traits.
 * It seems that BETYdb and CO have different view of what a trait is. For CO it is an abstract concept (plant height) and for BETYdb it is the summary of a measured variable for a specific crop, cultivar, site. 
 
+
 ### Variables
-* Variables in CO are abstract concepts representing a method of measuring a trait with certain units in a context (crop). Variables are tightly-coupled to traits and coprs.
+* Variables in CO are abstract concepts representing a method of measuring a trait with certain units in a context (crop). Variables are tightly-coupled to traits and crops (e.g.,  [PHT_Avg_cm](http://www.cropontology.org/terms/CO_341:0000249/) - Cowpea).
 * CO does not model specific observations 
-* CO defined a format for variable names.
+* CO defines a format for variable names (P_M_S: property_method_scale)
 * Variables in BETYdb are names representing characteristics that can be measured (with units). Variables are defined independent of trait and crop.  Interestingly, the [trait view](https://terraref.ncsa.illinois.edu/bety/traits) renders the variable name as the trait.
 * BETYdb includes support for CF-style standard names.
 * ICASA Measured Data variables are characteristics that can be measured (with units).
@@ -381,3 +382,5 @@ Defined as "Metrical units for use in conjunction with PATO." Includes prefixes 
 * ICASA does not specify methods outside of the variable description
 * BETYdb methods are associated with variables and have a description and citation
 * CO methods similarly include a description and reference (citation or URL). CO also includes a formula and method class.
+
+
