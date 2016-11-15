@@ -1,0 +1,35 @@
+Scale name,Scale class
+%,Numerical
+,Numerical
+Count ,Numerical
+Count,Numerical
+Crop component category,Nominal
+Crop generic code,Ordinal
+Crop growth stage,Ordinal
+Day,Numerical
+Days after emergence,Time
+Days after sowing,Numerical
+Days after sowing,Time
+Julian day,Time
+Mulch color category,Nominal
+cm,Numerical
+count,Numerical
+count/area,Numerical
+count/ha,Numerical
+count/ha,numerical
+count/hill,Numerical
+count/m2,Numerical
+ha,Numerical
+kg/ha,Numerical
+kg/m2,Numerical
+kg/plot,Numerical
+l/ha,Numerical
+m,Numerical
+m/h,numerical
+m2,Numerical
+mm,Numerical
+mm/day,Numerical
+order,Numerical
+passes,Numerical
+ratio,Numerical
+yyyymmdd,Time
