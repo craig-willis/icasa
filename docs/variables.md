@@ -1,11 +1,12 @@
-# Variables, Traits, and Units
+# Variables, Traits, Units, and Methods
 
-Below is an overview of how ICASA, BETYdb, the Crop Ontology, and Plant Breeder's API represent traits and variables. Also included are a few notes about CF Standard Names, OGC Observations & Measurements, and UDUNITS standards.
+Below is an overview of how ICASA, BETYdb, the Crop Ontology, and Plant Breeder's API represent traits, variables, units and methods. Also included are a few notes about CF Standard Names, OGC Observations & Measurements, and UDUNITS standards.
 
 ## ICASA: Measured Data
 
 In the [ICASA Master Variable List](https://docs.google.com/spreadsheets/d/1MYx1ukUsCAM1pcixbVQSu49NU-LfXg-Dtt-ncLBzGAM/pub?output=html#), "Measured Data" variables have the following primary attributes:
 
+### Variables
 | Attribute     | Description |
 | --- | --- |
 | Identifier | Unique identifier | 
@@ -15,8 +16,15 @@ In the [ICASA Master Variable List](https://docs.google.com/spreadsheets/d/1MYx1
 
 Variables appear to be strictly quantitative. Temporal granularity is encoded in the variable name (LAID = leaf area index on a given day). Measure variables can be represented as summary values or time series.
 
+### Traits
+Traits appear to be variables.
+
 ### Units
 See the [list of unique ICASA units](../examples/units/icasa-units.csv)
+
+### Methods
+Methods are not explicity defined within the context of trait/variable measurement.
+
 ### AgMIP JSON Data Objects
 
 Below is an example of the ICASA measured variables encoded using the AgMIP JSON Data Objects. Method and units are assumed:
@@ -49,6 +57,9 @@ Below is an example of the ICASA measured variables encoded using the AgMIP JSON
 
 ## BETYdb: Traits and Variables
 
+BETYdb models variables and traits explicitly.  Units are an attribute of a variable.
+
+### Variables
 According to the BETYdb [schema](https://www.betydb.org/schemas), variables have the following primary attributes:
 
 | Attribute     | Description |
@@ -61,6 +72,8 @@ According to the BETYdb [schema](https://www.betydb.org/schemas), variables have
 | Standard Units| CF standard units |
 | Notes         | Additional Notes |
 
+
+### Traits
 [Traits](https://www.betydb.org/schemas?partial=traits_table) have the following attributes:
 
 | Attribute     | Description |
@@ -81,6 +94,19 @@ Variables appear to be strictly quantitative.
 
 Traits are statistics summarizing the measurement of a variable in a context (site, species, cultivar, date/time). The method of measurement belongs to the trait, not the variable.
 
+### Units
+Units are properties of variables. 
+
+### Methods
+[Methods](https://www.betydb.org/schemas?partial=methods) have the following attributes:
+
+| Attribute     | Description |
+| ---           | --- |
+| Name          | Method name  | 
+| Description   | Method description |
+| Citation      | Reference to citation | 
+
+Methods belong to traits. 
 
 ### Example
 
@@ -90,7 +116,12 @@ checked,sitename,city,lat,lon,scientificname,commonname,genus,author,citation_ye
 checked,University of Queensland Farm,Redland Bay,-27.47,152.74,Manihot esculenta,cassava,Manihot,Tsay,1988,sole-cropping,1982-12-04 08:00:00 -0600,12.0,1982.0,5.0,a_biomass,0.410,Mg/ha,"","",[missing],""
 ```
 
-
+Example method:
+```
+Name: 95th quantiles height Estimation from 3D Scanner
+Description: 1. remove the lowest points, assuming that these represent the ground, 2. compute the height below which 95% of the points occur
+Citation: Zongyang 2016 Maricopa Field Stati...
+```
 
 ## Crop Ontology: Traits, Variables, Methods and Scales/Units
 
@@ -160,6 +191,17 @@ Based on the [example spreadsheet](https://drive.google.com/drive/folders/0ByUhv
 |Category n	|If the scale is categorical, class value and meaning of the n-th category. |
 
 See the [list of unique scales](../examples/units/co-scales.csv).
+
+### Method
+| Attribute     | Description |
+| ---           | --- |
+|Method ID	 |Unique identifier of the method. |
+|Method name	 |(Short) name of the method |
+|Method class	 |Class of the method. Entries can be "Measurement", "Counting", "Estimation", "Computation" |
+|Method description	 |Textual and generic description of the method. |
+|Formula	 |For computational methods i.e., when the method consists in assessing the trait by computing measurements, write the |generic formula used for the calculation|
+|Method reference	 |Bibliographical reference describing the method. |
+
 
 ### Summary
 In the Crop Ontology, a trait is a general concept. A variable is a specific combination of trait, method, and scale. Variables may be qualitative or quantitative. See the Plant Breeder's API example below.
