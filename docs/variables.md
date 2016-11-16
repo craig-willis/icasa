@@ -355,13 +355,12 @@ Defined as "Metrical units for use in conjunction with PATO." Includes prefixes 
 
 ### Traits
 * Traits in CO are abstract concepts (e.g., Plant Height), instantiated through variables (e.g.,  [PHT_Avg_cm](http://www.cropontology.org/terms/CO_341:0000249/))
-* Traits in BETYdb are summary statistics of a set of measurements/observations of a variable in a context (crop, cultivar, site). For example [spike height -cm, MAC season 1 field plot 76 W, Sorghum bicolor](https://terraref.ncsa.illinois.edu/bety/traits/6000000006).
-* ICASA doesn't explicitly model traits, but it's likely that some (all?) "Measured Data" variables are traits.
-* It seems that BETYdb and CO have different view of what a trait is. For CO it is an abstract concept (plant height) and for BETYdb it is the summary of a measured variable for a specific crop, cultivar, site. 
+* Traits in BETYdb are measurements/observations of a variable using a method in a context (crop, cultivar, site). For example [spike height -cm, MAC season 1 field plot 76 W, Sorghum bicolor](https://terraref.ncsa.illinois.edu/bety/traits/6000000006).
+* ICASA doesn't explicitly model traits, but it's likely that some "Measured Data" variables are not traits.
+* CO does not model specific observations 
 
 ### Variables
-* Variables in CO are abstract concepts representing a method of measuring a trait with certain units in a context (crop). Variables are tightly-coupled to traits and crops (e.g.,  [PHT_Avg_cm](http://www.cropontology.org/terms/CO_341:0000249/) - Cowpea).
-* CO does not model specific observations 
+* Variables in CO are standard names representing a method of measuring a trait with certain units in a context (crop). Variables are tightly-coupled to traits and crops (e.g.,  [PHT_Avg_cm](http://www.cropontology.org/terms/CO_341:0000249/) - Cowpea).
 * CO defines a format for variable names (P_M_S: property_method_scale)
 * Variables in BETYdb are names representing characteristics that can be measured (with units). Variables are defined independent of trait and crop.  Interestingly, the [trait view](https://terraref.ncsa.illinois.edu/bety/traits) renders the variable name as the trait.
 * BETYdb includes support for CF-style standard names.
