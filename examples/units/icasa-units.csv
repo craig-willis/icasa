@@ -64,7 +64,7 @@ number/plant,single
 number/shoot,single
 ppm,single
 ratio,single
-single
+single,
 t/ha,single
 unitless,single
 year,single
