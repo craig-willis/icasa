@@ -3,7 +3,6 @@ Unit_or_type,Data_type
 %/day,single
 C,single
 MJ/m2.d,single
-Mg/ha,
 Mg/ha,single
 cm,single
 cm/cm2,single
@@ -18,7 +17,6 @@ cm2/m2.d,single
 cm2/plant,single
 cm3/cm3,single
 code,text
-dap,
 dap,single
 date,single
 day,single
@@ -37,7 +35,6 @@ g/plant,single
 g/plant.d,single
 g/shoot,single
 g/unit,single
-kg/ha,
 kg/ha,single
 kg/ha.d,single
 kg/hl,single
@@ -64,7 +61,6 @@ number/plant,single
 number/shoot,single
 ppm,single
 ratio,single
-single
 t/ha,single
 unitless,single
 year,single
