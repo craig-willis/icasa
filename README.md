@@ -12,7 +12,9 @@ What's been done:
 
 See the [Design Notes](docs/design.md) for more information on the basic requirements, recommendations, and design considerations.
 
-The PURL http://purl.org/icasa has been registered with the [Internet Archive](http://www.purl.org).
+The PURL http://purl.org/icasa has been registered with the [Internet Archive](http://www.purl.org) (but not currently working).
+
+See related work by the DSSAT team: https://github.com/DSSAT/icasa-data-ontology
 
 ## Management Info
 
@@ -42,10 +44,10 @@ Each dataset/subset/group is added as an OWL Class. Each variable/code is added 
 Class names are manually generated from the dataset/subset/group columns and descriptions from White et al (2013).
 
 Files:
-* icasa-mgmt-info.csv: Management_Info sheet exported from Google spreadsheet as CSV
-* icasa-mgmt-info.owl: OWL ontology (output of icasa-mgmt-info.py)
-* icasa-mgmt-info.py: Python script that reads icasa-mgmt-info.csv, icasa-mgmt-info-subgroups.csv and generates icasa-mgmt-info.owl
-* icasa-mgmt-info-subgroups.csv: Manual mapping of dataset/subset/group information to class names.
+* [icasa-mgmt-info.csv](icasa-mgmt-info.csv): Management_Info sheet exported from Google spreadsheet as CSV
+* [icasa-mgmt-info.owl](icasa-mgmt-info.owl): OWL ontology (output of icasa-mgmt-info.py)
+* [icasa-mgmt-info.py](icasa-mgmt-info.py): Python script that reads icasa-mgmt-info.csv, icasa-mgmt-info-subgroups.csv and generates icasa-mgmt-info.owl
+* [icasa-mgmt-info-subgroups.csv](icasa-mgmt-info-subgroups.csv): Manual mapping of dataset/subset/group information to class names.
 
 To run:
 ```
@@ -62,7 +64,7 @@ Of course, there can certainly be other types of measured data.  While ICASA ass
 
 A  different approach is taken for the Measured_Data sheet.  A simple OWL ontology was manually created to describe the top-level concepts of [variables and units](variables-units.owl).  This will likely be replaced by another standard ontology or model, once a suitable candidate is found.
 
-The python script [icasa-measured-data.py]icasa-measured-data.py) converts the Measured_Data into a set of [variable descriptions in RDF](icasa-measured-data.rdf).  We can imagine similar sets of variables for BETYdb, TERRA-REF, and other projects.
+The python script [icasa-measured-data.py](icasa-measured-data.py) converts the Measured_Data into a set of [variable descriptions in RDF](icasa-measured-data.rdf).  We can imagine similar sets of variables for BETYdb, TERRA-REF, and other projects.
 ```
     <!-- http://http://purl.org/icasa/variables#irrd -->
     <rdf:Description rdf:about="http://purl.org/icasa/variables#irrd">
@@ -77,13 +79,13 @@ The python script [icasa-measured-data.py]icasa-measured-data.py) converts the M
 
 
 Files:
-* icasa-mgmt-info-subgroups.csv: Manual mapping of dataset/subset/group information to RDF Class Names. Descriptions taken from White et al (2013).
-* measured-data.owl: Owl ontology describing Variables and Units (manually created)
-* icasa-measured-data.csv: Measured_Data sheet as CSV
-* icasa-measured-data.py: Python script that reads icasa-measured-data.csv and generates icasa-measured-data.rdf
-* icasa-measured-data.rdf: RDF descriptions of each variable
-* icasa-measured-data-subgroups.csv: Mapping of dataset/subset/group to category
-* icasa-measured-data-units-types.csv: List of units and types (not currently used)
+* [icasa-mgmt-info-subgroups.csv](icasa-mgmt-info-subgroups.csv): Manual mapping of dataset/subset/group information to RDF Class Names. Descriptions taken from White et al (2013).
+* [measured-data.owl](measured-data.owl): Owl ontology describing Variables and Units (manually created)
+* [icasa-measured-data.csv](icasa-measured-data.csv): Measured_Data sheet as CSV
+* [icasa-measured-data.py](icasa-measured-data.py): Python script that reads icasa-measured-data.csv and generates icasa-measured-data.rdf
+* [icasa-measured-data.rdf](icasa-measured-data.rdf): RDF descriptions of each variable
+* [icasa-measured-data-subgroups.csv](icasa-measured-data-subgroups.csv): Mapping of dataset/subset/group to category
+* [icasa-measured-data-units-types.csv](icasa-measured-data-units-types.csv): List of units and types (not currently used)
 
 
 ## Units
