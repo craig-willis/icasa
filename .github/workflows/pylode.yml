@@ -1,0 +1,37 @@
+name: Run pyLODE
+
+on: 
+  push:
+    paths:
+    - '**.ttl'
+  workflow_dispatch:
+
+jobs:
+  pylode:
+    runs-on: ubuntu-latest
+    steps:  
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install pyLODE
+      run: python -m pip install pyLODE==2.13.2 ontogram
+    - name: Run pyLODE
+      run: | 
+          mkdir -p $GITHUB_WORKSPACE/docs/icasa/1.0-alpha/core
+          pylode -i $GITHUB_WORKSPACE/icasa-mgmt-info.owl -o $GITHUB_WORKSPACE/docs/icasa/1.0-alpha/core/index.html
+          cp $GITHUB_WORKSPACE/icasa-mgmt-info.owl docs/icasa/1.0-alpha/core/core.owl
+          rdfpipe -o ttl $GITHUB_WORKSPACE/icasa-mgmt-info.owl > $GITHUB_WORKSPACE/docs/icasa/1.0-alpha/core/core.ttl
+
+          mkdir -p $GITHUB_WORKSPACE/docs/icasa/1.0-alpha/variables
+          pylode -i $GITHUB_WORKSPACE/icasa-measured-data.owl -o $GITHUB_WORKSPACE/docs/icasa/1.0-alpha/variables/index.html
+          cp $GITHUB_WORKSPACE/icasa-measured-data.owl docs/icasa/1.0-alpha/variables/variables.owl
+          rdfpipe -o ttl $GITHUB_WORKSPACE/icasa-measured-data.owl > $GITHUB_WORKSPACE/docs/icasa/1.0-alpha/variables/variables.ttl
+    - name: Commit HTML
+      run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add docs/wt/1.0
+          git commit -m 'Updated vocabulary'
+          git push

@@ -22,18 +22,10 @@ print(
 
 print( 
 '  <owl:Ontology rdf:about="' +  baseUrl + '">\n' +
-'    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICASA ontology for integrated description of agricultural field experiments and production</dc:title>\n' + 
-'    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeffrey W. White</dc:creator>\n' + 
-'    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L.A. Hunt</dc:creator>\n' + 
-'    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenneth J. Boote</dc:creator>\n' + 
-'    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James W. Jones</dc:creator>\n' + 
-'    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jawoo Koo</dc:creator>\n' + 
-'    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soonho Kim</dc:creator>\n' + 
-'    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cheryl H. Porter</dc:creator>\n' + 
-'    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul W. Wilkens</dc:creator>\n' + 
-'    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerrit Hoogenboom</dc:creator>\n' + 
+'    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Core ICASA ontology for integrated description of agricultural field experiments and production</dc:title>\n' + 
+'    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Craig Willis</dc:creator>\n' + 
 '    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology based on the ICASA version 2.0 data standard. The foundation of the standard is a master list of variables with major separations among descriptions of management practices or treatments, environmental conditions (soil and weather data), and measurements of crop responses  as described in White et al (2013).</dc:description>\n' + 
-'    <dc:date>2016-09-24</dc:date>\n' +
+'    <dc:date>2022-06-01</dc:date>\n' +
 '    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0-alpha</owl:versionInfo>\n' + 
 '  </owl:Ontology>'
 )

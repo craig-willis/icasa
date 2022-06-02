@@ -9,18 +9,10 @@
   xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="http://purl.org/icasa/core">
-    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICASA ontology for integrated description of agricultural field experiments and production</dc:title>
-    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeffrey W. White</dc:creator>
-    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L.A. Hunt</dc:creator>
-    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenneth J. Boote</dc:creator>
-    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James W. Jones</dc:creator>
-    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jawoo Koo</dc:creator>
-    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soonho Kim</dc:creator>
-    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cheryl H. Porter</dc:creator>
-    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul W. Wilkens</dc:creator>
-    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerrit Hoogenboom</dc:creator>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Core ICASA ontology for integrated description of agricultural field experiments and production</dc:title>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Craig Willis</dc:creator>
     <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology based on the ICASA version 2.0 data standard. The foundation of the standard is a master list of variables with major separations among descriptions of management practices or treatments, environmental conditions (soil and weather data), and measurements of crop responses  as described in White et al (2013).</dc:description>
-    <dc:date>2016-09-24</dc:date>
+    <dc:date>2022-06-01</dc:date>
     <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0-alpha</owl:versionInfo>
   </owl:Ontology>
 <!--
