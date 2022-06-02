@@ -1,0 +1,4834 @@
+@prefix : <http://purl.org/icasa/core> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+: a owl:Ontology ;
+    dc:creator "Craig Willis"^^xsd:string ;
+    dc:date "2022-06-01" ;
+    dc:description "Ontology based on the ICASA version 2.0 data standard. The foundation of the standard is a master list of variables with major separations among descriptions of management practices or treatments, environmental conditions (soil and weather data), and measurements of crop responses  as described in White et al (2013)."^^xsd:string ;
+    dc:title "Core ICASA ontology for integrated description of agricultural field experiments and production"^^xsd:string ;
+    owl:versionInfo "1.0-alpha"^^xsd:string .
+
+<http://purl.org/icasa/core#AgMIP> a owl:Class ;
+    rdfs:label "AgMIP" ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#Simulation> a owl:Class ;
+    rdfs:label "Simulation" ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#abund> a owl:DatatypeProperty ;
+    rdfs:label "abund",
+        "bund_height" ;
+    rdfs:comment "Bund height (e.g., for flooded rice)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#IrrigationApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#aco2> a owl:DatatypeProperty ;
+    rdfs:label "aco2",
+        "ambient_co2_conc" ;
+    rdfs:comment "CO2, ambient"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#alpha> a owl:DatatypeProperty ;
+    rdfs:label "alpha",
+        "rainfall_parm_alpha" ;
+    rdfs:comment "Rainfall distribution scale parameter,"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#amth> a owl:DatatypeProperty ;
+    rdfs:label "amth",
+        "angstrom_coef_a_month" ;
+    rdfs:comment "Angstrom A coefficient, monthly"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#anga> a owl:DatatypeProperty ;
+    rdfs:label "anga",
+        "angstrom_coef_a_year" ;
+    rdfs:comment "Angstrom A coefficient, yearly"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#angb> a owl:DatatypeProperty ;
+    rdfs:label "angb",
+        "angstrom_coef_b_year" ;
+    rdfs:comment "Angstrom B coefficient, yearly"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#apsim_kl> a owl:DatatypeProperty ;
+    rdfs:label "apsim_kl",
+        "plant_root_uptake_factor" ;
+    rdfs:comment "APSIM plant specific water uptake coefficient"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#bmth> a owl:DatatypeProperty ;
+    rdfs:label "angstrom_coef_b_month",
+        "bmth" ;
+    rdfs:comment "Angstrom B coefficient, monthly"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#caco3> a owl:DatatypeProperty ;
+    rdfs:label "caco3",
+        "caco3_content" ;
+    rdfs:comment "Soil CaCO3 content"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#cdate> a owl:DatatypeProperty ;
+    rdfs:label "cdate",
+        "chemical_applic_date" ;
+    rdfs:comment "Chemicals application date"@en ;
+    rdfs:domain <http://purl.org/icasa/core#ChemicalApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ch> a owl:DatatypeProperty ;
+    rdfs:label "ch",
+        "chemical_applic_level" ;
+    rdfs:comment "Chemicals application level, liks to CHEMICALS table"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Chemical>,
+        <http://purl.org/icasa/core#ChemicalApplication>,
+        <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ch_name> a owl:DatatypeProperty ;
+    rdfs:label "ch_name",
+        "chemical_applic_name" ;
+    rdfs:comment "Chemical, name experimentalist assigned to a given application level"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Chemical> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ch_notes> a owl:DatatypeProperty ;
+    rdfs:label "ch_notes",
+        "chemical_applic_notes" ;
+    rdfs:comment "Chemical notes, extensive comments on applications"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Chemical> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ch_targets> a owl:DatatypeProperty ;
+    rdfs:label "ch_targets",
+        "chemical_applic_target" ;
+    rdfs:comment "Chemicals application target"@en ;
+    rdfs:domain <http://purl.org/icasa/core#ChemicalApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#chacd> a owl:DatatypeProperty ;
+    rdfs:label "chacd",
+        "chemical_applic_method" ;
+    rdfs:comment "Chemicals application method"@en ;
+    rdfs:domain <http://purl.org/icasa/core#ChemicalApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#chamt> a owl:DatatypeProperty ;
+    rdfs:label "chamt",
+        "chemical_applic_amount" ;
+    rdfs:comment "Chemicals application amount (active)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#ChemicalApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#chcd> a owl:DatatypeProperty ;
+    rdfs:label "chcd",
+        "chemical_applic_material" ;
+    rdfs:comment "Chemicals application material"@en ;
+    rdfs:domain <http://purl.org/icasa/core#ChemicalApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#chday> a owl:DatatypeProperty ;
+    rdfs:label "chday",
+        "chemical_applic_day" ;
+    rdfs:comment "Chemicals application day of year or DAP if year = -99"@en ;
+    rdfs:domain <http://purl.org/icasa/core#ChemicalApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#chdep> a owl:DatatypeProperty ;
+    rdfs:label "application_depth_chem",
+        "chdep" ;
+    rdfs:comment "Chemicals application depth"@en ;
+    rdfs:domain <http://purl.org/icasa/core#ChemicalApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#chyr> a owl:DatatypeProperty ;
+    rdfs:label "chemical_applic_year",
+        "chyr" ;
+    rdfs:comment "Chemicals application year"@en ;
+    rdfs:domain <http://purl.org/icasa/core#ChemicalApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#classification> a owl:DatatypeProperty ;
+    rdfs:label "classification",
+        "soil_classification" ;
+    rdfs:comment "Soil classification"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#cldd> a owl:DatatypeProperty ;
+    rdfs:label "cldd",
+        "cloudiness_factor" ;
+    rdfs:comment "Cloudiness factor, relative"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#cmplc> a owl:DatatypeProperty ;
+    rdfs:label "cmplc",
+        "complications" ;
+    rdfs:comment "Complications arising during experiment"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Note> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#cnstr> a owl:DatatypeProperty ;
+    rdfs:label "cnstr",
+        "constraints" ;
+    rdfs:comment "Constraints known to affect crop performance"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Note> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#co> a owl:DatatypeProperty ;
+    rdfs:label "co",
+        "crop_component_number" ;
+    rdfs:comment "Crop component number"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#co2a> a owl:DatatypeProperty ;
+    rdfs:label "co2_conc_annual_increase",
+        "co2a" ;
+    rdfs:comment "CO2 concentration, annual increase "@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#co2d> a owl:DatatypeProperty ;
+    rdfs:label "co2_conc_atmosphere_daily",
+        "co2d" ;
+    rdfs:comment "CO2 concentration, atmospheric average over day"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#co2y> a owl:DatatypeProperty ;
+    rdfs:label "co2_concentration_annual",
+        "co2y" ;
+    rdfs:comment "CO2 concentration, annual (yearly)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#cona> a owl:DatatypeProperty ;
+    rdfs:label "cona" ;
+    rdfs:comment "Apsim Cona soil evaporation "@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#cr_system> a owl:DatatypeProperty ;
+    rdfs:label "cr_system",
+        "cropping_system" ;
+    rdfs:comment "Cropping system descriptive name"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#crid> a owl:DatatypeProperty ;
+    rdfs:label "crid",
+        "crop_ident_icasa" ;
+    rdfs:comment "Crop (or weed) species identifier"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Genotype> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#cul_id> a owl:DatatypeProperty ;
+    rdfs:label "cul_id",
+        "cultivar_identifier" ;
+    rdfs:comment "Cultivar, line or genotype identifier"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Genotype> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#cul_name> a owl:DatatypeProperty ;
+    rdfs:label "cul_name",
+        "cultivar_name" ;
+    rdfs:comment "Cultivar name"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Genotype> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#cul_notes> a owl:DatatypeProperty ;
+    rdfs:label "cul_notes",
+        "cultivar_notes" ;
+    rdfs:comment "Cultivar notes"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Genotype> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#da3d> a owl:DatatypeProperty ;
+    rdfs:label "da3d",
+        "daylength_3_deg" ;
+    rdfs:comment "Daylength (3 deg basis)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#dayd> a owl:DatatypeProperty ;
+    rdfs:label "dayd",
+        "daylength_sunrise_sunset" ;
+    rdfs:comment "Daylength (sunrise-sunset)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#description> a owl:DatatypeProperty ;
+    rdfs:label "description",
+        "variate_description" ;
+    rdfs:comment "Description of a given variate"@en ;
+    rdfs:domain <http://purl.org/icasa/core#ValidationCriteria> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#diffusconst> a owl:DatatypeProperty ;
+    rdfs:label "diffus_const",
+        "diffusconst" ;
+    rdfs:comment "APSIM Evaporative diffusion constant"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#diffusslope> a owl:DatatypeProperty ;
+    rdfs:label "diffus_slope",
+        "diffusslope" ;
+    rdfs:comment "APSIM Evaporative diffusion slope"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#digital_obj_id> a owl:DatatypeProperty ;
+    rdfs:label "digital_obj_id",
+        "digital_object_identifier" ;
+    rdfs:comment "Digital_object_identifier according to international standard"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Document> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#digital_obj_id_sl> a owl:DatatypeProperty ;
+    rdfs:label "digital_obj_id_sl",
+        "digital_object_identifier_sl" ;
+    rdfs:comment "Digital_object_identifier according to international standard"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilDocument> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#digital_obj_id_wst> a owl:DatatypeProperty ;
+    rdfs:label "digital_obj_id_wst",
+        "digital_object_identifier_wst" ;
+    rdfs:comment "Digital_object_identifier according to international standard"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherDocument> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#doc_id> a owl:DatatypeProperty ;
+    rdfs:label "doc_id",
+        "document_id" ;
+    rdfs:comment "id"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Document> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#doc_id_sl> a owl:DatatypeProperty ;
+    rdfs:label "doc_id_sl",
+        "document_id_sl" ;
+    rdfs:comment "id"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilDocument> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#doc_id_wst> a owl:DatatypeProperty ;
+    rdfs:label "doc_id_wst",
+        "document_id_wst" ;
+    rdfs:comment "id"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherDocument> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#document> a owl:DatatypeProperty ;
+    rdfs:label "document",
+        "document_name" ;
+    rdfs:comment "Document name in abbreviated form"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Document> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#document_sl> a owl:DatatypeProperty ;
+    rdfs:label "document_name_sl",
+        "document_sl" ;
+    rdfs:comment "Document name in abbreviated form"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilDocument> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#document_wst> a owl:DatatypeProperty ;
+    rdfs:label "document_name_wst",
+        "document_wst" ;
+    rdfs:comment "Document name in abbreviated form"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherDocument> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#dtr> a owl:DatatypeProperty ;
+    rdfs:label "dtr",
+        "radiation_shortwave" ;
+    rdfs:comment "Solar radiation, daily shortwave"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#dtwt> a owl:DatatypeProperty ;
+    rdfs:label "dtwt",
+        "water_table_depth" ;
+    rdfs:comment "Water table depth"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#durn> a owl:DatatypeProperty ;
+    rdfs:label "durat_summarization_per",
+        "durn" ;
+    rdfs:comment "Duration of summarization period"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ecco2> a owl:DatatypeProperty ;
+    rdfs:label "ecco2",
+        "environ_modif_code_co2" ;
+    rdfs:comment "Environmental modific.code, CO2"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModificationLevel> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ecdew> a owl:DatatypeProperty ;
+    rdfs:label "ecdew",
+        "environ_mod_code_dewpt" ;
+    rdfs:comment "Environmental modific.code, dewpoint"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModificationLevel> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ecdyl> a owl:DatatypeProperty ;
+    rdfs:label "ecdyl",
+        "environ_mod_code_daylen" ;
+    rdfs:comment "Environmental modific.code, daylength"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModificationLevel> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ecmax> a owl:DatatypeProperty ;
+    rdfs:label "ecmax",
+        "environ_mod_code_tmax" ;
+    rdfs:comment "Environmental modific.code, maximum temperature"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModificationLevel> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ecmin> a owl:DatatypeProperty ;
+    rdfs:label "ecmin",
+        "environ_mod_code_tmin" ;
+    rdfs:comment "Environmental modific.code, minimum temperature"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModificationLevel> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ecrad> a owl:DatatypeProperty ;
+    rdfs:label "ecrad",
+        "environ_mod_code_radiat" ;
+    rdfs:comment "Environmental modific.code, radiation"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModificationLevel> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ecrai> a owl:DatatypeProperty ;
+    rdfs:label "ecrai",
+        "environ_modif_code_rain" ;
+    rdfs:comment "Environmental modific.code, rain"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModificationLevel> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ecwnd> a owl:DatatypeProperty ;
+    rdfs:label "ecwnd",
+        "environ_modif_code_wind" ;
+    rdfs:comment "Environmental modific.code, wind"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModificationLevel> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#edate> a owl:DatatypeProperty ;
+    rdfs:label "edate",
+        "emergence_date" ;
+    rdfs:comment "Date of emergence"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#eid> a owl:DatatypeProperty ;
+    rdfs:label "eid",
+        "exp_id" ;
+    rdfs:comment "id"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#em> a owl:DatatypeProperty ;
+    rdfs:label "em",
+        "environmental_modif_lev" ;
+    rdfs:comment "Environmental modifications level, links to EM table"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModification>,
+        <http://purl.org/icasa/core#EnvironmentModificationLevel>,
+        <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#em_name> a owl:DatatypeProperty ;
+    rdfs:label "em_name",
+        "environ_modif_name" ;
+    rdfs:comment "Environmental modifications level name"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModification> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#em_notes> a owl:DatatypeProperty ;
+    rdfs:label "em_notes",
+        "environ_comments" ;
+    rdfs:comment "Environmental modifications, extended comments"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModification> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#emco2> a owl:DatatypeProperty ;
+    rdfs:label "emco2",
+        "environ_modif_co2" ;
+    rdfs:comment "Environmental modification, CO2"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModificationLevel> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#emdate> a owl:DatatypeProperty ;
+    rdfs:label "emdate",
+        "environ_modificat_date" ;
+    rdfs:comment "Environmental modifications date"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModificationLevel> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#emday> a owl:DatatypeProperty ;
+    rdfs:label "emday",
+        "environ_modificat_day" ;
+    rdfs:comment "Environmental modifications date"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModificationLevel> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#emdew> a owl:DatatypeProperty ;
+    rdfs:label "emdew",
+        "environ_modif_dew_pt" ;
+    rdfs:comment "Environmental modification, dewpoint"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModificationLevel> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#emdyl> a owl:DatatypeProperty ;
+    rdfs:label "emdyl",
+        "environ_modif_daylen" ;
+    rdfs:comment "Environmental modification, daylength"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModificationLevel> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#emmax> a owl:DatatypeProperty ;
+    rdfs:label "emmax",
+        "environ_modif_max_temp" ;
+    rdfs:comment "Environmental modification, maximum temperature"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModificationLevel> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#emmin> a owl:DatatypeProperty ;
+    rdfs:label "emmin",
+        "environ_modif_min_temp" ;
+    rdfs:comment "Environmental modification, minimum temperature"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModificationLevel> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#emrad> a owl:DatatypeProperty ;
+    rdfs:label "emrad",
+        "environ_modif_solar_rad" ;
+    rdfs:comment "Environmental modification,radiation"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModificationLevel> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#emrai> a owl:DatatypeProperty ;
+    rdfs:label "emrai",
+        "environ_modif_rain" ;
+    rdfs:comment "Environmental modification,rain"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModificationLevel> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#emwnd> a owl:DatatypeProperty ;
+    rdfs:label "emwnd",
+        "environ_modif_wind" ;
+    rdfs:comment "Environmental modification,wind"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModificationLevel> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#emyr> a owl:DatatypeProperty ;
+    rdfs:label "emyr",
+        "environ_modificat_year" ;
+    rdfs:comment "Environmental modifications year"@en ;
+    rdfs:domain <http://purl.org/icasa/core#EnvironmentModificationLevel> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#endat> a owl:DatatypeProperty ;
+    rdfs:label "endat",
+        "simulation_end_date" ;
+    rdfs:comment "Simulation end date"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SimulationControl> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#evap> a owl:DatatypeProperty ;
+    rdfs:label "evap",
+        "evaporation_pan" ;
+    rdfs:comment "Evaporation,pan"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ex_funding_source> a owl:DatatypeProperty ;
+    rdfs:label "ex_funding_source" ;
+    rdfs:comment "Funding source(s) for this data set"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ex_license> a owl:DatatypeProperty ;
+    rdfs:label "ex_license" ;
+    rdfs:comment "Data license name and url"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#exname> a owl:DatatypeProperty ;
+    rdfs:label "exname",
+        "name_of_experiment" ;
+    rdfs:comment "Name of experiment"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#exp_dur> a owl:DatatypeProperty ;
+    rdfs:label "exp_dur",
+        "experiment_duration" ;
+    rdfs:comment "Duration of experiment in years"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#exper_id> a owl:DatatypeProperty ;
+    rdfs:label "exper_id",
+        "experiment_id" ;
+    rdfs:comment "Experiment database key, links to ED table"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment>,
+        <http://purl.org/icasa/core#PlotDetail>,
+        <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#exper_type> a owl:DatatypeProperty ;
+    rdfs:label "exper_type",
+        "experiment_type" ;
+    rdfs:comment "General type of experiment, e.g., varietal trial"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#factors> a owl:DatatypeProperty ;
+    rdfs:label "experimental_factor_comb",
+        "factors" ;
+    rdfs:comment "Experimental factor combinations"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#farea> a owl:DatatypeProperty ;
+    rdfs:label "farea",
+        "field_area" ;
+    rdfs:comment "Field area"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fd_month> a owl:DatatypeProperty ;
+    rdfs:label "fd_month",
+        "month" ;
+    rdfs:comment "Month of year"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fe> a owl:DatatypeProperty ;
+    rdfs:label "fe",
+        "fertilizer_level" ;
+    rdfs:comment "Fertilizer level in treatment structure"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Fertilizer>,
+        <http://purl.org/icasa/core#FertilizerApplication>,
+        <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fe_name> a owl:DatatypeProperty ;
+    rdfs:label "fe_name",
+        "fertilizer_level_name" ;
+    rdfs:comment "Fertilizer level name"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Fertilizer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fe_no> a owl:DatatypeProperty ;
+    rdfs:label "fe_no",
+        "fert_#_tot" ;
+    rdfs:comment "Total number of fertilizer applications over season"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Fertilizer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fe_notes> a owl:DatatypeProperty ;
+    rdfs:label "fe_notes",
+        "fertilizer_notes" ;
+    rdfs:comment "Fertilizer, comments or explanations of a given treatment"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Fertilizer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#feacd> a owl:DatatypeProperty ;
+    rdfs:label "feacd",
+        "fertilizer_applic_method" ;
+    rdfs:comment "Fertilizer application method"@en ;
+    rdfs:domain <http://purl.org/icasa/core#FertilizerApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#feamc> a owl:DatatypeProperty ;
+    rdfs:label "ca_in_applied_fertilizer",
+        "feamc" ;
+    rdfs:comment "Ca in applied fertilizer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#FertilizerApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#feamk> a owl:DatatypeProperty ;
+    rdfs:label "feamk",
+        "fertilizer_k_applied" ;
+    rdfs:comment "Potassium in applied fertilizer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#FertilizerApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#feamn> a owl:DatatypeProperty ;
+    rdfs:label "feamn",
+        "n_in_applied_fertilizer" ;
+    rdfs:comment "Nitrogen in applied fertilizer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#FertilizerApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#feamo> a owl:DatatypeProperty ;
+    rdfs:label "feamo",
+        "other_elements_appl_fert" ;
+    rdfs:comment "Other elements in applied fertilizer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#FertilizerApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#feamp> a owl:DatatypeProperty ;
+    rdfs:label "feamp",
+        "phosphorus_applied_fert" ;
+    rdfs:comment "Phosphorus in applied fertilizer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#FertilizerApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fecd> a owl:DatatypeProperty ;
+    rdfs:label "fecd",
+        "fertilizer_material" ;
+    rdfs:comment "Fertilizer material"@en ;
+    rdfs:domain <http://purl.org/icasa/core#FertilizerApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fecd_name> a owl:DatatypeProperty ;
+    rdfs:label "fecd_name",
+        "fertiliz_app_name" ;
+    rdfs:comment "Name or notes for this fertilizer application"@en ;
+    rdfs:domain <http://purl.org/icasa/core#FertilizerApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fedate> a owl:DatatypeProperty ;
+    rdfs:label "fedate",
+        "fertilization_date" ;
+    rdfs:comment "Fertilization date"@en ;
+    rdfs:domain <http://purl.org/icasa/core#FertilizerApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#feday> a owl:DatatypeProperty ;
+    rdfs:label "feday",
+        "fertilizer_applic_day" ;
+    rdfs:comment "Fertilizer application day"@en ;
+    rdfs:domain <http://purl.org/icasa/core#FertilizerApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fedep> a owl:DatatypeProperty ;
+    rdfs:label "application_depth_fert",
+        "fedep" ;
+    rdfs:comment "Fertilizer application depth"@en ;
+    rdfs:domain <http://purl.org/icasa/core#FertilizerApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fek_no> a owl:DatatypeProperty ;
+    rdfs:label "fek_no",
+        "potassium_applics_season" ;
+    rdfs:comment "Potassium applications, total number at end season"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Fertilizer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fek_tot> a owl:DatatypeProperty ;
+    rdfs:label "fek_tot",
+        "potassium_season" ;
+    rdfs:comment "Potassium, total amount over season"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Fertilizer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fen_no> a owl:DatatypeProperty ;
+    rdfs:label "fen_no",
+        "nitrogen_applics_season" ;
+    rdfs:comment "Nitrogen applications, total number at end season"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Fertilizer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fen_tot> a owl:DatatypeProperty ;
+    rdfs:label "fen_tot",
+        "nitrogen_season" ;
+    rdfs:comment "Nitrogen, total amount over season"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Fertilizer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fenh4> a owl:DatatypeProperty ;
+    rdfs:label "fenh4",
+        "nh4_applied_fertilizer" ;
+    rdfs:comment "Ammonium in applied fertilizer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#FertilizerApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#feno3> a owl:DatatypeProperty ;
+    rdfs:label "feno3",
+        "no3_applied_fertilizer" ;
+    rdfs:comment "Nitrate applied fertilizer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#FertilizerApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#feocd> a owl:DatatypeProperty ;
+    rdfs:label "feocd",
+        "fertiliz_code_other_elem" ;
+    rdfs:comment "Fertilizer code for other elements (e.g., Mg for magnesium)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#FertilizerApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fep_no> a owl:DatatypeProperty ;
+    rdfs:label "fep_no",
+        "phosphorus_applics_season" ;
+    rdfs:comment "Phosphorus applications, total number at end season"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Fertilizer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fep_tot> a owl:DatatypeProperty ;
+    rdfs:label "fep_tot",
+        "phosphorus_season" ;
+    rdfs:comment "Phosphorus, total amount over season"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Fertilizer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fertilizer> a owl:DatatypeProperty ;
+    rdfs:label "fert_applied",
+        "fertilizer" ;
+    rdfs:comment "Indicates whether or not fertilizer was applied (Y or N)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Fertilizer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#feyr> a owl:DatatypeProperty ;
+    rdfs:label "fertilizer_applic_year",
+        "feyr" ;
+    rdfs:comment "Fertilizer application year"@en ;
+    rdfs:domain <http://purl.org/icasa/core#FertilizerApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#first_name> a owl:DatatypeProperty ;
+    rdfs:label "first_name",
+        "researcher_first_name" ;
+    rdfs:comment "First name of researchers involved with the experiment(s) or data"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Person>,
+        <http://purl.org/icasa/core#SoilPerson>,
+        <http://purl.org/icasa/core#WeatherPerson> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fl> a owl:DatatypeProperty ;
+    rdfs:label "field_level",
+        "fl" ;
+    rdfs:comment "Field level identifier"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field>,
+        <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fl_drntype> a owl:DatatypeProperty ;
+    rdfs:label "drainage_type",
+        "fl_drntype" ;
+    rdfs:comment "Drainage, type in field"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fl_land> a owl:DatatypeProperty ;
+    rdfs:label "field_landscape_position",
+        "fl_land" ;
+    rdfs:comment "Landscape class of location (e.g., coastal)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fl_lat> a owl:DatatypeProperty ;
+    rdfs:label "field_latitude",
+        "fl_lat" ;
+    rdfs:comment "Field latitude"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fl_loc_1> a owl:DatatypeProperty ;
+    rdfs:label "field_country",
+        "fl_loc_1" ;
+    rdfs:comment "Name of country where field is located"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fl_loc_2> a owl:DatatypeProperty ;
+    rdfs:label "field_sub_country",
+        "fl_loc_2" ;
+    rdfs:comment "First political subdivision for field location (e.g., state, province, department)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fl_loc_3> a owl:DatatypeProperty ;
+    rdfs:label "field_sub_sub_country",
+        "fl_loc_3" ;
+    rdfs:comment "Second political subdivision for field location (e.g, county)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fl_long> a owl:DatatypeProperty ;
+    rdfs:label "field_longitude",
+        "fl_long" ;
+    rdfs:comment "Field longitude, E positive, W negative"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fl_name> a owl:DatatypeProperty ;
+    rdfs:label "field_name",
+        "fl_name" ;
+    rdfs:comment "Field name"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fl_notes> a owl:DatatypeProperty ;
+    rdfs:label "field_notes",
+        "fl_notes" ;
+    rdfs:comment "Field, short notes"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fl_plowd> a owl:DatatypeProperty ;
+    rdfs:label "field_plow_layer_depth",
+        "fl_plowd" ;
+    rdfs:comment "Field plow layer depth"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fl_plowdc> a owl:DatatypeProperty ;
+    rdfs:label "field_plow_layer_compac",
+        "fl_plowdc" ;
+    rdfs:comment "Field plow layer compaction (0 to 1 scale)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fl_sltx> a owl:DatatypeProperty ;
+    rdfs:label "field_soil_texture",
+        "fl_sltx" ;
+    rdfs:comment "Field observed soil texture"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#flaga> a owl:DatatypeProperty ;
+    rdfs:label "flag_for_summary_data",
+        "flaga" ;
+    rdfs:comment "Flag to identify summary data with specific problems or significance"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#flagw> a owl:DatatypeProperty ;
+    rdfs:label "flag_for_weather_data",
+        "flagw" ;
+    rdfs:comment "Flag to identify daily weather data with specific problems or significance"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fldrad> a owl:DatatypeProperty ;
+    rdfs:label "drain_radius",
+        "fldrad" ;
+    rdfs:comment "Drain radius"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fldrd> a owl:DatatypeProperty ;
+    rdfs:label "depth_to_drain",
+        "fldrd" ;
+    rdfs:comment "Drain, depth in field"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fldrs> a owl:DatatypeProperty ;
+    rdfs:label "drain_spacing",
+        "fldrs" ;
+    rdfs:comment "Drain spacing"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#flele> a owl:DatatypeProperty ;
+    rdfs:label "field_elevation",
+        "flele" ;
+    rdfs:comment "Elevation of field site"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#fllwr> a owl:DatatypeProperty ;
+    rdfs:label "field_length_width_ratio",
+        "fllwr" ;
+    rdfs:comment "Field length to width ratio"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#flob> a owl:DatatypeProperty ;
+    rdfs:label "flob",
+        "obstruction_to_sun" ;
+    rdfs:comment "Obstruction to sun"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#flsl> a owl:DatatypeProperty ;
+    rdfs:label "field_slope",
+        "flsl" ;
+    rdfs:comment "Field slope (from horizontal)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#flsla> a owl:DatatypeProperty ;
+    rdfs:label "field_slope_aspect",
+        "flsla" ;
+    rdfs:comment "Field slope aspect, W, nW, etc."@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#flsll> a owl:DatatypeProperty ;
+    rdfs:label "field_slope_length",
+        "flsll" ;
+    rdfs:comment "Field slope length"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#flst> a owl:DatatypeProperty ;
+    rdfs:label "flst",
+        "surface_stones_(cover)" ;
+    rdfs:comment "Surface stones (cover)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ge> a owl:DatatypeProperty ;
+    rdfs:label "cultivar_level",
+        "ge",
+        "genotype_level_number" ;
+    rdfs:comment "Genotype level number"@en,
+        "Genotype level, as listed in Treatments table under GE"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Genotype>,
+        <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ge_id> a owl:DatatypeProperty ;
+    rdfs:label "ge_id",
+        "genotype_level_id" ;
+    rdfs:comment "Genotype level database key"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#gsdu> a owl:DatatypeProperty ;
+    rdfs:label "growing_season_duration",
+        "gsdu" ;
+    rdfs:comment "Growing season duration"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#gsst> a owl:DatatypeProperty ;
+    rdfs:label "growing_season_start_day",
+        "gsst" ;
+    rdfs:comment "Growing season start day"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ha> a owl:DatatypeProperty ;
+    rdfs:label "ha",
+        "harvest_operations_level" ;
+    rdfs:comment "Harvest operations level, links to HARVEST table"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Harvest>,
+        <http://purl.org/icasa/core#HarvestEvent>,
+        <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ha_comments> a owl:DatatypeProperty ;
+    rdfs:label "ha_comments",
+        "harvest_comments" ;
+    rdfs:comment "Harvest, extended comments on harvest procedures"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Harvest> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ha_name> a owl:DatatypeProperty ;
+    rdfs:label "ha_name",
+        "harvest_ops_level_name" ;
+    rdfs:comment "Harvest operations level name"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Harvest> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ha_notes> a owl:DatatypeProperty ;
+    rdfs:label "ha_notes",
+        "harvest_notes" ;
+    rdfs:comment "Harvest, short notes"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Harvest> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#habpc> a owl:DatatypeProperty ;
+    rdfs:label "habpc",
+        "harv_operation_byproduct" ;
+    rdfs:comment "Harvest operations, percent of by-product harvested"@en ;
+    rdfs:domain <http://purl.org/icasa/core#HarvestEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#hacom> a owl:DatatypeProperty ;
+    rdfs:label "hacom",
+        "harvest_operat_component" ;
+    rdfs:comment "Harvest operations, crop component harvested"@en ;
+    rdfs:domain <http://purl.org/icasa/core#HarvestEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#hacr> a owl:DatatypeProperty ;
+    rdfs:label "hacr",
+        "harvest_crop" ;
+    rdfs:comment "Harvest operations, crop harvested"@en ;
+    rdfs:domain <http://purl.org/icasa/core#HarvestEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#hadat> a owl:DatatypeProperty ;
+    rdfs:label "hadat",
+        "harvest_operations_date" ;
+    rdfs:comment "Harvest operations date, DAP if year = -99"@en ;
+    rdfs:domain <http://purl.org/icasa/core#HarvestEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#haday> a owl:DatatypeProperty ;
+    rdfs:label "haday",
+        "harvest_operations_day" ;
+    rdfs:comment "Harvest operations day, DAP if year = -99"@en ;
+    rdfs:domain <http://purl.org/icasa/core#HarvestEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#haht> a owl:DatatypeProperty ;
+    rdfs:label "haht",
+        "harvest_cut_height" ;
+    rdfs:comment "Harvest, height of cut"@en ;
+    rdfs:domain <http://purl.org/icasa/core#HarvestEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#hamt> a owl:DatatypeProperty ;
+    rdfs:label "hamt",
+        "harvest_amount" ;
+    rdfs:comment "Harvest, total amount removed as mass"@en ;
+    rdfs:domain <http://purl.org/icasa/core#HarvestEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#happc> a owl:DatatypeProperty ;
+    rdfs:label "happc",
+        "harv_operat_main_product" ;
+    rdfs:comment "Harvest operations, percent economic product harvested"@en ;
+    rdfs:domain <http://purl.org/icasa/core#HarvestEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#harea> a owl:DatatypeProperty ;
+    rdfs:label "harea",
+        "harvest_area" ;
+    rdfs:comment "Harvest area"@en ;
+    rdfs:domain <http://purl.org/icasa/core#HarvestEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#harm> a owl:DatatypeProperty ;
+    rdfs:label "harm",
+        "harvest_method" ;
+    rdfs:comment "Harvest method"@en ;
+    rdfs:domain <http://purl.org/icasa/core#HarvestEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#hasiz> a owl:DatatypeProperty ;
+    rdfs:label "harv_operat_size_categor",
+        "hasiz" ;
+    rdfs:comment "Harvest operations size category"@en ;
+    rdfs:domain <http://purl.org/icasa/core#HarvestEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#hastg> a owl:DatatypeProperty ;
+    rdfs:label "harvest_stage",
+        "hastg" ;
+    rdfs:comment "Harvest, growth stage of crop at date"@en ;
+    rdfs:domain <http://purl.org/icasa/core#HarvestEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#hayr> a owl:DatatypeProperty ;
+    rdfs:label "harvest_operations_year",
+        "hayr" ;
+    rdfs:comment "Harvest operations year"@en ;
+    rdfs:domain <http://purl.org/icasa/core#HarvestEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#iadate> a owl:DatatypeProperty ;
+    rdfs:label "auto_irrig_date",
+        "iadate" ;
+    rdfs:comment "Date to begin automatic irrigation"@en ;
+    rdfs:domain <http://purl.org/icasa/core#AutomaticIrrigation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#iame> a owl:DatatypeProperty ;
+    rdfs:label "iame",
+        "method_auto_applications" ;
+    rdfs:comment "Method for automatic applications"@en ;
+    rdfs:domain <http://purl.org/icasa/core#AutomaticIrrigation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#iamt> a owl:DatatypeProperty ;
+    rdfs:label "auto_irrig_amnt_applied",
+        "iamt" ;
+    rdfs:comment "Irrigation amount, automatic application"@en ;
+    rdfs:domain <http://purl.org/icasa/core#AutomaticIrrigation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ic> a owl:DatatypeProperty ;
+    rdfs:label "ic",
+        "initial_conditions_level" ;
+    rdfs:comment "Initial conditions level, link"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition>,
+        <http://purl.org/icasa/core#InitialConditionSoilLayer>,
+        <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ic_name> a owl:DatatypeProperty ;
+    rdfs:label "ic_name",
+        "initial_conditions_name" ;
+    rdfs:comment "Initial conditions name"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icdat> a owl:DatatypeProperty ;
+    rdfs:label "icdat",
+        "initial_conditions_date" ;
+    rdfs:comment "Initial conditions measurement date"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icday> a owl:DatatypeProperty ;
+    rdfs:label "icday",
+        "profile_measurement_day" ;
+    rdfs:comment "Day of year, inital profile measurement"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ich2o> a owl:DatatypeProperty ;
+    rdfs:label "ich2o",
+        "initial_watr_conc_by_lyr" ;
+    rdfs:comment "Initial water concentration by layer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialConditionSoilLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icin> a owl:DatatypeProperty ;
+    rdfs:label "icin",
+        "initial_prof_inorg_n" ;
+    rdfs:comment "Initial profile inorganic nitrogen amount"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icn_tot> a owl:DatatypeProperty ;
+    rdfs:label "icn_tot",
+        "initial_ntot_layer" ;
+    rdfs:comment "Initial inorganic N amount, by layer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialConditionSoilLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icnd> a owl:DatatypeProperty ;
+    rdfs:label "icnd",
+        "nodule_wt_previous_crop" ;
+    rdfs:comment "Nodule weight from previous crop"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icnh4> a owl:DatatypeProperty ;
+    rdfs:label "icnh4",
+        "initial_nh4_concen_layer" ;
+    rdfs:comment "Initial NH4 conc., as elemental N on dry wt. basis, by layer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialConditionSoilLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icno3> a owl:DatatypeProperty ;
+    rdfs:label "icno3",
+        "initial_no3_concen_layer" ;
+    rdfs:comment "Initial NO3 conc., as elemental N on dry wt. basis, by layer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialConditionSoilLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icpcr> a owl:DatatypeProperty ;
+    rdfs:label "icpcr",
+        "residue_nature_prev_crop" ;
+    rdfs:comment "Residue, crop code for previous crop"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icpnh4> a owl:DatatypeProperty ;
+    rdfs:label "icpnh4",
+        "initial_prof_nh4" ;
+    rdfs:comment "Initial profile soil ammonium"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icpno3> a owl:DatatypeProperty ;
+    rdfs:label "icpno3",
+        "initial_prof_no3" ;
+    rdfs:comment "Initial profile soil nitrate"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icrag> a owl:DatatypeProperty ;
+    rdfs:label "icrag",
+        "residue_above_ground_wt" ;
+    rdfs:comment "Residue above-ground weight, dry weight basis"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icrdat> a owl:DatatypeProperty ;
+    rdfs:label "icrdat",
+        "init_residu_measure_date" ;
+    rdfs:comment "Initial residues measurement date"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icrdp> a owl:DatatypeProperty ;
+    rdfs:label "icrdp",
+        "residue_incorpor_depth" ;
+    rdfs:comment "Residue incorporation depth"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icrdy> a owl:DatatypeProperty ;
+    rdfs:label "day_year_residue_measure",
+        "icrdy" ;
+    rdfs:comment "Day of year, residue measurement"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icrip> a owl:DatatypeProperty ;
+    rdfs:label "icrip",
+        "residue_incorporated" ;
+    rdfs:comment "Residue incorporation percentage"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icrk> a owl:DatatypeProperty ;
+    rdfs:label "icrk",
+        "residue_k_conc" ;
+    rdfs:comment "Residue, above-ground, potassium concentration"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icrli> a owl:DatatypeProperty ;
+    rdfs:label "icrli",
+        "residue_lignin_conc" ;
+    rdfs:comment "Residue, above-ground, lignin concentration"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icrm> a owl:DatatypeProperty ;
+    rdfs:label "icrm",
+        "residue_moisture_init" ;
+    rdfs:comment "Moisture in initial above-ground residue "@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icrn> a owl:DatatypeProperty ;
+    rdfs:label "icrn",
+        "residue_n_conc" ;
+    rdfs:comment "Residue, above-ground, nitrogen concentration"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icrp> a owl:DatatypeProperty ;
+    rdfs:label "icrp",
+        "residue_p_conc" ;
+    rdfs:comment "Residue, above-ground, phosphorus concentration"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icrt> a owl:DatatypeProperty ;
+    rdfs:label "icrt",
+        "root_wt_previous_crop" ;
+    rdfs:comment "Root weight from previous crop"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icryr> a owl:DatatypeProperty ;
+    rdfs:label "icryr",
+        "init_residue_measure_yr" ;
+    rdfs:comment "Initial residues measurement year"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icrzc> a owl:DatatypeProperty ;
+    rdfs:label "icrzc",
+        "rhizobia_number" ;
+    rdfs:comment "Rhizobia number (count)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icrze> a owl:DatatypeProperty ;
+    rdfs:label "icrze",
+        "rhizobia_effectiveness" ;
+    rdfs:comment "Rhizobia effectiveness on 0-1 scale"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icrzn> a owl:DatatypeProperty ;
+    rdfs:label "icrzn",
+        "rhizobia_nitrogen_amount" ;
+    rdfs:comment "Rhizobia nitrogen amount"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icsc> a owl:DatatypeProperty ;
+    rdfs:label "icsc",
+        "initial_soil_stable_c" ;
+    rdfs:comment "Stable organic carbon by layer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialConditionSoilLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icslt> a owl:DatatypeProperty ;
+    rdfs:label "icslt",
+        "initial_soil_temperature" ;
+    rdfs:comment "Initial soil temperature"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialConditionSoilLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icsw> a owl:DatatypeProperty ;
+    rdfs:label "icsw",
+        "initial_profile_wtr_cont" ;
+    rdfs:comment "Initial water content of entire profile"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icswpc> a owl:DatatypeProperty ;
+    rdfs:label "icswpc",
+        "initial_profile_wtr_cont_%" ;
+    rdfs:comment "Initial water content of entire profile, expressed as percent of available water"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icwt> a owl:DatatypeProperty ;
+    rdfs:label "icwt",
+        "initial_water_tabl_depth" ;
+    rdfs:comment "Initial water table depth"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#icyr> a owl:DatatypeProperty ;
+    rdfs:label "icyr",
+        "initial_prof_measure_yr" ;
+    rdfs:comment "Inital profile measurements year"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialCondition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#id> a owl:DatatypeProperty ;
+    rdfs:label "id" ;
+    rdfs:comment "id"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Chemical>,
+        <http://purl.org/icasa/core#ChemicalApplication>,
+        <http://purl.org/icasa/core#EnvironmentModification>,
+        <http://purl.org/icasa/core#EnvironmentModificationLevel>,
+        <http://purl.org/icasa/core#Fertilizer>,
+        <http://purl.org/icasa/core#FertilizerApplication>,
+        <http://purl.org/icasa/core#Field>,
+        <http://purl.org/icasa/core#Genotype>,
+        <http://purl.org/icasa/core#Harvest>,
+        <http://purl.org/icasa/core#HarvestEvent>,
+        <http://purl.org/icasa/core#InitialCondition>,
+        <http://purl.org/icasa/core#InitialConditionSoilLayer>,
+        <http://purl.org/icasa/core#Irrigation>,
+        <http://purl.org/icasa/core#IrrigationApplication>,
+        <http://purl.org/icasa/core#Mulch>,
+        <http://purl.org/icasa/core#MulchAddition>,
+        <http://purl.org/icasa/core#OrganicMaterial>,
+        <http://purl.org/icasa/core#OrganicMaterialApplication>,
+        <http://purl.org/icasa/core#Planting>,
+        <http://purl.org/icasa/core#SimulationControl>,
+        <http://purl.org/icasa/core#SoilAnalysis>,
+        <http://purl.org/icasa/core#SoilAnalysisLayer>,
+        <http://purl.org/icasa/core#Tillage>,
+        <http://purl.org/icasa/core#TillageEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#id_field> a owl:DatatypeProperty ;
+    rdfs:label "field_id",
+        "id_field" ;
+    rdfs:comment "Field, identifier usually consisting of institution+site+4 digit number"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#idate> a owl:DatatypeProperty ;
+    rdfs:label "idate",
+        "irrigation_date" ;
+    rdfs:comment "Irrigation date"@en ;
+    rdfs:domain <http://purl.org/icasa/core#IrrigationApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#in> a owl:DatatypeProperty ;
+    rdfs:label "in",
+        "institute_id" ;
+    rdfs:comment "id"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Institution>,
+        <http://purl.org/icasa/core#Person>,
+        <http://purl.org/icasa/core#SoilInstitution>,
+        <http://purl.org/icasa/core#WeatherInstitution> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#in_role> a owl:DatatypeProperty ;
+    rdfs:label "in_role",
+        "institute_role" ;
+    rdfs:comment "Role of participating institutions"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Institution>,
+        <http://purl.org/icasa/core#SoilInstitution>,
+        <http://purl.org/icasa/core#WeatherInstitution> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#in_type> a owl:DatatypeProperty ;
+    rdfs:label "in_type",
+        "institute_type" ;
+    rdfs:comment "Type of participating institutions"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Institution>,
+        <http://purl.org/icasa/core#SoilInstitution>,
+        <http://purl.org/icasa/core#WeatherInstitution> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#inp> a owl:DatatypeProperty ;
+    rdfs:label "inp",
+        "institute_id_person" ;
+    rdfs:comment "Links to institutions"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilPerson>,
+        <http://purl.org/icasa/core#WeatherPerson> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#inst_name> a owl:DatatypeProperty ;
+    rdfs:label "inst_name",
+        "institute_name" ;
+    rdfs:comment "Names of participating institute"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Institution>,
+        <http://purl.org/icasa/core#SoilInstitution>,
+        <http://purl.org/icasa/core#WeatherInstitution> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ir> a owl:DatatypeProperty ;
+    rdfs:label "ir",
+        "irrigation_level" ;
+    rdfs:comment "Irrigation level, links to IRRIGATIONS table"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Irrigation>,
+        <http://purl.org/icasa/core#IrrigationApplication>,
+        <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ir_name> a owl:DatatypeProperty ;
+    rdfs:label "ir_name",
+        "irrigation_level_name" ;
+    rdfs:comment "Irrigation level name"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Irrigation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ir_no> a owl:DatatypeProperty ;
+    rdfs:label "ir_no",
+        "irrigation_applics_season" ;
+    rdfs:comment "Irrigation applications, total number at end season"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Irrigation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ir_notes> a owl:DatatypeProperty ;
+    rdfs:label "ir_notes",
+        "irrigation_notes" ;
+    rdfs:comment "Irrigation, notes on irrigation application"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Irrigation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ir_tot> a owl:DatatypeProperty ;
+    rdfs:label "ir_tot",
+        "irrigation_season" ;
+    rdfs:comment "Irrigation, total amount over season"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Irrigation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#iradp> a owl:DatatypeProperty ;
+    rdfs:label "iradp",
+        "irrigation_applic_depth" ;
+    rdfs:comment "Irrigation application depth (e.g., for depth to drip line)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#IrrigationApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#irday> a owl:DatatypeProperty ;
+    rdfs:label "irday",
+        "irrigation_day" ;
+    rdfs:comment "Irrigation day"@en ;
+    rdfs:domain <http://purl.org/icasa/core#IrrigationApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ireff> a owl:DatatypeProperty ;
+    rdfs:label "ireff",
+        "irrigation_efficiency" ;
+    rdfs:comment "Irrigation application efficiency as fraction (0 to 1)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#AutomaticIrrigation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#irept> a owl:DatatypeProperty ;
+    rdfs:label "autoirrigation_end_h2o",
+        "irept" ;
+    rdfs:comment "Irrigation, ending % avail, automatic application"@en ;
+    rdfs:domain <http://purl.org/icasa/core#AutomaticIrrigation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#irmdp> a owl:DatatypeProperty ;
+    rdfs:label "auto_irrig_manag_depth",
+        "irmdp" ;
+    rdfs:comment "Irrigation management, reference soil depth for automatic application"@en ;
+    rdfs:domain <http://purl.org/icasa/core#AutomaticIrrigation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#irnpc> a owl:DatatypeProperty ;
+    rdfs:label "irnpc",
+        "irrigation_h2o_n_conc" ;
+    rdfs:comment "Irrigation water nitrogen concentration"@en ;
+    rdfs:domain <http://purl.org/icasa/core#IrrigationApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#irop> a owl:DatatypeProperty ;
+    rdfs:label "irop",
+        "irrigation_operation" ;
+    rdfs:comment "Irrigation operation (e.g., furrow, sprinkler, drip…)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#IrrigationApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#irop_name> a owl:DatatypeProperty ;
+    rdfs:label "irop_name",
+        "irrigation_operation_name" ;
+    rdfs:comment "Name of irrigation operation or specific notes about this application"@en ;
+    rdfs:domain <http://purl.org/icasa/core#IrrigationApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#irrig> a owl:DatatypeProperty ;
+    rdfs:label "irrig",
+        "irrig_applied" ;
+    rdfs:comment "Indicates whether or not the field was irrigated"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Irrigation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#irstg> a owl:DatatypeProperty ;
+    rdfs:label "auto_irrig_growth_stg",
+        "irstg" ;
+    rdfs:comment "Irrigation, growth stage, automatic appn"@en ;
+    rdfs:domain <http://purl.org/icasa/core#AutomaticIrrigation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#irthr> a owl:DatatypeProperty ;
+    rdfs:label "autoirrig_threshold_h2o",
+        "irthr" ;
+    rdfs:comment "Irrigation threshold water content for automatic application"@en ;
+    rdfs:domain <http://purl.org/icasa/core#AutomaticIrrigation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#irval> a owl:DatatypeProperty ;
+    rdfs:label "irrig_amount_depth",
+        "irval" ;
+    rdfs:comment "Irrigation amount, depth of water"@en ;
+    rdfs:domain <http://purl.org/icasa/core#IrrigationApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#iryr> a owl:DatatypeProperty ;
+    rdfs:label "irrigation_year",
+        "iryr" ;
+    rdfs:comment "Irrigation or water management year"@en ;
+    rdfs:domain <http://purl.org/icasa/core#IrrigationApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#last_name> a owl:DatatypeProperty ;
+    rdfs:label "last_name",
+        "researcher_last_name" ;
+    rdfs:comment "Last name of researchers involved with the experiment(s) or data"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Person>,
+        <http://purl.org/icasa/core#SoilPerson>,
+        <http://purl.org/icasa/core#WeatherPerson> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#loc_source> a owl:DatatypeProperty ;
+    rdfs:label "field_location_source",
+        "loc_source" ;
+    rdfs:comment "Source of field location data, indication of accuracy of FL_LAT and FL_LONG"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#local_id> a owl:DatatypeProperty ;
+    rdfs:label "exp_code_local",
+        "local_id" ;
+    rdfs:comment "Locally used ID for experiment"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#local_name> a owl:DatatypeProperty ;
+    rdfs:label "experiment_name_local",
+        "local_name" ;
+    rdfs:comment "Locally used name for experiment"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#main_factor> a owl:DatatypeProperty ;
+    rdfs:label "main_experiment_factor",
+        "main_factor" ;
+    rdfs:comment "Main factor, factors or interactions of interest in an experiment"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#max> a owl:DatatypeProperty ;
+    rdfs:label "max",
+        "maximum_value" ;
+    rdfs:comment "Expected maximum value of a given variate"@en ;
+    rdfs:domain <http://purl.org/icasa/core#ValidationCriteria> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#methods> a owl:DatatypeProperty ;
+    rdfs:label "method_notes",
+        "methods",
+        "soil_profile_methods" ;
+    rdfs:comment "Description of methods used to obtain profile data"@en,
+        "General notes on execution of experiment."@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment>,
+        <http://purl.org/icasa/core#Soil> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#mgmt_type> a owl:DatatypeProperty ;
+    rdfs:label "management_type",
+        "mgmt_type" ;
+    rdfs:comment "Whether managed by researchers, producers"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#mid_initial> a owl:DatatypeProperty ;
+    rdfs:label "mid_initial",
+        "researcher_name_mi" ;
+    rdfs:comment "Middle initial of researchers involved with the experiment(s) or data"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Person>,
+        <http://purl.org/icasa/core#SoilPerson>,
+        <http://purl.org/icasa/core#WeatherPerson> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#min> a owl:DatatypeProperty ;
+    rdfs:label "min",
+        "minimum_value" ;
+    rdfs:comment "Expected minimum value of a given variate"@en ;
+    rdfs:domain <http://purl.org/icasa/core#ValidationCriteria> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#miss> a owl:DatatypeProperty ;
+    rdfs:label "miss",
+        "missing_value" ;
+    rdfs:comment "Designated special value to indicate missing data"@en ;
+    rdfs:domain <http://purl.org/icasa/core#ValidationCriteria> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ml> a owl:DatatypeProperty ;
+    rdfs:label "ml",
+        "mulch_level" ;
+    rdfs:comment "Mulch treatment level"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Mulch>,
+        <http://purl.org/icasa/core#MulchAddition>,
+        <http://purl.org/icasa/core#MulchRemove>,
+        <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ml_name> a owl:DatatypeProperty ;
+    rdfs:label "ml_name",
+        "mulch_level_name" ;
+    rdfs:comment "Mulch level, name of treatment"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Mulch> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ml_notes> a owl:DatatypeProperty ;
+    rdfs:label "ml_notes",
+        "mulch_level_notes" ;
+    rdfs:comment "Mulch description, detailed comments"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Mulch> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#mladat> a owl:DatatypeProperty ;
+    rdfs:label "mladat",
+        "mulch_applic_date" ;
+    rdfs:comment "Mulch application date"@en ;
+    rdfs:domain <http://purl.org/icasa/core#MulchAddition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#mlady> a owl:DatatypeProperty ;
+    rdfs:label "mlady",
+        "mulch_applic_day" ;
+    rdfs:comment "Mulch application date as day of year"@en ;
+    rdfs:domain <http://purl.org/icasa/core#MulchAddition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#mlayr> a owl:DatatypeProperty ;
+    rdfs:label "mlayr",
+        "mulch_applic_year" ;
+    rdfs:comment "Mulch application year"@en ;
+    rdfs:domain <http://purl.org/icasa/core#MulchAddition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#mlcol> a owl:DatatypeProperty ;
+    rdfs:label "mlcol",
+        "mulch_color" ;
+    rdfs:comment "Mulch color "@en ;
+    rdfs:domain <http://purl.org/icasa/core#MulchAddition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#mlcov> a owl:DatatypeProperty ;
+    rdfs:label "mlcov",
+        "mulch_cover_fraction" ;
+    rdfs:comment "Fraction of surface covered by mulch"@en ;
+    rdfs:domain <http://purl.org/icasa/core#MulchAddition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#mlrdat> a owl:DatatypeProperty ;
+    rdfs:label "mlrdat",
+        "mulch_removal_date" ;
+    rdfs:comment "Mulch removal date"@en ;
+    rdfs:domain <http://purl.org/icasa/core#MulchRemove> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#mlrday> a owl:DatatypeProperty ;
+    rdfs:label "mlrday",
+        "mulch_removal_day" ;
+    rdfs:comment "Mulch removal date as day of year"@en ;
+    rdfs:domain <http://purl.org/icasa/core#MulchRemove> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#mlryr> a owl:DatatypeProperty ;
+    rdfs:label "mlryr",
+        "mulch_removal_year" ;
+    rdfs:comment "Mulch removal year"@en ;
+    rdfs:domain <http://purl.org/icasa/core#MulchRemove> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#mlthk> a owl:DatatypeProperty ;
+    rdfs:label "mlthk",
+        "mulch_thickness" ;
+    rdfs:comment "Mulch thickness "@en ;
+    rdfs:domain <http://purl.org/icasa/core#MulchAddition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#mltp> a owl:DatatypeProperty ;
+    rdfs:label "mltp",
+        "mulch_type" ;
+    rdfs:comment "Mulch type by codes for soild polythelene sheet, net, etc. "@en ;
+    rdfs:domain <http://purl.org/icasa/core#MulchAddition> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#mltpr> a owl:DatatypeProperty ;
+    rdfs:label "mltpr",
+        "mulch_type_remove" ;
+    rdfs:comment "Mulch type removed by codes for soild polythelene sheet, net, etc. "@en ;
+    rdfs:domain <http://purl.org/icasa/core#MulchRemove> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#name_code> a owl:DatatypeProperty ;
+    rdfs:label "name_code" ;
+    rdfs:comment "Code associated with a specific variate "@en ;
+    rdfs:domain <http://purl.org/icasa/core#ValidationCriteria> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#namn> a owl:DatatypeProperty ;
+    rdfs:label "namn",
+        "temp_min_all_days_mon_av" ;
+    rdfs:comment "Temperature minimum, monthly average of all days"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#nasd> a owl:DatatypeProperty ;
+    rdfs:label "nasd",
+        "temp_min_all_days_mon_sd" ;
+    rdfs:comment "Temperature minimum, standard dev. for all days in a month"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#nplsb> a owl:DatatypeProperty ;
+    rdfs:label "nplsb",
+        "seedbed_density" ;
+    rdfs:comment "Planting density in nursery seed bed"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#nrcsfam> a owl:DatatypeProperty ;
+    rdfs:label "nrcsfam",
+        "soil_family_nrcs_system" ;
+    rdfs:comment "Soil family, NRCS system"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysis> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#objectives> a owl:DatatypeProperty ;
+    rdfs:label "objectives",
+        "objectives_of_study" ;
+    rdfs:comment "Objectives of the study"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#om> a owl:DatatypeProperty ;
+    rdfs:label "om",
+        "org_materials_applic_lev" ;
+    rdfs:comment "Organic materials application level, links to OM table"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterial>,
+        <http://purl.org/icasa/core#OrganicMaterialApplication>,
+        <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#om_name> a owl:DatatypeProperty ;
+    rdfs:label "om_name",
+        "org_material_applic_name" ;
+    rdfs:comment "Organic materials application name"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterial> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#om_notes> a owl:DatatypeProperty ;
+    rdfs:label "om_notes",
+        "org_material_notes" ;
+    rdfs:comment "Organic materials, extended comments on treatment(s)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterial> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#om_tot> a owl:DatatypeProperty ;
+    rdfs:label "om_tot",
+        "org_material_applic_tot" ;
+    rdfs:comment "Total seasonal organic materials application amount, dry weight basis"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterial> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#omacd> a owl:DatatypeProperty ;
+    rdfs:label "omacd",
+        "org_material_applic_meth" ;
+    rdfs:comment "Organic materials application method"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterialApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#omamt> a owl:DatatypeProperty ;
+    rdfs:label "omamt",
+        "org_material_applic_amnt" ;
+    rdfs:comment "Organic materials application amount, dry weight basis"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterialApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#omc2n> a owl:DatatypeProperty ;
+    rdfs:label "omc2n",
+        "org_material_c_to_n" ;
+    rdfs:comment "Organic materials C:N ratio"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterialApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#omcd> a owl:DatatypeProperty ;
+    rdfs:label "omcd",
+        "organic_material" ;
+    rdfs:comment "Organic material, identifying code"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterialApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#omcov> a owl:DatatypeProperty ;
+    rdfs:label "omcov",
+        "org_material_cover" ;
+    rdfs:comment "Organic materials, percent ground covered by organic matter"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterialApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#omcpc> a owl:DatatypeProperty ;
+    rdfs:label "omcpc",
+        "org_matter_carbon_conc" ;
+    rdfs:comment "Organic matter or residue added, carbon concentration"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterialApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#omdat> a owl:DatatypeProperty ;
+    rdfs:label "omdat",
+        "org_material_applic_date" ;
+    rdfs:comment "Organic materials application date"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterialApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#omday> a owl:DatatypeProperty ;
+    rdfs:label "omday",
+        "org_material_applic_day" ;
+    rdfs:comment "Organic materials application day"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterialApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#omdep> a owl:DatatypeProperty ;
+    rdfs:label "omdep",
+        "org_material_appl_depth" ;
+    rdfs:comment "Organic materials application depth"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterialApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#omh2o> a owl:DatatypeProperty ;
+    rdfs:label "omh2o",
+        "org_matter_moisture_conc" ;
+    rdfs:comment "Organic matter or residue added, moisture concentration"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterialApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ominp> a owl:DatatypeProperty ;
+    rdfs:label "ominp",
+        "org_material_incorp_perc" ;
+    rdfs:comment "Organic materials application, fraction incorporporated as %"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterialApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#omkpc> a owl:DatatypeProperty ;
+    rdfs:label "omkpc",
+        "organic_material_k_conc" ;
+    rdfs:comment "Organic materials potasium concentration"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterialApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#omlpc> a owl:DatatypeProperty ;
+    rdfs:label "omlpc",
+        "org_material_lignin_conc" ;
+    rdfs:comment "Organic materials lignin concentration"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterialApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#omnpc> a owl:DatatypeProperty ;
+    rdfs:label "omnpc",
+        "organic_material_n_conc" ;
+    rdfs:comment "Organic materials nitrogen concentration"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterialApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#omppc> a owl:DatatypeProperty ;
+    rdfs:label "omppc",
+        "organic_material_p_conc" ;
+    rdfs:comment "Organic materials phosphorus concentration"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterialApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#omyr> a owl:DatatypeProperty ;
+    rdfs:label "omyr",
+        "org_materials_applic_yr" ;
+    rdfs:comment "Organic materials application year"@en ;
+    rdfs:domain <http://purl.org/icasa/core#OrganicMaterialApplication> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#op> a owl:DatatypeProperty ;
+    rdfs:label "op",
+        "option_for_crop_in_seq" ;
+    rdfs:comment "Option for crop in sequence"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#page> a owl:DatatypeProperty ;
+    rdfs:label "page",
+        "transplant_age" ;
+    rdfs:comment "Transplant age"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#pard> a owl:DatatypeProperty ;
+    rdfs:label "par_photon_flux_density",
+        "pard" ;
+    rdfs:comment "PAR or photon flux density"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#pdate> a owl:DatatypeProperty ;
+    rdfs:label "pdate",
+        "planting_date" ;
+    rdfs:comment "Planting or sowing date"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#pdw> a owl:DatatypeProperty ;
+    rdfs:label "pdw",
+        "prob_dry-wet_sequence" ;
+    rdfs:comment "Probability of a dry-wet sequence"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#person_notes> a owl:DatatypeProperty ;
+    rdfs:label "person_notes",
+        "persons_notes" ;
+    rdfs:comment "Additional notes on persons involved with the experiment(s)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Person> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#pl> a owl:DatatypeProperty ;
+    rdfs:label "pl",
+        "planting_level" ;
+    rdfs:comment "Planting, level in treatment structure"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting>,
+        <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#pl_name> a owl:DatatypeProperty ;
+    rdfs:label "pl_name",
+        "planting_level_name" ;
+    rdfs:comment "Planting level, name of treatment"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plage> a owl:DatatypeProperty ;
+    rdfs:label "plage",
+        "planting_material_age" ;
+    rdfs:comment "Planting material age (also used for dormancy adjustments)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plday> a owl:DatatypeProperty ;
+    rdfs:label "planting_day",
+        "plday" ;
+    rdfs:comment "Day of planting"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#pldoe> a owl:DatatypeProperty ;
+    rdfs:label "emergence_day",
+        "pldoe" ;
+    rdfs:comment "Day of year for date of emergence"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#pldp> a owl:DatatypeProperty ;
+    rdfs:label "planting_depth",
+        "pldp" ;
+    rdfs:comment "Planting depth"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#pldr> a owl:DatatypeProperty ;
+    rdfs:label "pldr",
+        "plots_relative_to_drains" ;
+    rdfs:comment "Plots relative to drains"@en ;
+    rdfs:domain <http://purl.org/icasa/core#PlotDetail> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plds> a owl:DatatypeProperty ;
+    rdfs:label "planting_distribution",
+        "plds" ;
+    rdfs:comment "Planting distribution"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plenv> a owl:DatatypeProperty ;
+    rdfs:label "nursery_env_pl_material",
+        "plenv" ;
+    rdfs:comment "Transplant nursery environment (mean temperature)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plftn> a owl:DatatypeProperty ;
+    rdfs:label "fertile_tiller_num",
+        "plftn" ;
+    rdfs:comment "Fertile tiller number (sorghum)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plgpc> a owl:DatatypeProperty ;
+    rdfs:label "germination",
+        "plgpc" ;
+    rdfs:comment "Planting material germination"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#pllay> a owl:DatatypeProperty ;
+    rdfs:label "pllay",
+        "plot_layout" ;
+    rdfs:comment "Plot layout or experimental desin (e.g., \"RCBD with four blocks\")"@en ;
+    rdfs:domain <http://purl.org/icasa/core#PlotDetail> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plma> a owl:DatatypeProperty ;
+    rdfs:label "planting_material",
+        "plma" ;
+    rdfs:comment "Planting material"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plmsource> a owl:DatatypeProperty ;
+    rdfs:label "planting_material_source",
+        "plmsource" ;
+    rdfs:comment "Source of the planting material"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plmwt> a owl:DatatypeProperty ;
+    rdfs:label "planting_material_weight",
+        "plmwt" ;
+    rdfs:comment "Planting material weight"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plph> a owl:DatatypeProperty ;
+    rdfs:label "plants_per_hill",
+        "plph" ;
+    rdfs:comment "Plants per hill"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plpoe> a owl:DatatypeProperty ;
+    rdfs:label "plant_pop_at_emergence",
+        "plpoe" ;
+    rdfs:comment "Plant population at emergence"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plpop> a owl:DatatypeProperty ;
+    rdfs:label "plant_pop_at_planting",
+        "plpop" ;
+    rdfs:comment "Plant population at planting"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plrd> a owl:DatatypeProperty ;
+    rdfs:label "plrd",
+        "row_direction" ;
+    rdfs:comment "Row direction, degrees from N"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plrs> a owl:DatatypeProperty ;
+    rdfs:label "plrs",
+        "row_spacing" ;
+    rdfs:comment "Row spacing"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plspl> a owl:DatatypeProperty ;
+    rdfs:label "length_sprout_material",
+        "plspl" ;
+    rdfs:comment "Planting material sprout length"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plta> a owl:DatatypeProperty ;
+    rdfs:label "plot_area",
+        "plta" ;
+    rdfs:comment "Plot area (gross) per rep"@en ;
+    rdfs:domain <http://purl.org/icasa/core#PlotDetail> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#pltha> a owl:DatatypeProperty ;
+    rdfs:label "plot_harvest_area",
+        "pltha" ;
+    rdfs:comment "Plot harvest area"@en ;
+    rdfs:domain <http://purl.org/icasa/core#PlotDetail> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plthl> a owl:DatatypeProperty ;
+    rdfs:label "plot_harvest_length",
+        "plthl" ;
+    rdfs:comment "Plot harvest length"@en ;
+    rdfs:domain <http://purl.org/icasa/core#PlotDetail> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plthm> a owl:DatatypeProperty ;
+    rdfs:label "harvest_method_plot",
+        "plthm" ;
+    rdfs:comment "Plot harvest method (eg.Hand, combine)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#PlotDetail> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plthno> a owl:DatatypeProperty ;
+    rdfs:label "plot_harvest_row_number",
+        "plthno" ;
+    rdfs:comment "Plot harvest row number"@en ;
+    rdfs:domain <http://purl.org/icasa/core#PlotDetail> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plthw> a owl:DatatypeProperty ;
+    rdfs:label "plot_harvest_width",
+        "plthw" ;
+    rdfs:comment "Plot harvest width"@en ;
+    rdfs:domain <http://purl.org/icasa/core#PlotDetail> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#pltln> a owl:DatatypeProperty ;
+    rdfs:label "plot_length",
+        "pltln" ;
+    rdfs:comment "Plot length (gross) for single plot or treatment"@en ;
+    rdfs:domain <http://purl.org/icasa/core#PlotDetail> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#pltod> a owl:DatatypeProperty ;
+    rdfs:label "drainage_orientation",
+        "pltod" ;
+    rdfs:comment "Drainage orientation (from North)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#PlotDetail> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#pltor> a owl:DatatypeProperty ;
+    rdfs:label "plot_orientation",
+        "pltor" ;
+    rdfs:comment "Plot orientation (from North)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#PlotDetail> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#pltrno> a owl:DatatypeProperty ;
+    rdfs:label "plot_row_number",
+        "pltrno" ;
+    rdfs:comment "Plot row number for single plot or treatment"@en ;
+    rdfs:domain <http://purl.org/icasa/core#PlotDetail> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#pltsp> a owl:DatatypeProperty ;
+    rdfs:label "plot_separation",
+        "pltsp" ;
+    rdfs:comment "Spacing between individual plots, if any"@en ;
+    rdfs:domain <http://purl.org/icasa/core#PlotDetail> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#pltwi> a owl:DatatypeProperty ;
+    rdfs:label "plot_width",
+        "pltwi" ;
+    rdfs:comment "Plot width (gross) for single plot or treatment"@en ;
+    rdfs:domain <http://purl.org/icasa/core#PlotDetail> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plyr> a owl:DatatypeProperty ;
+    rdfs:label "planting_year",
+        "plyr" ;
+    rdfs:comment "Planting year"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#plyre> a owl:DatatypeProperty ;
+    rdfs:label "emergence_year",
+        "plyre" ;
+    rdfs:comment "Year for date of emergence (growth stage)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#pp> a owl:DatatypeProperty ;
+    rdfs:label "people_level",
+        "person_level",
+        "pp" ;
+    rdfs:comment "id"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Person>,
+        <http://purl.org/icasa/core#SoilPerson> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#pp_role> a owl:DatatypeProperty ;
+    rdfs:label "pp_role",
+        "researcher_role" ;
+    rdfs:comment "Role of researcher in experiment or dataset preparation"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Person>,
+        <http://purl.org/icasa/core#SoilPerson>,
+        <http://purl.org/icasa/core#WeatherPerson> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#pred> a owl:DatatypeProperty ;
+    rdfs:label "pred",
+        "rainfall" ;
+    rdfs:comment "Rainfall"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#psycon> a owl:DatatypeProperty ;
+    rdfs:label " psychrometric_constant ",
+        "psycon" ;
+    rdfs:comment " Psychrometric constant "@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#psyvnt> a owl:DatatypeProperty ;
+    rdfs:label "psychrometer_ventilation",
+        "psyvnt" ;
+    rdfs:comment "Psychrometer ventilation (ventilated or natural air flow)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#rain> a owl:DatatypeProperty ;
+    rdfs:label "rain",
+        "rain_snow_fall" ;
+    rdfs:comment "Rainfall, including moisture in snow, in one day"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#raiy> a owl:DatatypeProperty ;
+    rdfs:label "rainfall_yearly_total",
+        "raiy" ;
+    rdfs:comment "Rainfall, yearly total"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#refht> a owl:DatatypeProperty ;
+    rdfs:label "ref_height_weather_meas",
+        "refht" ;
+    rdfs:comment "Reference height for weather measurement"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#rep_no> a owl:DatatypeProperty ;
+    rdfs:label "number_of_replicates",
+        "rep_no" ;
+    rdfs:comment "Number of blocks or replicates"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#rev_date_first> a owl:DatatypeProperty ;
+    rdfs:label "rev_date_first",
+        "revision_date_first" ;
+    rdfs:comment "Date the file was first created"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#rev_date_first_sl> a owl:DatatypeProperty ;
+    rdfs:label "rev_date_first_sl",
+        "revision_date_first_sl" ;
+    rdfs:comment "Date the file was first created"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Soil> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#rev_date_first_wst> a owl:DatatypeProperty ;
+    rdfs:label "rev_date_first_wst",
+        "revision_date_first_wst" ;
+    rdfs:comment "Date the file was first created"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Weather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#rev_date_latest> a owl:DatatypeProperty ;
+    rdfs:label "rev_date_latest",
+        "revision_date_latest" ;
+    rdfs:comment "Date the file was last revised"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#rev_date_latest_sl> a owl:DatatypeProperty ;
+    rdfs:label "rev_date_latest_sl",
+        "revision_date_latest_sl" ;
+    rdfs:comment "Date the file was last modified"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Soil> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#rev_date_latest_wst> a owl:DatatypeProperty ;
+    rdfs:label "rev_date_latest_wst",
+        "revision_date_latest_wst" ;
+    rdfs:comment "Date the file was last modified"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Weather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#revision_notes> a owl:DatatypeProperty ;
+    rdfs:label "revision_notes" ;
+    rdfs:comment "Notes describing reasons for the revision"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#revision_notes_sl> a owl:DatatypeProperty ;
+    rdfs:label "revision_notes_sl" ;
+    rdfs:comment "Notes describing reasons for the revision"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Soil> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#revision_notes_wst> a owl:DatatypeProperty ;
+    rdfs:label "revision_notes_wst" ;
+    rdfs:comment "Notes describing reasons for the revision"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Weather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#rhavd> a owl:DatatypeProperty ;
+    rdfs:label "realtive_humidity_avg",
+        "rhavd" ;
+    rdfs:comment "Realtive humidity, average daily value"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#rhmxd> a owl:DatatypeProperty ;
+    rdfs:label "relative_humidity_max",
+        "rhmxd" ;
+    rdfs:comment "Relative humidity, maximum daily value"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#rhumd> a owl:DatatypeProperty ;
+    rdfs:label "relative_humidity_min ",
+        "rhumd" ;
+    rdfs:comment "Relative humidity at maximum daily temperature (or minimum daily relative humidity)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#rm> a owl:DatatypeProperty ;
+    rdfs:label "relative_maturity",
+        "rm" ;
+    rdfs:comment "Relative maturity"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Genotype> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#rnum> a owl:DatatypeProperty ;
+    rdfs:label "rainy_days",
+        "rnum" ;
+    rdfs:comment "Rainy days"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#rotation> a owl:DatatypeProperty ;
+    rdfs:label "rotation" ;
+    rdfs:comment "Crop rotation indicator (=1 for continuous, multi-year simulation, =0 for single year simulations with multiple initializations)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#rp> a owl:DatatypeProperty ;
+    rdfs:label "replicate_number",
+        "rp" ;
+    rdfs:comment "Replicate number"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#rtot> a owl:DatatypeProperty ;
+    rdfs:label "rainfall_total",
+        "rtot" ;
+    rdfs:comment "Rainfall total"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sa> a owl:DatatypeProperty ;
+    rdfs:label "sa",
+        "soil_analysis_level" ;
+    rdfs:comment "Soil analysis, treatment level identifier linkage "@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysis>,
+        <http://purl.org/icasa/core#SoilAnalysisLayer>,
+        <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sa_name> a owl:DatatypeProperty ;
+    rdfs:label "sa_name",
+        "soil_analysis_name" ;
+    rdfs:comment "Soil analysis name"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysis> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sabdm> a owl:DatatypeProperty ;
+    rdfs:label "sabdm",
+        "soil_bulk_dens_moist" ;
+    rdfs:comment "Soil bulk density, moist, determined on field sample"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysisLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sadat> a owl:DatatypeProperty ;
+    rdfs:label "sadat",
+        "soil_analysis_date" ;
+    rdfs:comment "Soil analysis date"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysis> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#saday> a owl:DatatypeProperty ;
+    rdfs:label "saday",
+        "soil_analysis_day" ;
+    rdfs:comment "Soil analysis day of year or days after planting"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysis> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#salb> a owl:DatatypeProperty ;
+    rdfs:label "salb",
+        "soil_albedo" ;
+    rdfs:comment "Soil albedo, dry soil"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#salbm> a owl:DatatypeProperty ;
+    rdfs:label "salbm",
+        "soil_albedo_moist" ;
+    rdfs:comment "Soil albedo, moist soil"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#samhb> a owl:DatatypeProperty ;
+    rdfs:label "samhb",
+        "soil_analys_meth_ph_buff" ;
+    rdfs:comment "Soil anlysis method for pH in buffer solution"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysis> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#samke> a owl:DatatypeProperty ;
+    rdfs:label "samke",
+        "soil_anal_meth_exch_k" ;
+    rdfs:comment "Soil analysis method for exchangeable"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysis> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#samn> a owl:DatatypeProperty ;
+    rdfs:label "samn",
+        "solar_rad_all_day_mon_av" ;
+    rdfs:comment "Solar radiation, all days, monthly avera"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sampx> a owl:DatatypeProperty ;
+    rdfs:label "sampx",
+        "soil_anal_meth_p_extract" ;
+    rdfs:comment "Soil analysis method for P extraction"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysis> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sani> a owl:DatatypeProperty ;
+    rdfs:label "sani",
+        "soil_n_conc_total" ;
+    rdfs:comment "Nitrogen, total soil, total"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysisLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#saoc> a owl:DatatypeProperty ;
+    rdfs:label "organic_carbon_conc",
+        "saoc" ;
+    rdfs:comment "Organic carbon"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysisLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#saphb> a owl:DatatypeProperty ;
+    rdfs:label "ph_in_buffer",
+        "saphb" ;
+    rdfs:comment "pH of soil measured in buffer solution, from in-field sample"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysisLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#saphw> a owl:DatatypeProperty ;
+    rdfs:label "ph_in_water",
+        "saphw" ;
+    rdfs:comment "pH of soil in water, from in-field sample"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysisLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sayr> a owl:DatatypeProperty ;
+    rdfs:label "sayr",
+        "soil_analysis_year" ;
+    rdfs:comment "Soil analysis year"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysis> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sc_year> a owl:DatatypeProperty ;
+    rdfs:label "sc_year",
+        "simulation_start_year" ;
+    rdfs:comment "Simulation start year"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SimulationControl> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#scday> a owl:DatatypeProperty ;
+    rdfs:label "scday",
+        "simulation_start_day" ;
+    rdfs:comment "Simulation start day of year"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SimulationControl> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#scmpf> a owl:DatatypeProperty ;
+    rdfs:label "scmpf",
+        "soil_compac_fact_by_lyr" ;
+    rdfs:comment "Soil compaction factor by layer (0 to 1 scale)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysisLayer>,
+        <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sdat> a owl:DatatypeProperty ;
+    rdfs:label "sdat",
+        "simulation_start_date" ;
+    rdfs:comment "Simulation start date"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SimulationControl> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sdmn> a owl:DatatypeProperty ;
+    rdfs:label "sdmn",
+        "solar_rad_dry_day_mon_av" ;
+    rdfs:comment "Solar radiation, dry days, monthly avera"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sdsd> a owl:DatatypeProperty ;
+    rdfs:label "sdsd",
+        "solar_rad_dry_d_mon_sd" ;
+    rdfs:comment "Solar radiation, dry days, monthly st de"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#shmn> a owl:DatatypeProperty ;
+    rdfs:label "shmn",
+        "sunshine_duration_month" ;
+    rdfs:comment "Daily sunshine duration, monthly average"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sid> a owl:DatatypeProperty ;
+    rdfs:label "sid",
+        "soil_id" ;
+    rdfs:comment "Unique soil identifier linking to SOIL_PROFILES"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field>,
+        <http://purl.org/icasa/core#SoilProfile>,
+        <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#site_name> a owl:DatatypeProperty ;
+    rdfs:label "site_name" ;
+    rdfs:comment "Name of site for experiment"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#site_type> a owl:DatatypeProperty ;
+    rdfs:label "site_type" ;
+    rdfs:comment "Type of site, e.g., station, on-farm"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sksat> a owl:DatatypeProperty ;
+    rdfs:label "sat_hydraul_conductivity",
+        "sksat" ;
+    rdfs:comment "Saturated hydraulic conductivity"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sl_citation> a owl:DatatypeProperty ;
+    rdfs:label "sl_citation",
+        "soil_citation" ;
+    rdfs:comment "Full citation for soil data"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Soil> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sl_distrib> a owl:DatatypeProperty ;
+    rdfs:label "distrib_restrictions",
+        "sl_distrib" ;
+    rdfs:comment "Distribution limitations for the soils data set"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment>,
+        <http://purl.org/icasa/core#Soil> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sl_license> a owl:DatatypeProperty ;
+    rdfs:label "sl_license",
+        "soil_license" ;
+    rdfs:comment "License associated with soil data"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Soil> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sl_loc_1> a owl:DatatypeProperty ;
+    rdfs:label "sl_loc_1",
+        "soil_location_country" ;
+    rdfs:comment "First admin for location of site for soil profile (usually country)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sl_loc_2> a owl:DatatypeProperty ;
+    rdfs:label "sl_loc_2",
+        "soil_loc_2nd_level" ;
+    rdfs:comment "Second admin level for location of site for soil profile (usually state or province)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sl_loc_3> a owl:DatatypeProperty ;
+    rdfs:label "sl_loc_3",
+        "soil_loc_3rd_level" ;
+    rdfs:comment "Third admin level for location of site for soil profile (usually county or municipality)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sl_notes> a owl:DatatypeProperty ;
+    rdfs:label "sl_notes",
+        "soil_notes" ;
+    rdfs:comment "Notes describing soil dataset"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Soil> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sl_slope> a owl:DatatypeProperty ;
+    rdfs:label "sl_slope",
+        "soil_profile_slope" ;
+    rdfs:comment "Slope where soil profile characterized"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sl_system> a owl:DatatypeProperty ;
+    rdfs:label "sl_system",
+        "soil_classific_system" ;
+    rdfs:comment "Soil classification system (e.g., FAO, USDA)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slacc> a owl:DatatypeProperty ;
+    rdfs:label "slacc",
+        "soil_active_c" ;
+    rdfs:comment "Biologically active soil organic carbon by layer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sladc> a owl:DatatypeProperty ;
+    rdfs:label "sladc",
+        "soil_adsorption_coef" ;
+    rdfs:comment "Soil adsorption coefficient (0 to 1 scale)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sladr> a owl:DatatypeProperty ;
+    rdfs:label "sladr",
+        "soil_water_air_dry" ;
+    rdfs:comment "Soil water content, air dry"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slal> a owl:DatatypeProperty ;
+    rdfs:label "slal",
+        "soil_aluminum_conc" ;
+    rdfs:comment "Soil aluminum concentration in profile described"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slbdm> a owl:DatatypeProperty ;
+    rdfs:label "slbdm",
+        "soil_bulk_density_moist" ;
+    rdfs:comment "Soil bulk density when moist for layer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slbs> a owl:DatatypeProperty ;
+    rdfs:label "slbs",
+        "soil_base_saturation" ;
+    rdfs:comment "Soil base saturation"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slca> a owl:DatatypeProperty ;
+    rdfs:label "slca",
+        "soil_calcium_conc" ;
+    rdfs:comment "Soil calcium, exchangeable"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slcec> a owl:DatatypeProperty ;
+    rdfs:label "cation_exchange_capacity",
+        "slcec" ;
+    rdfs:comment "Cation exchange capacity"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slcf> a owl:DatatypeProperty ;
+    rdfs:label "slcf",
+        "soil_coarse_fraction" ;
+    rdfs:comment "Soil texture, coarse fraction (>2 mm), weight percent of fine earth"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slcly> a owl:DatatypeProperty ;
+    rdfs:label "slcly",
+        "soil_clay_fraction" ;
+    rdfs:comment "Soil texture, clay (<0.002 mm), weight percent of fine earth"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slcom> a owl:DatatypeProperty ;
+    rdfs:label "slcom",
+        "soil_color_moist_munsell" ;
+    rdfs:comment "Soil color of moist soil using Munsell hue"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sldn> a owl:DatatypeProperty ;
+    rdfs:label "sldn",
+        "soil_denitrification_fac" ;
+    rdfs:comment "Soil denitrification factor"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sldp> a owl:DatatypeProperty ;
+    rdfs:label "sldp",
+        "soil_depth" ;
+    rdfs:comment "Soil depth"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sldr> a owl:DatatypeProperty ;
+    rdfs:label "drainage_rate_per_day",
+        "sldr" ;
+    rdfs:comment "Drainage rate as fraction per day"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysis>,
+        <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sldrl> a owl:DatatypeProperty ;
+    rdfs:label "layer_drainage_rate_per_day",
+        "sldrl" ;
+    rdfs:comment "Drainage rate as fraction per day, per layer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sldul> a owl:DatatypeProperty ;
+    rdfs:label "sldul",
+        "soil_wat_drned_upper_lim" ;
+    rdfs:comment "Soil water, drained upper limit"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slec> a owl:DatatypeProperty ;
+    rdfs:label "electric_conductivity",
+        "slec" ;
+    rdfs:comment "Electric conductivity"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slfac> a owl:DatatypeProperty ;
+    rdfs:label "slfac",
+        "soil_active_c_fraction" ;
+    rdfs:comment "Biologically active soil organic carbon by layer, fraction of total organic C"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slfc1> a owl:DatatypeProperty ;
+    rdfs:label "slfc1",
+        "soil_water_field_cap_1" ;
+    rdfs:comment "Soil water content at 1/3 atmosphere pressure"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slfc2> a owl:DatatypeProperty ;
+    rdfs:label "slfc2",
+        "soil_water_field_cap_2" ;
+    rdfs:comment "Soil water content at 1/10 atmospheric pressure"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slfe> a owl:DatatypeProperty ;
+    rdfs:label "iron",
+        "slfe" ;
+    rdfs:comment "Iron"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slfic> a owl:DatatypeProperty ;
+    rdfs:label "slfic",
+        "soil_inert_c_fraction" ;
+    rdfs:comment "Inert organic carbon by layer, fraction of total organic C"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slfinc> a owl:DatatypeProperty ;
+    rdfs:label "slfinc",
+        "soil_intermediate_c_fraction" ;
+    rdfs:comment "Intermediate soil organic carbon by layer, fraction of total organic C"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slfsc> a owl:DatatypeProperty ;
+    rdfs:label "slfsc",
+        "soil_stable_c_fraction" ;
+    rdfs:comment "Stable organic carbon by layer, fraction of total organic C"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slic> a owl:DatatypeProperty ;
+    rdfs:label "slic",
+        "soil_inert_c" ;
+    rdfs:comment "Inert organic carbon by layer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slinc> a owl:DatatypeProperty ;
+    rdfs:label "slinc",
+        "soil_intermediate_c" ;
+    rdfs:comment "Intermediate soil organic carbon by layer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slke> a owl:DatatypeProperty ;
+    rdfs:label "potassium_exchangeable",
+        "slke" ;
+    rdfs:comment "Potassium, exchangeable"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysisLayer>,
+        <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sllb> a owl:DatatypeProperty ;
+    rdfs:label "sllb",
+        "soil_layer_base_depth" ;
+    rdfs:comment "Soil layer base depth"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialConditionSoilLayer>,
+        <http://purl.org/icasa/core#SoilAnalysisLayer>,
+        <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slll> a owl:DatatypeProperty ;
+    rdfs:label "slll",
+        "soil_water_lower_limit" ;
+    rdfs:comment "Soil water, lower limit"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sllt> a owl:DatatypeProperty ;
+    rdfs:label "sllt",
+        "soil_layer_top_depth" ;
+    rdfs:comment "Soil layer top depth"@en ;
+    rdfs:domain <http://purl.org/icasa/core#InitialConditionSoilLayer>,
+        <http://purl.org/icasa/core#SoilAnalysisLayer>,
+        <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slmg> a owl:DatatypeProperty ;
+    rdfs:label "slmg",
+        "soil_magnesium_conc" ;
+    rdfs:comment "Magnesium"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slmh> a owl:DatatypeProperty ;
+    rdfs:label "master_horizon",
+        "slmh" ;
+    rdfs:comment "Master horizon"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slmn> a owl:DatatypeProperty ;
+    rdfs:label "slmn",
+        "soil_manganese_conc" ;
+    rdfs:comment "Manganese"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slna> a owl:DatatypeProperty ;
+    rdfs:label "slna",
+        "soil_sodium_conc" ;
+    rdfs:comment "Sodium in soil layer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slnf> a owl:DatatypeProperty ;
+    rdfs:label "mineralization_factor",
+        "slnf" ;
+    rdfs:comment "Mineralization factor (0 to 1 scale)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slni> a owl:DatatypeProperty ;
+    rdfs:label "slni",
+        "soil_organic_n_conc" ;
+    rdfs:comment "Nitrogen, total soil organic"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sloc> a owl:DatatypeProperty ;
+    rdfs:label "sloc",
+        "soil_organic_c_perc_layr" ;
+    rdfs:comment "Total soil organic carbon by layer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slpa> a owl:DatatypeProperty ;
+    rdfs:label "phosphorus_isotherm_a",
+        "slpa" ;
+    rdfs:comment "Phosphorus isotherm A"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slpb> a owl:DatatypeProperty ;
+    rdfs:label "phosphorus_iostherm_b",
+        "slpb" ;
+    rdfs:comment "Phosphorus iostherm B"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slpf> a owl:DatatypeProperty ;
+    rdfs:label "slpf",
+        "soil_fertility_on_photo" ;
+    rdfs:comment "Soil fertility effect on photosynthesis (0 to 1 scale)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slphb> a owl:DatatypeProperty ;
+    rdfs:label "slphb",
+        "soil_ph_in_buffer" ;
+    rdfs:comment "pH of soil measured in buffer solution, from profile description"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slphw> a owl:DatatypeProperty ;
+    rdfs:label "slphw",
+        "soil_ph_in_water" ;
+    rdfs:comment "pH of soil in water, from profile description"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slpo> a owl:DatatypeProperty ;
+    rdfs:label "phosphorus_organic",
+        "slpo" ;
+    rdfs:comment "Phosphorus, organic"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slpt> a owl:DatatypeProperty ;
+    rdfs:label "phosphorus_total",
+        "slpt" ;
+    rdfs:comment "Phosphorus, total"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slpx> a owl:DatatypeProperty ;
+    rdfs:label "phosphorus_extractable",
+        "slpx" ;
+    rdfs:comment "Phosphorus, extractable"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysisLayer>,
+        <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slres> a owl:DatatypeProperty ;
+    rdfs:label "slres",
+        "soil_water_residual" ;
+    rdfs:comment "Soil water, residual"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slrgf> a owl:DatatypeProperty ;
+    rdfs:label "root_growth_factor_soil",
+        "slrgf" ;
+    rdfs:comment "Root growth factor, soil only (0 to 1 scale)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slro> a owl:DatatypeProperty ;
+    rdfs:label "runoff_curve_no_scs",
+        "slro" ;
+    rdfs:comment "Runoff curve no. (Soil Conservation Service)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysis>,
+        <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slsat> a owl:DatatypeProperty ;
+    rdfs:label "slsat",
+        "soil_water_saturated" ;
+    rdfs:comment "Soil water, saturated"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slsc> a owl:DatatypeProperty ;
+    rdfs:label "slsc",
+        "soil_stable_c" ;
+    rdfs:comment "Stable organic carbon by layer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilAnalysisLayer>,
+        <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slsil> a owl:DatatypeProperty ;
+    rdfs:label "slsil",
+        "soil_silt_fraction" ;
+    rdfs:comment "Soil texture, silt (0.05 to 0.002 mm), weight percent of fine earth"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slsnd> a owl:DatatypeProperty ;
+    rdfs:label "slsnd",
+        "soil_sand_fraction" ;
+    rdfs:comment "Soil texture, sand (0.05 to 2.0 mm), weight percent of fine earth"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slsu> a owl:DatatypeProperty ;
+    rdfs:label "slsu",
+        "soil_sulphur_conc" ;
+    rdfs:comment "Sulphur in soil layer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sltop> a owl:DatatypeProperty ;
+    rdfs:label "depth_of_topsoil",
+        "sltop" ;
+    rdfs:comment "Thickness of topsoil"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sltx> a owl:DatatypeProperty ;
+    rdfs:label "sltx",
+        "soil_texture" ;
+    rdfs:comment "Soil texture"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slu1> a owl:DatatypeProperty ;
+    rdfs:label "slu1",
+        "soil_evaporation_limit" ;
+    rdfs:comment "Soil evaporation, upper limit for stage 1"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slwp> a owl:DatatypeProperty ;
+    rdfs:label "slwp",
+        "soil_water_wilting_pt" ;
+    rdfs:comment "Soil water content (wilting point) at 15 atmosphere pressure "@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#slxf> a owl:DatatypeProperty ;
+    rdfs:label "slxf",
+        "soil_water_uptake_factor" ;
+    rdfs:comment "Root exploration factor (0 to 1 scale, APSIM XF)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sm> a owl:DatatypeProperty ;
+    rdfs:label "simulation_id",
+        "sm" ;
+    rdfs:comment "SM"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SimulationControl> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sm_id> a owl:DatatypeProperty ;
+    rdfs:label "simulation_control_level",
+        "sm_id" ;
+    rdfs:comment "Simulation control database key for treatment levels"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#smhb> a owl:DatatypeProperty ;
+    rdfs:label "ph_buffer_determin_meth",
+        "smhb" ;
+    rdfs:comment "pH in buffer determination method"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#smke> a owl:DatatypeProperty ;
+    rdfs:label "potassium_determ_method",
+        "smke" ;
+    rdfs:comment "Potassium determination method"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#smpx> a owl:DatatypeProperty ;
+    rdfs:label "phosphorus_determ_method",
+        "smpx" ;
+    rdfs:comment "Phosphorus determination method"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sname> a owl:DatatypeProperty ;
+    rdfs:label "simulation_name",
+        "sname" ;
+    rdfs:comment "Simulation scenario, name"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SimulationControl> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#snh4> a owl:DatatypeProperty ;
+    rdfs:label "nh4soil_kcl",
+        "snh4" ;
+    rdfs:comment "NH4 in soil based on KCl extraction, by layer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sno3> a owl:DatatypeProperty ;
+    rdfs:label "nitrate_kcl",
+        "sno3" ;
+    rdfs:comment "Nitrate in soil based on KCl extraction, by layer"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#soil_dataset> a owl:DatatypeProperty ;
+    rdfs:label "soil_dataset",
+        "soil_file" ;
+    rdfs:comment "File containing relevant soil profile description"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#soil_elev> a owl:DatatypeProperty ;
+    rdfs:label "soil_elev",
+        "soil_site_elevation" ;
+    rdfs:comment "Elevation of soil profile site"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#soil_file_id> a owl:DatatypeProperty ;
+    rdfs:label "soil_file_id" ;
+    rdfs:comment "Soil profile file name"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile>,
+        <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#soil_id> a owl:DatatypeProperty ;
+    rdfs:label "soil_id",
+        "soil_profile_id" ;
+    rdfs:comment "Soil profile identifier"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile>,
+        <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#soil_lat> a owl:DatatypeProperty ;
+    rdfs:label "latitude_soil_profile",
+        "soil_lat" ;
+    rdfs:comment "Latitude of soil profile site"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#soil_long> a owl:DatatypeProperty ;
+    rdfs:label "longitude_soil_profile",
+        "soil_long" ;
+    rdfs:comment "Longitude of soil profile site"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#soil_name> a owl:DatatypeProperty ;
+    rdfs:label "name_of_soil_profile",
+        "soil_name" ;
+    rdfs:comment "Name of soil profile"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#soil_site> a owl:DatatypeProperty ;
+    rdfs:label "soil_site" ;
+    rdfs:comment "Name of site where soil profile data sampled"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#soil_subset> a owl:DatatypeProperty ;
+    rdfs:label "soil_identifier",
+        "soil_subset" ;
+    rdfs:comment "Soil identifier"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sq> a owl:DatatypeProperty ;
+    rdfs:label "sequence_number",
+        "sq" ;
+    rdfs:comment "Sequence number"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#srad> a owl:DatatypeProperty ;
+    rdfs:label "solar_radiation",
+        "srad" ;
+    rdfs:comment "Solar radiation"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sray> a owl:DatatypeProperty ;
+    rdfs:label "solar_rad_yearly_avg",
+        "sray" ;
+    rdfs:comment "Solar radiation, yearly average"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sscol> a owl:DatatypeProperty ;
+    rdfs:label "soil_surface_color",
+        "sscol" ;
+    rdfs:comment "Surface soil color, moist, using Munsell hue"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#start_yr> a owl:DatatypeProperty ;
+    rdfs:label "start_yr",
+        "start_yr_weather_summary" ;
+    rdfs:comment "Start of summary period weather summary"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#suite_address> a owl:DatatypeProperty ;
+    rdfs:label "suite_address",
+        "suite_researcher_address" ;
+    rdfs:comment "Mailing address of researcher"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SuitePerson> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#suite_distrib> a owl:DatatypeProperty ;
+    rdfs:label "suite_distrib",
+        "suite_distrib_restrictions" ;
+    rdfs:comment "Distribution limitations for the data set"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Suite> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#suite_document> a owl:DatatypeProperty ;
+    rdfs:label "suite_document",
+        "suite_document_name" ;
+    rdfs:comment "Document name in abbreviated form"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SuiteDocument> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#suite_doi> a owl:DatatypeProperty ;
+    rdfs:label "suite_digital_object_identifier",
+        "suite_doi" ;
+    rdfs:comment "Digital_object_identifier according to international standard"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SuiteDocument> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#suite_email> a owl:DatatypeProperty ;
+    rdfs:label "suite_email",
+        "suite_email_address" ;
+    rdfs:comment "E-mail address of researcher"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SuitePerson> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#suite_exper_type> a owl:DatatypeProperty ;
+    rdfs:label "suite_exper_type",
+        "suite_experiment_type" ;
+    rdfs:comment "General type of experiment, e.g., varietal trial"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Suite> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#suite_factors> a owl:DatatypeProperty ;
+    rdfs:label "suite_experimental_factor_comb",
+        "suite_factors" ;
+    rdfs:comment "Experimental factor combinations"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Suite> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#suite_institution> a owl:DatatypeProperty ;
+    rdfs:label "suite_institute_name",
+        "suite_institution" ;
+    rdfs:comment "Names of participating institutions"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SuiteInstitution> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#suite_keywords> a owl:DatatypeProperty ;
+    rdfs:label "suite_keywords" ;
+    rdfs:comment "Keywords for dataset"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Suite> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#suite_main_fac> a owl:DatatypeProperty ;
+    rdfs:label "suite_main_experiment_factor",
+        "suite_main_fac" ;
+    rdfs:comment "Main factor, factors or interactions of interest in an experiment"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Suite> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#suite_name> a owl:DatatypeProperty ;
+    rdfs:label "suite_name" ;
+    rdfs:comment "Brief name of suite of experiments"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Suite> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#suite_notes> a owl:DatatypeProperty ;
+    rdfs:label "suite_notes" ;
+    rdfs:comment "Notes about data set"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Suite> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#suite_obj> a owl:DatatypeProperty ;
+    rdfs:label "suite_obj",
+        "suite_objectives_of_study" ;
+    rdfs:comment "Objectives of the study"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Suite> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#suite_orcid> a owl:DatatypeProperty ;
+    rdfs:label "suite_orcid" ;
+    rdfs:comment "ORCId of researcher(s)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SuitePerson> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#suite_person_notes> a owl:DatatypeProperty ;
+    rdfs:label "suite_person_notes",
+        "suite_persons_notes" ;
+    rdfs:comment "Additional notes on persons involved with the experiment(s)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SuitePerson> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#suiteid> a owl:DatatypeProperty ;
+    rdfs:label "suite_id",
+        "suiteid" ;
+    rdfs:comment "Suite identifiers"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Suite> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#summeru> a owl:DatatypeProperty ;
+    rdfs:label "summer_u",
+        "summeru" ;
+    rdfs:comment "Summer soil evaporation, upper limit for stage 1"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#sunh> a owl:DatatypeProperty ;
+    rdfs:label "sunh",
+        "sunshine_duration" ;
+    rdfs:comment "Sunshine duration over 24 h period"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#swmn> a owl:DatatypeProperty ;
+    rdfs:label "solar_rad_wet_d_mon_avg",
+        "swmn" ;
+    rdfs:comment "Solar radiation, wet days, monthly avera"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#swsd> a owl:DatatypeProperty ;
+    rdfs:label "solar_rad_wet_d_mon_sd",
+        "swsd" ;
+    rdfs:comment "Solar radiation, wet days, monthly st de"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tamp> a owl:DatatypeProperty ;
+    rdfs:label "tamp",
+        "temp_amplit_month_avg" ;
+    rdfs:comment "Temperature amplitude (peak to trough) of 12 monthly averages"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tav> a owl:DatatypeProperty ;
+    rdfs:label "tav",
+        "temperature_avg_year" ;
+    rdfs:comment "Temperature average for whole year"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tavd> a owl:DatatypeProperty ;
+    rdfs:label "tavd",
+        "temp_average_daily" ;
+    rdfs:comment "Temperature of air, average daily"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tdate> a owl:DatatypeProperty ;
+    rdfs:label "tdate",
+        "tillage_date" ;
+    rdfs:comment "Tillage date"@en ;
+    rdfs:domain <http://purl.org/icasa/core#TillageEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tdew> a owl:DatatypeProperty ;
+    rdfs:label "tdew",
+        "temperature_dewpoint" ;
+    rdfs:comment "Temperature, dewpoint"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tdry> a owl:DatatypeProperty ;
+    rdfs:label "dry_bulb_temper_avg_day",
+        "tdry" ;
+    rdfs:comment "Temperature, dry-bulb, daily average"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tdyd> a owl:DatatypeProperty ;
+    rdfs:label "tdyd",
+        "temp_avg_daylight" ;
+    rdfs:comment "Temperature of air, average during daylight hours"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#temht> a owl:DatatypeProperty ;
+    rdfs:label "temht",
+        "temperature_sensor_ht" ;
+    rdfs:comment "Weather station temperature sensor height"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tgad> a owl:DatatypeProperty ;
+    rdfs:label "temp_avg_daily_air",
+        "tgad" ;
+    rdfs:comment "Temperature, average daily air, growth"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tgrd> a owl:DatatypeProperty ;
+    rdfs:label "temp_avg_daylight_air",
+        "tgrd" ;
+    rdfs:comment "Temperature, average air, daylight hours"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ti> a owl:DatatypeProperty ;
+    rdfs:label "ti",
+        "tillage_level" ;
+    rdfs:comment "Tillage operation level"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Tillage>,
+        <http://purl.org/icasa/core#TillageEvent>,
+        <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ti_name> a owl:DatatypeProperty ;
+    rdfs:label "ti_name",
+        "tillage_treatment_name" ;
+    rdfs:comment "Tillage, name assigned to treatments over trial"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Tillage> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ti_no> a owl:DatatypeProperty ;
+    rdfs:label "ti_no",
+        "tillage_event_tot" ;
+    rdfs:comment "Total tillage operations, cumulative for season"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Tillage> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ti_notes> a owl:DatatypeProperty ;
+    rdfs:label "ti_notes",
+        "tillage_treatment_notes" ;
+    rdfs:comment "Tillage notes, extensive comments on practices"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Tillage> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ti_op_name> a owl:DatatypeProperty ;
+    rdfs:label "ti_op_name",
+        "tillage_operation_name" ;
+    rdfs:comment "Tillage operations, name of specific event"@en ;
+    rdfs:domain <http://purl.org/icasa/core#TillageEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ti_practice> a owl:DatatypeProperty ;
+    rdfs:label "ti_practice",
+        "tillage_practice" ;
+    rdfs:comment "Tillage type"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Tillage> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tiday> a owl:DatatypeProperty ;
+    rdfs:label "tiday",
+        "tillage_operations_day" ;
+    rdfs:comment "Tillage operations day"@en ;
+    rdfs:domain <http://purl.org/icasa/core#TillageEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tidep> a owl:DatatypeProperty ;
+    rdfs:label "tidep",
+        "tillage_operations_depth" ;
+    rdfs:comment "Tillage operations depth"@en ;
+    rdfs:domain <http://purl.org/icasa/core#TillageEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tiimp> a owl:DatatypeProperty ;
+    rdfs:label "tiimp",
+        "tillage_implement" ;
+    rdfs:comment "Tillage implement"@en ;
+    rdfs:domain <http://purl.org/icasa/core#TillageEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#timix> a owl:DatatypeProperty ;
+    rdfs:label "till_mix_effectiveness",
+        "timix" ;
+    rdfs:comment "Tillage operations mixing effectiveness"@en ;
+    rdfs:domain <http://purl.org/icasa/core#TillageEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tiord> a owl:DatatypeProperty ;
+    rdfs:label "tillage_order",
+        "tiord" ;
+    rdfs:comment "Tillage operations order within a single day"@en ;
+    rdfs:domain <http://purl.org/icasa/core#TillageEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tiyr> a owl:DatatypeProperty ;
+    rdfs:label "tillage_operations_year",
+        "tiyr" ;
+    rdfs:comment "Tillage operations year"@en ;
+    rdfs:domain <http://purl.org/icasa/core#TillageEvent> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tmax> a owl:DatatypeProperty ;
+    rdfs:label "maximum_temperature",
+        "tmax" ;
+    rdfs:comment "Temperature of air, maximum"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tmin> a owl:DatatypeProperty ;
+    rdfs:label "minimum_temperature",
+        "tmin" ;
+    rdfs:comment "Temperature of air, minimum"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tmna> a owl:DatatypeProperty ;
+    rdfs:label "min_temp_average",
+        "tmna" ;
+    rdfs:comment "Temperature of air, minimum, averaged over time period (e.g., 5 days)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tmny> a owl:DatatypeProperty ;
+    rdfs:label "minimum_temp_avg_year",
+        "tmny" ;
+    rdfs:comment "Temperature minimum, yearly average"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tmxa> a owl:DatatypeProperty ;
+    rdfs:label "max_temp_average",
+        "tmxa" ;
+    rdfs:comment "Temperature of air, maximum, averaged over time period (e.g., 5 days)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tmxy> a owl:DatatypeProperty ;
+    rdfs:label "maximum_temp_avg_year",
+        "tmxy" ;
+    rdfs:comment "Temperature maximum, yearly average"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#tr_notes> a owl:DatatypeProperty ;
+    rdfs:label "tr_notes",
+        "treatment_comments" ;
+    rdfs:comment "Treatment, extended comments on treatments"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#trdate> a owl:DatatypeProperty ;
+    rdfs:label "transplant_date",
+        "trdate" ;
+    rdfs:comment "Transplant date"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Planting> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#treat_id> a owl:DatatypeProperty ;
+    rdfs:label "treat_id",
+        "treatment_id" ;
+    rdfs:comment "Treatment identifier, unique internal ID"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#trt_name> a owl:DatatypeProperty ;
+    rdfs:label "treatment_name",
+        "trt_name" ;
+    rdfs:comment "Treatment name"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#trtno> a owl:DatatypeProperty ;
+    rdfs:label "treatment_number",
+        "trtno" ;
+    rdfs:comment "Treatment number"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Treatment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ts10d> a owl:DatatypeProperty ;
+    rdfs:label "soil_temperature_180_210",
+        "ts10d" ;
+    rdfs:comment "Soil temperature, 180-210 cm"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ts1d> a owl:DatatypeProperty ;
+    rdfs:label "soil_temperature_0_5",
+        "ts1d" ;
+    rdfs:comment "Soil temperature, 0-5 cm"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ts2d> a owl:DatatypeProperty ;
+    rdfs:label "soil_temperature_5_15",
+        "ts2d" ;
+    rdfs:comment "Soil temperature, 5-15 cm"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ts3d> a owl:DatatypeProperty ;
+    rdfs:label "soil_temperature_15_30",
+        "ts3d" ;
+    rdfs:comment "Soil temperature, 15-30 cm"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ts4d> a owl:DatatypeProperty ;
+    rdfs:label "soil_temperature_30_45",
+        "ts4d" ;
+    rdfs:comment "Soil temperature, 30-45 cm"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ts5d> a owl:DatatypeProperty ;
+    rdfs:label "soil_temperature_45_60",
+        "ts5d" ;
+    rdfs:comment "Soil temperature, 45-60 cm"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ts6d> a owl:DatatypeProperty ;
+    rdfs:label "soil_temperature_60_90",
+        "ts6d" ;
+    rdfs:comment "Soil temperature, 60-90 cm"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ts7d> a owl:DatatypeProperty ;
+    rdfs:label "soil_temperature_90_120",
+        "ts7d" ;
+    rdfs:comment "Soil temperature, 90-120 cm"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ts8d> a owl:DatatypeProperty ;
+    rdfs:label "soil_temperature_120_150",
+        "ts8d" ;
+    rdfs:comment "Soil temperature, 120-150 cm"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#ts9d> a owl:DatatypeProperty ;
+    rdfs:label "soil_temperature_150_180",
+        "ts9d" ;
+    rdfs:comment "Soil temperature, 150-180 cm"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#twet> a owl:DatatypeProperty ;
+    rdfs:label "temperature_wet-bulb",
+        "twet" ;
+    rdfs:comment "Temperature, wet-bulb"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#twld> a owl:DatatypeProperty ;
+    rdfs:label "daylength_twilight_basis",
+        "twld" ;
+    rdfs:comment "Daylength (twilight to twilight)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#unit> a owl:DatatypeProperty ;
+    rdfs:label "unit",
+        "unit_of_measurement" ;
+    rdfs:comment "Unit of measurement for a given variate"@en ;
+    rdfs:domain <http://purl.org/icasa/core#ValidationCriteria> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#version> a owl:DatatypeProperty ;
+    rdfs:label "file_version",
+        "version" ;
+    rdfs:comment "File version for ICASA standard"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Experiment> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#version_sl> a owl:DatatypeProperty ;
+    rdfs:label "file_version_sl",
+        "version_sl" ;
+    rdfs:comment "File version for ICASA standard"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Soil> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#version_wst> a owl:DatatypeProperty ;
+    rdfs:label "file_version_wst",
+        "version_wst" ;
+    rdfs:comment "File version for ICASA standard"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Weather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#vg_alpha> a owl:DatatypeProperty ;
+    rdfs:label "van_genuch_alpha",
+        "vg_alpha" ;
+    rdfs:comment "Van Genuchten alpha parameter"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#vg_n> a owl:DatatypeProperty ;
+    rdfs:label "van_genuch_n",
+        "vg_n" ;
+    rdfs:comment "Van Genuchten N parameter"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfileLayer> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#vl_notes> a owl:DatatypeProperty ;
+    rdfs:label "validation_notes",
+        "vl_notes" ;
+    rdfs:comment "Validation criteria notes, explanations"@en ;
+    rdfs:domain <http://purl.org/icasa/core#ValidationCriteria> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#vprsd> a owl:DatatypeProperty ;
+    rdfs:label "vapor_pressure",
+        "vprsd" ;
+    rdfs:comment "Vapor pressure, average daily"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#w_date> a owl:DatatypeProperty ;
+    rdfs:label "w_date",
+        "weather_date" ;
+    rdfs:comment "Date for daily weather, field observations, etc."@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wid> a owl:DatatypeProperty ;
+    rdfs:label "weather_id",
+        "wid" ;
+    rdfs:comment "unique id to link to weather data"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather>,
+        <http://purl.org/icasa/core#WeatherStation>,
+        <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wind> a owl:DatatypeProperty ;
+    rdfs:label "wind",
+        "wind_speed_daily" ;
+    rdfs:comment "Wind speed, daily"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#winteru> a owl:DatatypeProperty ;
+    rdfs:label "winter_u",
+        "winteru" ;
+    rdfs:comment "Winter soil evaporation, upper limit for stage 1"@en ;
+    rdfs:domain <http://purl.org/icasa/core#SoilProfile> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wndht> a owl:DatatypeProperty ;
+    rdfs:label "ref_height_windsp_meas",
+        "wndht" ;
+    rdfs:comment "Reference height for windspeed measurement"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wst_address> a owl:DatatypeProperty ;
+    rdfs:label "researcher_address",
+        "wst_address" ;
+    rdfs:comment "Mailing address of researcher"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Person>,
+        <http://purl.org/icasa/core#SoilPerson>,
+        <http://purl.org/icasa/core#WeatherPerson> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wst_citation> a owl:DatatypeProperty ;
+    rdfs:label "weather_citation",
+        "wst_citation" ;
+    rdfs:comment "Full citation for weather data"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Weather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wst_dataset> a owl:DatatypeProperty ;
+    rdfs:label "weather_file",
+        "wst_dataset" ;
+    rdfs:comment "Weather dataset containing relevant data"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field>,
+        <http://purl.org/icasa/core#Weather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wst_dist> a owl:DatatypeProperty ;
+    rdfs:label "wst_dist",
+        "wsta_distance" ;
+    rdfs:comment "Distance from weather station to field (m)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wst_distrib> a owl:DatatypeProperty ;
+    rdfs:label "distrib_restrictions_wst",
+        "wst_distrib" ;
+    rdfs:comment "Distribution limitations for the weather data set"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Weather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wst_elev> a owl:DatatypeProperty ;
+    rdfs:label "weather_sta_elevation",
+        "wst_elev" ;
+    rdfs:comment "Elevation of weather station"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wst_email> a owl:DatatypeProperty ;
+    rdfs:label "e_mail_address",
+        "wst_email" ;
+    rdfs:comment "E-mail address of researcher"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Person>,
+        <http://purl.org/icasa/core#SoilPerson>,
+        <http://purl.org/icasa/core#WeatherPerson> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wst_id> a owl:DatatypeProperty ;
+    rdfs:label "weather_station_code",
+        "weather_station_id",
+        "wst_id" ;
+    rdfs:comment "Weather station identifier to link to site information"@en,
+        "Weather station identifier to link to site/field information"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather>,
+        <http://purl.org/icasa/core#WeatherStation>,
+        <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wst_lat> a owl:DatatypeProperty ;
+    rdfs:label "weather_sta_latitude",
+        "wst_lat" ;
+    rdfs:comment "Latitude of station, degrees decimal with North as positive value"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wst_license> a owl:DatatypeProperty ;
+    rdfs:label "weather_license",
+        "wst_license" ;
+    rdfs:comment "License associated with weather data"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Weather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wst_loc_1> a owl:DatatypeProperty ;
+    rdfs:label "wst_loc_1",
+        "wsta_location_country" ;
+    rdfs:comment "First admin for location of site for soil profile (usually country)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wst_loc_2> a owl:DatatypeProperty ;
+    rdfs:label "wst_loc_2",
+        "wsta_loc_2nd_level" ;
+    rdfs:comment "Second admin level for location of site for soil profile (usually state or province)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wst_loc_3> a owl:DatatypeProperty ;
+    rdfs:label "wst_loc_3",
+        "wsta_loc_3rd_level" ;
+    rdfs:comment "Third admin level for location of site for soil profile (usually county or municipality)"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wst_long> a owl:DatatypeProperty ;
+    rdfs:label "weather_sta_longitude",
+        "wst_long" ;
+    rdfs:comment "Longitude of station, degrees decimals with East as positive value"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wst_name> a owl:DatatypeProperty ;
+    rdfs:label "weather_station_name",
+        "wst_name" ;
+    rdfs:comment "Weather station name"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wst_notes> a owl:DatatypeProperty ;
+    rdfs:label "weather_notes",
+        "wst_notes" ;
+    rdfs:comment "General notes on the weather dataset"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Weather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wst_site> a owl:DatatypeProperty ;
+    rdfs:label "weather_station_site",
+        "wst_site" ;
+    rdfs:comment "Name and location of site for weather data"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wst_source> a owl:DatatypeProperty ;
+    rdfs:label "source_daily_weather",
+        "wst_source" ;
+    rdfs:comment "Source of daily weather data for calculated means or weather generator parameters"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStation> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wtdoy> a owl:DatatypeProperty ;
+    rdfs:label "day_of_year",
+        "wtdoy" ;
+    rdfs:comment "Day of year for daily weather record"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wth_subset> a owl:DatatypeProperty ;
+    rdfs:label "weather_sta_identifier",
+        "wth_subset" ;
+    rdfs:comment "Subset name for a single weather station"@en ;
+    rdfs:domain <http://purl.org/icasa/core#Field> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#wtyr> a owl:DatatypeProperty ;
+    rdfs:label "wtyr",
+        "year" ;
+    rdfs:comment "Year (4 digits) for daily weather data"@en ;
+    rdfs:domain <http://purl.org/icasa/core#DailyWeather> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#xamn> a owl:DatatypeProperty ;
+    rdfs:label "temp_max_all_days_mon_av",
+        "xamn" ;
+    rdfs:comment "Temperature maximum, all days, monthly average"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#xdmn> a owl:DatatypeProperty ;
+    rdfs:label "temp_max_dry_days_mon_av",
+        "xdmn" ;
+    rdfs:comment "Temperature maximum, dry days, monthly average"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#xdsd> a owl:DatatypeProperty ;
+    rdfs:label "temp_max_dry_days_st_dev",
+        "xdsd" ;
+    rdfs:comment "Temperature maximum, dry days, standard deviation"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#xwmn> a owl:DatatypeProperty ;
+    rdfs:label "temp_max_wet_days_mon_av",
+        "xwmn" ;
+    rdfs:comment "Temperature maximum, wet days, monthly average"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#xwsd> a owl:DatatypeProperty ;
+    rdfs:label "temp_max_wet_days_st_dev",
+        "xwsd" ;
+    rdfs:comment "Temperature maximum, wet days, standard deviation"@en ;
+    rdfs:domain <http://purl.org/icasa/core#WeatherStationParameter> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/icasa/core#SuiteInstitution> a owl:Class ;
+    rdfs:label "SuiteInstitution" ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#Note> a owl:Class ;
+    rdfs:label "Note" ;
+    rdfs:comment "Information on constraints or complications affecting the usability of the dataset"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#SuiteDocument> a owl:Class ;
+    rdfs:label "SuiteDocument" ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#Document> a owl:Class ;
+    rdfs:label "Document" ;
+    rdfs:comment "Any publications or other media associated with the experiment, especially journal articles or project reports"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#SoilDocument> a owl:Class ;
+    rdfs:label "SoilDocument" ;
+    rdfs:comment "Documents describing the source or applications of the soil data"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#WeatherDocument> a owl:Class ;
+    rdfs:label "WeatherDocument" ;
+    rdfs:comment "Documents describing the source or applications of the weather data"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#Chemical> a owl:Class ;
+    rdfs:label "Chemical" ;
+    rdfs:comment "Herbicide, pesticide, or growth regulator application details"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#EnvironmentModification> a owl:Class ;
+    rdfs:label "EnvironmentModification" ;
+    rdfs:comment "Adjustments to weather variable such as those that could be made during growth chamber, CO2 enrichment, or rainout shelter studies"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#Institution> a owl:Class ;
+    rdfs:label "Institution" ;
+    rdfs:comment "Names, roles and contact information for institutions involved in the experiment"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#Mulch> a owl:Class ;
+    rdfs:label "Mulch" ;
+    rdfs:comment "Details of soil covers such as plastic sheeting or fabrics"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#SoilInstitution> a owl:Class ;
+    rdfs:label "SoilInstitution" ;
+    rdfs:comment "Institutions involved in preparing the soil data"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#SuitePerson> a owl:Class ;
+    rdfs:label "SuitePerson" ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#WeatherInstitution> a owl:Class ;
+    rdfs:label "WeatherInstitution" ;
+    rdfs:comment "Institutions involved in preparing the weather data"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#Harvest> a owl:Class ;
+    rdfs:label "Harvest" ;
+    rdfs:comment "Harvest dates, components harvested, and percentages removed"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#MulchRemove> a owl:Class ;
+    rdfs:label "MulchRemove" ;
+    rdfs:comment "Mulch removal"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#OrganicMaterial> a owl:Class ;
+    rdfs:label "OrganicMaterial" ;
+    rdfs:comment "Details of straw, manure and other organic material applications"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#Tillage> a owl:Class ;
+    rdfs:label "Tillage" ;
+    rdfs:comment "Dates and types of tillage operations"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#Genotype> a owl:Class ;
+    rdfs:label "Genotype" ;
+    rdfs:comment "Crop and cultivar identifiers, names, and background"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#Irrigation> a owl:Class ;
+    rdfs:label "Irrigation" ;
+    rdfs:comment "Irrigation dates and amounts, flood and water table depths, thresholds for automatic applications"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#SimulationControl> a owl:Class ;
+    rdfs:label "SimulationControl" ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#ValidationCriteria> a owl:Class ;
+    rdfs:label "ValidationCriteria" ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#WeatherPerson> a owl:Class ;
+    rdfs:label "WeatherPerson" ;
+    rdfs:comment "Persons involved in preparing the weather data"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#AutomaticIrrigation> a owl:Class ;
+    rdfs:label "AutomaticIrrigation" ;
+    rdfs:comment "Automaatic irrigation"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#SoilPerson> a owl:Class ;
+    rdfs:label "SoilPerson" ;
+    rdfs:comment "Persons involved in preparing the soil data"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#MulchAddition> a owl:Class ;
+    rdfs:label "MulchAddition" ;
+    rdfs:comment "Mulch addition"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#Person> a owl:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "Names, roles and contact information for persons involved in the experiment or preparation of the dataset"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#Soil> a owl:Class ;
+    rdfs:label "Soil" ;
+    rdfs:comment "Set of soil profile data for pedons from one or more sites in a region"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#Suite> a owl:Class ;
+    rdfs:label "Suite" ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#Weather> a owl:Class ;
+    rdfs:label "Weather" ;
+    rdfs:comment "Daily weather data from one or more stations"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#ChemicalApplication> a owl:Class ;
+    rdfs:label "ChemicalApplication" ;
+    rdfs:comment "Chemical application"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#InitialConditionSoilLayer> a owl:Class ;
+    rdfs:label "InitialConditionSoilLayer" ;
+    rdfs:comment "Initial condition soil layer"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#TillageEvent> a owl:Class ;
+    rdfs:label "TillageEvent" ;
+    rdfs:comment "Tillage event"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#IrrigationApplication> a owl:Class ;
+    rdfs:label "IrrigationApplication" ;
+    rdfs:comment "Irrigation application"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#Fertilizer> a owl:Class ;
+    rdfs:label "Fertilizer" ;
+    rdfs:comment "Fertilizer amounts, types, and dates of applications"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#SoilAnalysis> a owl:Class ;
+    rdfs:label "SoilAnalysis" ;
+    rdfs:comment "Details of classical soil surface layer analyses"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#SoilAnalysisLayer> a owl:Class ;
+    rdfs:label "SoilAnalysisLayer" ;
+    rdfs:comment "Soil anlaysis soil layer"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#HarvestEvent> a owl:Class ;
+    rdfs:label "HarvestEvent" ;
+    rdfs:comment "Harvest event"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#PlotDetail> a owl:Class ;
+    rdfs:label "PlotDetail" ;
+    rdfs:comment "Information on the plot size and characteristics"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#FertilizerApplication> a owl:Class ;
+    rdfs:label "FertilizerApplication" ;
+    rdfs:comment "Fertilizer application"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#OrganicMaterialApplication> a owl:Class ;
+    rdfs:label "OrganicMaterialApplication" ;
+    rdfs:comment "Organic material application"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#EnvironmentModificationLevel> a owl:Class ;
+    rdfs:label "EnvironmentModificationLevel" ;
+    rdfs:comment "Environment modification level"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#WeatherStationParameter> a owl:Class ;
+    rdfs:label "WeatherStationParameter" ;
+    rdfs:comment "Parameters for weather generators that are applicable to the station"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#Experiment> a owl:Class ;
+    rdfs:label "Experiment" ;
+    rdfs:comment "Complete description of management and initial conditions for a real or synthetic experiment (or very closely linked set of experiments). Data measured during or at the end of the experiment. The information presented should be sufficient to allow thorough interpretation or analysis of the results and for simulation of the experiment"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#Treatment> a owl:Class ;
+    rdfs:label "Treatment" ;
+    rdfs:comment "Treatment names and level codes for crop rotations, crop components and experimental factors"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#Planting> a owl:Class ;
+    rdfs:label "Planting" ;
+    rdfs:comment "Planting date, seed and initial plant populations, seeding depth, and plant distribution (row spacing, etc.)"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#InitialCondition> a owl:Class ;
+    rdfs:label "InitialCondition" ;
+    rdfs:comment "Starting conditions including above- and below-ground residues, and water and nitrogen in the complete profile"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#WeatherStation> a owl:Class ;
+    rdfs:label "WeatherStation" ;
+    rdfs:comment "Daily weather data typically for a single experiment or season, but preferably for a complete year or longer"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#Field> a owl:Class ;
+    rdfs:label "Field" ;
+    rdfs:comment "Field description including links to weather station and soil profile information"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#SoilProfile> a owl:Class ;
+    rdfs:label "SoilProfile" ;
+    rdfs:comment "Background information on a single profile"@en,
+        "Soil profile data for individual pedons"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#DailyWeather> a owl:Class ;
+    rdfs:label "DailyWeather" ;
+    rdfs:comment "Daily weather data from a single weather station"@en ;
+    rdfs:subClassOf owl:Thing .
+
+<http://purl.org/icasa/core#SoilProfileLayer> a owl:Class ;
+    rdfs:label "SoilProfileLayer" ;
+    rdfs:comment "Soil profile layer"@en ;
+    rdfs:subClassOf owl:Thing .
+

@@ -1,0 +1,45 @@
+@prefix : <http://purl.org/icasa/vu> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+: a owl:Ontology ;
+    dc:date "2016-09-24" ;
+    dc:description "Ontology intended to model variables and units  capturing the ICASA measured data variables as well as CF standard names and BETYdb variables. "^^xsd:string ;
+    dc:title "ICASA Ontology for Variables and Units"^^xsd:string ;
+    owl:versionInfo "1.0-alpha"^^xsd:string .
+
+<http://purl.org/icasa/vu#alternateName> a owl:DatatypeProperty ;
+    rdfs:label "Alternate name" ;
+    rdfs:comment "Alternate name used to identify the variable or unit" ;
+    rdfs:domain <http://purl.org/icasa/vu#Unit>,
+        <http://purl.org/icasa/vu#Variable> .
+
+<http://purl.org/icasa/vu#definition> a owl:DatatypeProperty ;
+    rdfs:label "Definition" ;
+    rdfs:comment "Definition of the variable or unit" ;
+    rdfs:domain <http://purl.org/icasa/vu#Unit>,
+        <http://purl.org/icasa/vu#Variable> .
+
+<http://purl.org/icasa/vu#name> a owl:FunctionalProperty ;
+    rdfs:label "Name" ;
+    rdfs:comment "Preferred name used to identify the variable" ;
+    rdfs:domain <http://purl.org/icasa/vu#Variable> .
+
+<http://purl.org/icasa/vu#standardName> a owl:FunctionalProperty ;
+    rdfs:label "Standard name" ;
+    rdfs:comment "Standard name by CF conventions used to identify the variable" ;
+    rdfs:domain <http://purl.org/icasa/vu#Variable> .
+
+<http://purl.org/icasa/vu#Unit> a owl:Class ;
+    rdfs:label "Unit" ;
+    rdfs:comment "Magnitude of a quantity chosen as a standard for measurement of the same quantity"@en ;
+    rdfs:subClassOf owl:Thing ;
+    owl:sameAs <http://mmisw.org/ont/mmi/udunits2/Unit> .
+
+<http://purl.org/icasa/vu#Variable> a owl:Class ;
+    rdfs:label "Variable" ;
+    rdfs:comment "Quantity that can be measured in an experiment"@en ;
+    rdfs:subClassOf owl:Thing .
+
