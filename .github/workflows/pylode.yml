@@ -21,17 +21,17 @@ jobs:
       run: | 
           mkdir -p $GITHUB_WORKSPACE/docs/1.0-alpha/core
           pylode -i $GITHUB_WORKSPACE/icasa-mgmt-info.owl -o $GITHUB_WORKSPACE/docs/1.0-alpha/core/index.html
-          cp $GITHUB_WORKSPACE/icasa-mgmt-info.owl docs/1.0-alpha/core/core.owl
+          cp $GITHUB_WORKSPACE/icasa-mgmt-info.owl docs/1.0-alpha/core/
           rdfpipe -o ttl $GITHUB_WORKSPACE/icasa-mgmt-info.owl > $GITHUB_WORKSPACE/docs/1.0-alpha/core/core.ttl
 
           mkdir -p $GITHUB_WORKSPACE/docs/1.0-alpha/vu
           pylode -i $GITHUB_WORKSPACE/variables-units.owl -o $GITHUB_WORKSPACE/docs/1.0-alpha/vu/index.html
-          cp $GITHUB_WORKSPACE/variables-units.owl docs/1.0-alpha/vu/vu.owl
+          cp $GITHUB_WORKSPACE/variables-units.owl docs/1.0-alpha/vu/
           rdfpipe -o ttl $GITHUB_WORKSPACE/variables-units.owl > $GITHUB_WORKSPACE/docs/1.0-alpha/vu/vu.ttl
 
           mkdir -p $GITHUB_WORKSPACE/docs/1.0-alpha/variables
           pylode -i $GITHUB_WORKSPACE/icasa-measured-data.owl -o $GITHUB_WORKSPACE/docs/1.0-alpha/variables/index.html
-          cp $GITHUB_WORKSPACE/icasa-measured-data.owl docs/1.0-alpha/variables/variables.owl
+          cp $GITHUB_WORKSPACE/icasa-measured-data.owl docs/1.0-alpha/variables/
           rdfpipe -o ttl $GITHUB_WORKSPACE/icasa-measured-data.owl > $GITHUB_WORKSPACE/docs/1.0-alpha/variables/variables.ttl
     - name: Commit HTML
       run: |
