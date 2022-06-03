@@ -3,16 +3,16 @@
 This is an initial rendering of the [ICASA Master Variable List](https://docs.google.com/spreadsheets/d/1MYx1ukUsCAM1pcixbVQSu49NU-LfXg-Dtt-ncLBzGAM/pub?output=html#) 
 in OWL. The primary goal of this project is to create a practical and faithful implementation of the [ICASA Master Variable List](http://research.agmip.org/display/dev/ICASA+Master+Variable+List) that can be used for linked-data applications and covers the existing [AgMIP JSON Data Objects](http://research.agmip.org/display/dev/JSON+Data+Objects) and can be be combined with other linked-data contexts to support the [TERRA-REF](http://terraref.org/) project, particularly information available through [BETYdb](https://terraref.ncsa.illinois.edu/bety/).
 
-This is an early and rough draft and intended for community feedback.
+This is an early and rough draft intended for community feedback.
 
 What's been done:
-* ICASA "Mangement_Info" entities and attributes are rendered as an [OWL ontology for experiments and managements](icasa-mgmt-info.owl) [ [HTML](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa-mgmt-info.owl)].
-* A separate OWL ontology was manually created to describe [Variables and Units](variables-units.owl) [[HTML](http://www.essepuntato.it/lode/https://raw.githubusercontent.com/craig-willis/icasa/master/icasa-measured-data.owl)].  This is a proof of concept and will ideally be replaced by another standard once identified. For example, the [MMI UDUNIT2](http://mmisw.org/orr/) for units.
-* The "Measured_Data" sheet is rendered as a set of [Variables in RDF](icasa-measured-data.rdf) using the above Variables and Units ontology.
+* ICASA "Mangement_Info" entities and attributes are rendered as an [OWL ontology for experiments and managements](icasa-mgmt-info.owl) [ [HTML](https://purl.org/icasa/1.0-alpha/core/)].
+* ICASA "Measured_Data" sheet is rendered as a set of [Variables](icasa-measured-data.owl) using the below Variables and Units ontology. [ [HTML](https://purl.org/icasa/1.0-alpha/variables)].
+* A separate OWL ontology was manually created to describe [Variables and Units](variables-units.owl). This is a proof of concept and will ideally be replaced by another standard once identified. For example, the [MMI UDUNIT2](http://mmisw.org/orr/) for units.
 
 See the [Design Notes](docs/design.md) for more information on the basic requirements, recommendations, and design considerations.
 
-The PURL http://purl.org/icasa has been registered with the [Internet Archive](http://www.purl.org) (but not currently working).
+The PURL http://purl.org/icasa and currently redirects to this Github repostitory.
 
 See related work by the DSSAT team: https://github.com/DSSAT/icasa-data-ontology
 
